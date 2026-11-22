@@ -361,4 +361,46 @@ document.addEventListener('DOMContentLoaded', () => {
     card.style.setProperty('--my', (e.clientY - r.top) + 'px');
   }, { passive: true });
 
+  // ---- 8. Robotics HUD touches (navbar state, hero glow, IST clock, title decode) ----
+  const navbarEl = document.getElementById('navbar');
+  const syncNav = () => navbarEl && navbarEl.classList.toggle('scrolled', window.scrollY > 24);
+  window.addEventListener('scroll', syncNav, { passive: true });
+  syncNav();
+
+  const heroEl = document.getElementById('home');
+  const gridEl = heroEl && heroEl.querySelector('.hero-grid');
+  if (heroEl && gridEl) {
+    heroEl.addEventListener('mousemove', (e) => {
+      const r = heroEl.getBoundingClientRect();
+      gridEl.style.setProperty('--hx', (e.clientX - r.left) + 'px');
+      gridEl.style.setProperty('--hy', (e.clientY - r.top) + 'px');
+    }, { passive: true });
+  }
+
+  const telemetry = document.querySelector('.telemetry-bar');
+  if (telemetry) {
+    const item = document.createElement('div');
+    item.className = 'telemetry-item';
+    item.innerHTML = '<span class="t-key">IST:</span> <span class="t-val" id="missionClock">--:--:--</span>';
+    telemetry.appendChild(item);
+    const clock = item.querySelector('#missionClock');
+    const tickClock = () => { clock.textContent = new Date().toLocaleTimeString('en-GB', { timeZone: 'Asia/Kolkata', hour12: false }); };
+    tickClock();
+    setInterval(tickClock, 1000);
+  }
+
+  const accent = document.querySelector('.hero-title .hero-accent');
+  if (accent && !reduceMotion) {
+    const finalText = accent.textContent.trim();
+    const glyphs = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#/';
+    const t0 = performance.now();
+    (function scramble(now) {
+      const p = Math.min((now - t0) / 1000, 1);
+      const lock = Math.floor(p * finalText.length);
+      accent.textContent = finalText.split('').map((ch, i) =>
+        ch === ' ' || i < lock ? ch : glyphs[Math.floor(Math.random() * glyphs.length)]).join('');
+      if (p < 1) requestAnimationFrame(scramble); else accent.textContent = finalText;
+    })(t0);
+  }
+
 });
