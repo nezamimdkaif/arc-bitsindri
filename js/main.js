@@ -5,6 +5,76 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // ---- 0. Theme Switcher (System Preference + Manual Toggle) ----
+  const themeToggle = document.getElementById('themeToggle');
+  const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+  function getSystemTheme() {
+    return mediaQuery.matches ? 'dark' : 'light';
+  }
+
+  function applyTheme(theme, save = true) {
+    if (theme === 'system') {
+      const resolved = getSystemTheme();
+      document.documentElement.setAttribute('data-theme', resolved);
+      if (save) localStorage.removeItem('arc-theme');
+      updateThemeDisplay(resolved, true);
+    } else {
+      document.documentElement.setAttribute('data-theme', theme);
+      if (save) localStorage.setItem('arc-theme', theme);
+      updateThemeDisplay(theme, false);
+    }
+  }
+
+  function updateThemeDisplay(activeTheme, isSystem) {
+    const moonIcon = document.querySelector('.theme-icon-moon');
+    const sunIcon = document.querySelector('.theme-icon-sun');
+
+    if (moonIcon && sunIcon) {
+      if (activeTheme === 'dark') {
+        sunIcon.style.display = 'block';
+        moonIcon.style.display = 'none';
+      } else {
+        sunIcon.style.display = 'none';
+        moonIcon.style.display = 'block';
+      }
+    }
+
+    if (themeToggle) {
+      themeToggle.setAttribute(
+        'title',
+        `Current Theme: ${activeTheme.toUpperCase()} ${isSystem ? '(System Default)' : ''} • Click to toggle`
+      );
+    }
+
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  }
+
+  // Initial Load
+  const savedTheme = localStorage.getItem('arc-theme');
+  if (savedTheme) {
+    applyTheme(savedTheme, false);
+  } else {
+    applyTheme('system', false);
+  }
+
+  // Listen to OS-level theme changes in real time
+  mediaQuery.addEventListener('change', () => {
+    if (!localStorage.getItem('arc-theme')) {
+      applyTheme('system', false);
+    }
+  });
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme') || getSystemTheme();
+      const nextTheme = current === 'dark' ? 'light' : 'dark';
+      applyTheme(nextTheme, true);
+    });
+  }
+
   // ---- 1. Mobile Menu Toggle ----
   const navToggle = document.querySelector('.nav-toggle');
   const navLinks = document.querySelector('.nav-links');
