@@ -19,7 +19,7 @@
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
 
   <!-- Master Stylesheet with cache bust -->
-  <link rel="stylesheet" href="css/style.css?v=30">
+  <link rel="stylesheet" href="css/style.css?v=32">
 
   <!-- Theme: System (default) / Dark / Light. Runs before paint to avoid flash. -->
   <script>
@@ -609,17 +609,89 @@
       <div class="section-header">
         <span class="section-pill">Projects</span>
         <h2 class="section-title">What We Have Built</h2>
-        <p class="section-desc">A showcase of the rovers, drones and rockets Team ARC has designed, built and tested.</p>
+        <p class="section-desc">A showcase of the rovers, drones, rockets, and autonomous systems designed, built, and tested by Team ARC.</p>
       </div>
       <div class="proj-grid">
-        <article class="proj-card"><div class="proj-img proj-icon"><i data-lucide="bot" style="width:42px;height:42px;"></i><img loading="lazy" decoding="async" class="proj-logo" src="assets/images/logos/isro.png" alt="ISRO IRoC-U 2024 logo" onerror="this.remove()"></div><div class="proj-body"><div class="proj-meta"><span class="proj-tag">Planetary Rover</span><span class="proj-year">2024</span></div><h4>ISRO IRoC-U 2024</h4><p>Rocker-bogie rover built for the ISRO planetary exploration challenge.</p><div class="proj-reach"><span>Reached</span><strong>National Semi-Finalist (Top 12 nationwide)</strong></div></div></article>
-        <article class="proj-card"><div class="proj-img proj-icon"><i data-lucide="crosshair" style="width:42px;height:42px;"></i><img loading="lazy" decoding="async" class="proj-logo" src="assets/images/logos/isro.png" alt="ISRO IRoC-U 2026 logo" onerror="this.remove()"></div><div class="proj-body"><div class="proj-meta"><span class="proj-tag">Autonomous UAV</span><span class="proj-year">2026</span></div><h4>ISRO IRoC-U 2026</h4><p>Multi-rotor with GPS-denied visual navigation for the ISRO challenge.</p><div class="proj-reach"><span>Reached</span><strong>National Semi-Finalist</strong></div></div></article>
-        <article class="proj-card"><div class="proj-img proj-icon"><i data-lucide="rocket" style="width:42px;height:42px;"></i><img loading="lazy" decoding="async" class="proj-logo" src="assets/images/logos/inspace.png" alt="IN-SPACe Model Rocketry Challenge 2025 logo" onerror="this.remove()"></div><div class="proj-body"><div class="proj-meta"><span class="proj-tag">Model Rocketry</span><span class="proj-year">2025</span></div><h4>IN-SPACe Model Rocketry Challenge 2025</h4><p>Model rocket designed after the Preliminary and Critical Design Reviews by ISRO and IN-SPACe scientists.</p><div class="proj-reach"><span>Reached</span><strong>National Finalist</strong></div></div></article>
-        <article class="proj-card"><div class="proj-img proj-icon"><i data-lucide="radar" style="width:42px;height:42px;"></i><img loading="lazy" decoding="async" class="proj-logo" src="assets/images/logos/nidar.png" alt="NIDAR 2.0 AirMouse logo" onerror="this.remove()"></div><div class="proj-body"><div class="proj-meta"><span class="proj-tag">Indoor Search Drone</span><span class="proj-year">2026</span></div><h4>NIDAR 2.0 AirMouse</h4><p>GPS-denied indoor search, mapping and survivor localisation. Current test platform shown.</p><div class="proj-reach"><span>Reached</span><strong>Build and testing in progress</strong></div></div></article>
-        <article class="proj-card"><div class="proj-img proj-icon"><i data-lucide="siren" style="width:42px;height:42px;"></i><img loading="lazy" decoding="async" class="proj-logo" src="assets/images/logos/eyantra.png" alt="eYantra 2026-27 Khoj-o-Drone logo" onerror="this.remove()"></div><div class="proj-body"><div class="proj-meta"><span class="proj-tag">Survivor Search Drone</span><span class="proj-year">2026-27</span></div><h4>eYantra 2026-27 Khoj-o-Drone</h4><p>Autonomous quadcopter that finds survivors in a disaster zone and estimates their coordinates.</p><div class="proj-reach"><span>Reached</span><strong>Stage 1 completed, result awaited</strong></div></div></article>
-        <article class="proj-card"><div class="proj-img proj-icon"><i data-lucide="plane" style="width:42px;height:42px;"></i><img loading="lazy" decoding="async" class="proj-logo" src="assets/images/logos/sae.png" alt="SAE Aerothon logo" onerror="this.remove()"></div><div class="proj-body"><div class="proj-meta"><span class="proj-tag">Aircraft Design</span></div><h4>SAE Aerothon</h4><p>Team ARC competed in SAE Aerothon.</p><div class="proj-reach"><span>Reached</span><strong>Competed</strong></div></div></article>
-        <article class="proj-card"><div class="proj-img proj-icon"><i data-lucide="satellite" style="width:42px;height:42px;"></i></div><div class="proj-body"><div class="proj-meta"><span class="proj-tag">Hackathon</span></div><h4>Bharatiya Antariksh Hackathon</h4><p>Team ARC competed in the Bharatiya Antariksh Hackathon.</p><div class="proj-reach"><span>Reached</span><strong>Competed</strong></div></div></article>
-        </div>
+        <article class="proj-card">
+          <div class="proj-img">
+            <img loading="lazy" decoding="async" src="assets/images/competitions/rover/rover_full_build_1.jpg" alt="Lunar &amp; Planetary Rover">
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta"><span class="proj-tag">Planetary Rover</span><span class="proj-year">2024</span></div>
+            <h4>Lunar &amp; Planetary Rover</h4>
+            <p>6-wheel rocker-bogie exploration platform with custom regolith wheels and autonomous hazard navigation.</p>
+            <div class="proj-reach"><span>Mission</span><strong>ISRO IRoC-U '24 &bull; Semi-Finalist (Top 12)</strong></div>
+          </div>
+        </article>
+        <article class="proj-card">
+          <div class="proj-img">
+            <img loading="lazy" decoding="async" src="assets/images/nidar/nidar_drone_top.webp" alt="Autonomous Planetary UAV">
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta"><span class="proj-tag">Autonomous UAV</span><span class="proj-year">2026</span></div>
+            <h4>Autonomous Planetary UAV</h4>
+            <p>Multi-rotor aerial platform with onboard vision, SLAM, and GPS-denied navigation for planetary terrain.</p>
+            <div class="proj-reach"><span>Mission</span><strong>ISRO IRoC-U '26 &bull; Semi-Finalist</strong></div>
+          </div>
+        </article>
+        <article class="proj-card">
+          <div class="proj-img">
+            <img loading="lazy" decoding="async" src="assets/images/competitions/rocketry/rocket_launch_prep.jpg" alt="Model Sounding Rocket">
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta"><span class="proj-tag">Model Rocketry</span><span class="proj-year">2025</span></div>
+            <h4>Model Sounding Rocket</h4>
+            <p>High-altitude model rocket with dual-deployment parachute recovery, reviewed by ISRO &amp; IN-SPACe scientists.</p>
+            <div class="proj-reach"><span>Mission</span><strong>IN-SPACe Rocketry '25 &bull; National Finalist</strong></div>
+          </div>
+        </article>
+        <article class="proj-card">
+          <div class="proj-img">
+            <img loading="lazy" decoding="async" src="assets/images/nidar/nidar_drone_front.webp" alt="NIDAR 2.0 AirMouse">
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta"><span class="proj-tag">Indoor Search Drone</span><span class="proj-year">2026</span></div>
+            <h4>NIDAR 2.0 AirMouse</h4>
+            <p>Tactical quadcopter with 360&deg; LiDAR, depth cameras, and onboard compute for GPS-denied indoor search and mapping.</p>
+            <div class="proj-reach"><span>Status</span><strong>Active Mission &bull; Build &amp; Testing In Progress</strong></div>
+          </div>
+        </article>
+        <article class="proj-card">
+          <div class="proj-img proj-icon">
+            <i data-lucide="siren" style="width:42px;height:42px;"></i>
+            <img loading="lazy" decoding="async" class="proj-logo" src="assets/images/logos/eyantra.png" alt="eYantra Khoj-o-Drone logo" onerror="this.remove()">
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta"><span class="proj-tag">Survivor Search Drone</span><span class="proj-year">2026-27</span></div>
+            <h4>Khoj-o-Drone Quadcopter</h4>
+            <p>Autonomous survivor detection, visual tracking, and GPS-denied 3D localization quadcopter for disaster zones.</p>
+            <div class="proj-reach"><span>Mission</span><strong>eYantra 2026-27 &bull; Stage 1 Done (Result Awaited)</strong></div>
+          </div>
+        </article>
+        <article class="proj-card">
+          <div class="proj-img proj-icon">
+            <i data-lucide="plane" style="width:42px;height:42px;"></i>
+            <img loading="lazy" decoding="async" class="proj-logo" src="assets/images/logos/sae.png" alt="SAE Aerothon logo" onerror="this.remove()">
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta"><span class="proj-tag">Aircraft Design</span><span class="proj-year">2024</span></div>
+            <h4>Fixed-Wing RC Aircraft</h4>
+            <p>Custom-fabricated high-lift fixed-wing aircraft engineered for aerodynamic payload capacity and flight stability.</p>
+            <div class="proj-reach"><span>Competition</span><strong>SAE Aerothon &bull; Competed</strong></div>
+          </div>
+        </article>
+        <article class="proj-card">
+          <div class="proj-img proj-icon">
+            <i data-lucide="satellite" style="width:42px;height:42px;"></i>
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta"><span class="proj-tag">Space Software &amp; AI</span><span class="proj-year">2024</span></div>
+            <h4>Antariksh AI &amp; Satellite Pipeline</h4>
+            <p>Computer vision and geospatial AI pipeline for satellite data processing and automated environmental feature extraction.</p>
+            <div class="proj-reach"><span>Hackathon</span><strong>Bharatiya Antariksh Hackathon &bull; Competed</strong></div>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
