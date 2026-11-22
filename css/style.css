@@ -6,16 +6,16 @@
 
 :root {
   --bg-body: #ffffff;
-  --bg-surface: #f8fafc;
-  --bg-subtle: #f1f5f9;
+  --bg-surface: #f9fafb;
+  --bg-subtle: #f3f4f6;
   --bg-card: #ffffff;
   
-  --border: #e2e8f0;
-  --border-light: #edf2f7;
+  --border: #e5e7eb;
+  --border-light: #f1f5f9;
 
-  --text-main: #0f172a;
-  --text-secondary: #475569;
-  --text-muted: #64748b;
+  --text-main: #111827;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
   --text-white: #ffffff;
 
   --primary: #1d4ed8;
@@ -23,9 +23,9 @@
   --primary-light: #eff6ff;
   --primary-border: #bfdbfe;
 
-  --nav-bg: rgba(255, 255, 255, 0.94);
-  --hero-bg: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-  --footer-bg: #f8fafc;
+  --nav-bg: rgba(255, 255, 255, 0.96);
+  --hero-bg: #ffffff;
+  --footer-bg: #f9fafb;
 
   --font-heading: 'Montserrat', system-ui, -apple-system, sans-serif;
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
@@ -38,34 +38,34 @@
   --radius-full: 9999px;
 
   --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
-  --shadow-md: 0 4px 20px rgba(15, 23, 42, 0.07);
-  --shadow-lg: 0 12px 36px rgba(15, 23, 42, 0.09);
+  --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.06);
+  --shadow-lg: 0 12px 32px rgba(15, 23, 42, 0.08);
 
   --transition: all 0.2s ease;
 }
 
 :root[data-theme="dark"] {
-  --bg-body: #0b0f17;
-  --bg-surface: #0f1523;
-  --bg-subtle: #151e30;
-  --bg-card: #121927;
+  --bg-body: #121418;
+  --bg-surface: #181b22;
+  --bg-subtle: #1e222b;
+  --bg-card: #161920;
   
-  --border: #1f2a3e;
-  --border-light: #283750;
+  --border: #232833;
+  --border-light: #2b3140;
 
-  --text-main: #f1f5f9;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
+  --text-main: #ffffff;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
   --text-white: #ffffff;
 
-  --primary: #2563eb;
-  --primary-hover: #3b82f6;
-  --primary-light: rgba(37, 99, 235, 0.12);
-  --primary-border: rgba(37, 99, 235, 0.28);
+  --primary: #3b82f6;
+  --primary-hover: #60a5fa;
+  --primary-light: rgba(59, 130, 246, 0.12);
+  --primary-border: rgba(59, 130, 246, 0.25);
 
-  --nav-bg: rgba(11, 15, 23, 0.95);
-  --hero-bg: #0b0f17;
-  --footer-bg: #070a10;
+  --nav-bg: rgba(18, 20, 24, 0.96);
+  --hero-bg: #121418;
+  --footer-bg: #0e1014;
 
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
@@ -243,17 +243,21 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   gap: 12px;
+  flex-shrink: 0;
+  text-decoration: none;
 }
 
 .brand-logo {
   width: 44px;
   height: 44px;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
 .brand-text {
   display: flex;
   flex-direction: column;
+  white-space: nowrap;
 }
 
 .brand-name {
@@ -263,6 +267,7 @@ ul { list-style: none; }
   color: var(--text-main);
   line-height: 1.1;
   letter-spacing: -0.01em;
+  white-space: nowrap;
 }
 
 .brand-name span {
@@ -273,18 +278,20 @@ ul { list-style: none; }
   font-size: 0.725rem;
   font-weight: 500;
   color: var(--text-muted);
+  white-space: nowrap;
 }
 
 .nav-right-actions {
   display: flex;
   align-items: center;
   gap: 16px;
+  flex-shrink: 0;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 20px;
 }
 
 .nav-link {
@@ -378,10 +385,11 @@ ul { list-style: none; }
    HERO SECTION (Clean, Minimal, No Clutter)
    ========================================================================== */
 .hero {
-  padding: 144px 0 88px;
-  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  padding: 140px 0 84px;
+  background: var(--hero-bg);
   border-bottom: 1px solid var(--border);
   text-align: center;
+  transition: background 0.3s ease;
 }
 
 .hero-content {
@@ -1698,7 +1706,7 @@ ul { list-style: none; }
   .timeline-stepper { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1040px) {
   .nav-links {
     display: none;
     position: fixed;
@@ -1760,10 +1768,4 @@ ul { list-style: none; }
 [data-theme="dark"] .modal-dialog {
   background: var(--bg-card);
   border: 1px solid var(--border);
-}
-
-[data-theme="dark"] .hero {
-  background-color: var(--bg-body);
-  background-image: radial-gradient(rgba(37, 99, 235, 0.08) 1px, transparent 1px);
-  background-size: 24px 24px;
 }
