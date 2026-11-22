@@ -13,18 +13,18 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
 
   <!-- Master Stylesheet with cache bust -->
-  <link rel="stylesheet" href="css/style.css?v=4">
+  <link rel="stylesheet" href="css/style.css?v=5">
 </head>
 <body>
 
   <!-- ======================================================================
-       NAVBAR (Clean Single Logo Brand)
+       NAVBAR (Clean Single Logo Brand - aerorobotics.club style)
        ====================================================================== -->
   <nav class="navbar" id="navbar">
     <div class="container">
@@ -37,9 +37,10 @@
       </a>
 
       <div class="nav-links">
+        <a href="#home" class="nav-link">Home</a>
         <a href="#about" class="nav-link">About</a>
         <a href="#competitions" class="nav-link">Competitions</a>
-        <a href="#team" class="nav-link">Post Bearers</a>
+        <a href="#team" class="nav-link">Meet the Team</a>
         <a href="#contact" class="nav-link">Contact</a>
         <a href="#contact" class="btn btn-primary btn-sm">Join Club</a>
       </div>
@@ -53,22 +54,22 @@
   </nav>
 
   <!-- ======================================================================
-       HERO SECTION (Clean, Minimal, Focused)
+       HERO SECTION (Clean, Bold, aerorobotics.club aesthetic)
        ====================================================================== -->
   <header class="hero" id="home">
     <div class="container">
       <div class="hero-content">
         <div class="hero-pill">
-          <i data-lucide="shield-check" style="width:14px;height:14px;"></i>
-          Official Technical Society &bull; BIT Sindri (IIC)
+          <i data-lucide="award" style="width:14px;height:14px;"></i>
+          Award-Winning Space &amp; Robotics Society &bull; BIT Sindri (IIC)
         </div>
 
         <h1 class="hero-title">
-          Engineering the Future of <span>Robotics &amp; Space Flight</span>
+          aero &amp; robotics club <span>bit sindri</span>
         </h1>
 
         <p class="hero-subtitle">
-          A student-driven engineering community at <strong>Birsa Institute of Technology (BIT) Sindri</strong>. Designing planetary rovers, high-altitude sounding rockets, and autonomous systems.
+          A student-led robotics community devoted to pushing the frontiers of engineering through planetary rovers, autonomous UAVs, and sounding rockets.
         </p>
 
         <div class="hero-actions">
@@ -76,8 +77,46 @@
             Explore Flagship Challenges
             <i data-lucide="arrow-down" style="width:15px;height:15px;"></i>
           </a>
-          <a href="#team" class="btn btn-secondary">Meet The Post Bearers</a>
+          <a href="#team" class="btn btn-secondary">Meet The Team</a>
         </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       WORTH MORE THAN MEDALS (aerorobotics.club philosophy)
+       ====================================================================== -->
+  <section class="section section-alt" id="philosophy">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">Our Philosophy</span>
+        <h2 class="section-title">Worth More Than Medals</h2>
+        <p class="section-desc">Our goals go beyond building the trophy room. We cultivate genuine engineering mastery, collaboration, and space-ready innovation.</p>
+      </div>
+
+      <div class="philosophy-grid">
+        <div class="philosophy-card">
+          <div class="philosophy-icon">
+            <i data-lucide="wrench" style="width:22px;height:22px;"></i>
+          </div>
+          <h3>building more than robots</h3>
+          <p>
+            Team ARC cherishes its hands-on engineering roots. From precision machining rocker-bogie rovers and laminating composite sounding rockets to assembling autonomous aerial quadcopters, every member gains genuine hardware mastery.
+          </p>
+        </div>
+
+        <div class="philosophy-card">
+          <div class="philosophy-icon">
+            <i data-lucide="users" style="width:22px;height:22px;"></i>
+          </div>
+          <h3>getting everyone involved</h3>
+          <p>
+            In nationwide challenges like ISRO IRoC-U and IN-SPACe Rocketry, our whole team works together across mechanical CAD, avionics, embedded IoT, and computer vision to turn bold ideas into high-performance engineering reality.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
       </div>
     </div>
   </header>
@@ -730,19 +769,51 @@
   </section>
 
   <!-- ======================================================================
-       FOOTER
+       FOOTER (aerorobotics.club style)
        ====================================================================== -->
   <footer class="footer">
     <div class="container">
-      <div>
-        &copy; 2026 Aero &amp; Robotics Club (ARC), BIT Sindri. All rights reserved.
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Aero &amp; Robotics Club</h4>
+          <p>
+            Technical Wing of Institution's Innovation Council (IIC).<br>
+            Birsa Institute of Technology (BIT) Sindri,<br>
+            Dhanbad, Jharkhand &ndash; 828123, India.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>About Us</h4>
+          <ul>
+            <li><a href="#about">About ARC</a></li>
+            <li><a href="#competitions">Competitions</a></li>
+            <li><a href="#team">Post Bearers</a></li>
+            <li><a href="#philosophy">Our Philosophy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="mailto:arc@bitsindri.ac.in">arc@bitsindri.ac.in</a></li>
+            <li><a href="https://www.instagram.com/arc.bitsindri" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://bitsindri.ac.in" target="_blank" rel="noopener noreferrer">BIT Sindri Official</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>With Special Thanks to:</h4>
+          <p>
+            Prof. (Dr.) Pankaj Rai (Director, BIT Sindri), Faculty Mentors, and the Institution's Innovation Council (IIC) for continuous support and guidance.
+          </p>
+        </div>
       </div>
-      <div class="footer-socials">
-        <a href="https://www.instagram.com/arc.bitsindri" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <span>&bull;</span>
-        <a href="mailto:arc@bitsindri.ac.in">arc@bitsindri.ac.in</a>
-        <span>&bull;</span>
-        <a href="https://bitsindri.ac.in" target="_blank" rel="noopener noreferrer">BIT Sindri</a>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Aero &amp; Robotics Club (ARC), BIT Sindri. All rights reserved.</div>
+        <div>Dedicated to community, space systems, and engineering excellence.</div>
       </div>
     </div>
   </footer>
