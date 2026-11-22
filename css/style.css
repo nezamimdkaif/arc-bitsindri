@@ -1989,3 +1989,26 @@ body { counter-reset: sec; }
   .cta-actions, .cta-actions .btn { width: 100%; justify-content: center; }
   .nav-links { background: var(--bg-surface); }
 }
+
+/* ===== v15: eYantra/NIDAR tabs, projects, sponsors, matrix gallery ===== */
+.comp-logo{height:56px;width:auto;object-fit:contain;margin-left:auto;background:#fff;padding:6px 10px;border-radius:10px}
+.matrix-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+.matrix-gallery .comp-photo-item{margin:0;background:radial-gradient(circle at 50% 40%,rgba(120,150,200,.16),transparent 70%),var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);cursor:pointer;overflow:hidden}
+.matrix-gallery img{width:100%;height:240px;object-fit:contain;padding:12px;display:block;filter:drop-shadow(0 12px 14px rgba(0,0,0,.35))}
+.matrix-gallery .comp-photo-caption{font-weight:700;text-align:center;padding:10px;border-top:1px solid var(--border)}
+.matrix-top{margin:0 0 32px}
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.proj-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;display:flex;flex-direction:column;transition:var(--transition)}
+.proj-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.proj-img{height:190px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 40%,rgba(120,150,200,.18),transparent 70%)}
+.proj-img img{max-width:100%;max-height:100%;object-fit:contain;padding:10px;filter:drop-shadow(0 10px 12px rgba(0,0,0,.35))}
+.proj-icon{color:var(--accent,var(--primary))}
+.proj-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.proj-tag{font-family:var(--font-mono,monospace);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent,var(--primary))}
+.proj-body h4{margin:0;font-size:1.15rem}.proj-body p{margin:0;opacity:.85;font-size:.95rem}
+.proj-status{margin-top:auto;font-size:.78rem;font-weight:700;padding:4px 10px;border:1px solid var(--border);border-radius:999px;align-self:flex-start}
+.sponsor-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.sponsor-slot{background:#fff;color:#111;border:1px solid var(--border);border-radius:var(--radius-lg);min-height:140px;padding:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;font-weight:700}
+.sponsor-slot img{max-width:100%;max-height:80px;object-fit:contain}
+.sponsor-cta{text-align:center;margin-top:28px}
+@media(max-width:768px){.matrix-gallery{grid-template-columns:1fr}.matrix-gallery img{height:200px}.comp-logo{height:44px}}

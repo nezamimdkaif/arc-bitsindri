@@ -5,6 +5,11 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // Initialize Lucide icons
+  if (typeof lucide !== 'undefined') {
+    lucide.createIcons();
+  }
+
   // ---- 0. Theme Switcher (System / Dark / Light) ----
   const themeButtons = document.querySelectorAll('.theme-opt-btn');
   const darkQuery = window.matchMedia('(prefers-color-scheme: dark)');

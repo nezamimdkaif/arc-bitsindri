@@ -16,10 +16,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 
   <!-- Master Stylesheet with cache bust -->
-  <link rel="stylesheet" href="css/style.css?v=14">
+  <link rel="stylesheet" href="css/style.css?v=15">
 
   <!-- Theme: System (default) / Dark / Light. Runs before paint to avoid flash. -->
   <script>
@@ -53,9 +53,11 @@
         <div class="nav-links">
           <a href="#home" class="nav-link">Home</a>
           <a href="#competitions" class="nav-link">Competitions</a>
+          <a href="#projects" class="nav-link">Projects</a>
           <a href="#videos" class="nav-link">Videos</a>
           <a href="#subsystems" class="nav-link">Hardware</a>
           <a href="#team" class="nav-link">Team</a>
+          <a href="#sponsors" class="nav-link">Sponsors</a>
           <a href="#contact" class="nav-link">Contact</a>
           <a href="#contact" class="btn btn-primary btn-sm">Join ARC</a>
         </div>
@@ -258,6 +260,14 @@
         <button class="comp-tab-btn" data-tab="tab-rocket">
           <i data-lucide="rocket" style="width:18px;height:18px;"></i>
           3. IN-SPACe '25 (Model Rocketry)
+        </button>
+        <button class="comp-tab-btn" data-tab="tab-eyantra">
+          <i data-lucide="siren" style="width:18px;height:18px;"></i>
+          4. eYantra '26-27 (Khoj-o-Drone &bull; Stage 1 Done)
+        </button>
+        <button class="comp-tab-btn" data-tab="tab-nidar">
+          <i data-lucide="radar" style="width:18px;height:18px;"></i>
+          5. NIDAR 2.0 (AirMouse &bull; In Progress)
         </button>
       </div>
 
@@ -520,12 +530,86 @@
         </div>
       </div>
 
+    
+      <!-- COMPETITION 4: eYANTRA 26-27 -->
+      <div class="comp-panel" id="tab-eyantra">
+        <div class="comp-panel-header">
+          <div class="cph-title">
+            <span class="comp-status-badge drone"><i data-lucide="clock" style="width:14px;height:14px;"></i> Stage 1 Completed &bull; Result Awaited</span>
+            <h3>eYantra Robotics Competition 2026-27 &mdash; Khoj-o-Drone</h3>
+            <p>Autonomous quadcopter search for survivors in a disaster-stricken area</p>
+          </div>
+          <img class="comp-logo" src="assets/images/logos/eyantra.png" alt="eYantra official logo" onerror="this.remove()">
+        </div>
+        <div class="comp-panel-body">
+          <div class="comp-grid-details">
+            <div>
+              <div class="comp-block-label"><span class="bar"></span> Theme &amp; Objective</div>
+              <p class="comp-desc-text">Theme 2, <strong>Khoj-o-Drone (KD)</strong>: a quadcopter explores a cluttered disaster zone on its own, detects survivors, estimates their coordinates accurately, sends them to a ground station and prioritises critical survivors within the mission time.</p>
+              <div class="comp-block-label"><span class="bar"></span> Our Status</div>
+              <p class="comp-desc-text">Stage 1 has been completed by Team ARC and we are waiting for the official result. The next stage is simulator plus hardware work.</p>
+            </div>
+            <div>
+              <div class="comp-block-label"><span class="bar"></span> Stack &amp; Skills</div>
+              <p class="comp-desc-text">Gazebo / Mujoco simulation, ROS 2, Linux, Betaflight, Git, Python and C++. Focus areas: image processing, PID / LQR control, planning and navigation. Hardware: nano quadcopter with Whycon marker, ELRS radio link and camera.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMPETITION 5: NIDAR 2.0 -->
+      <div class="comp-panel" id="tab-nidar">
+        <div class="comp-panel-header">
+          <div class="cph-title">
+            <span class="comp-status-badge drone"><i data-lucide="wrench" style="width:14px;height:14px;"></i> Build &amp; Testing In Progress</span>
+            <h3>NIDAR 2.0 &mdash; AirMouse (Mission 2)</h3>
+            <p>GPS-denied indoor search, mapping and survivor localisation</p>
+          </div>
+          <img class="comp-logo" src="assets/images/logos/nidar.png" alt="NIDAR official logo" onerror="this.remove()">
+        </div>
+        <div class="comp-panel-body">
+          <div class="comp-grid-details">
+            <div>
+              <div class="comp-block-label"><span class="bar"></span> Mission</div>
+              <p class="comp-desc-text">The drone must search a maze-like arena of up to 15 x 15 m with up to 6 survivors inside a 30 minute limit. There is no manual waypoint correction, and a live 2D map and camera feed must reach the ground station.</p>
+              <div class="comp-block-label"><span class="bar"></span> Current Platform</div>
+              <p class="comp-desc-text">The drone shown below is our <strong>current test setup</strong>. It is being tested and the configuration will change as the pipeline matures.</p>
+            </div>
+            <div>
+              <div class="comp-block-label"><span class="bar"></span> Planned Pipeline</div>
+              <p class="comp-desc-text">ArduPilot (SITL with Gazebo, EKF3), 2D LiDAR for SLAM and obstacle mapping, downward rangefinder for altitude, optical flow for XY velocity, and a wide-angle HQ camera for survivor detection.</p>
+            </div>
+          </div>
+          <div class="matrix-gallery">
+            <figure class="comp-photo-item" data-lightbox data-src="assets/images/nidar/nidar_drone_top.webp" data-caption="NIDAR 2.0 test platform, three-quarter view"><img src="assets/images/nidar/nidar_drone_top.webp" alt="NIDAR test drone, three-quarter view" loading="lazy"><div class="comp-photo-caption">Three-Quarter View</div></figure>
+            <figure class="comp-photo-item" data-lightbox data-src="assets/images/nidar/nidar_drone_front.webp" data-caption="NIDAR 2.0 test platform, front view"><img src="assets/images/nidar/nidar_drone_front.webp" alt="NIDAR test drone, front view" loading="lazy"><div class="comp-photo-caption">Front View</div></figure>
+            <figure class="comp-photo-item" data-lightbox data-src="assets/images/nidar/nidar_drone_side.webp" data-caption="NIDAR 2.0 test platform, side view"><img src="assets/images/nidar/nidar_drone_side.webp" alt="NIDAR test drone, side view" loading="lazy"><div class="comp-photo-caption">Side View</div></figure>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ======================================================================
        ENGINEERING SUBSYSTEMS (Inside The Machine)
        ====================================================================== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">Projects</span>
+        <h2 class="section-title">What We Have Built</h2>
+        <p class="section-desc">A showcase of the rovers, drones and rockets Team ARC has designed, built and tested.</p>
+      </div>
+      <div class="proj-grid">
+        <article class="proj-card"><div class="proj-img proj-icon"><i data-lucide="bot" style="width:42px;height:42px;"></i></div><div class="proj-body"><span class="proj-tag">Planetary Rover</span><h4>ISRO IRoC-U 2024</h4><p>Rocker-bogie rover built for the planetary exploration challenge. National semi-finalist.</p><span class="proj-status">Semi-Finalist</span></div></article>
+        <article class="proj-card"><div class="proj-img proj-icon"><i data-lucide="crosshair" style="width:42px;height:42px;"></i></div><div class="proj-body"><span class="proj-tag">Autonomous UAV</span><h4>ISRO IRoC-U 2026</h4><p>GPS-denied visual navigation on a multi-rotor. National semi-finalist.</p><span class="proj-status">Semi-Finalist</span></div></article>
+        <article class="proj-card"><div class="proj-img proj-icon"><i data-lucide="rocket" style="width:42px;height:42px;"></i></div><div class="proj-body"><span class="proj-tag">Model Rocketry</span><h4>IN-SPACe 2025</h4><p>Model rocket designed and flown for the IN-SPACe competition.</p><span class="proj-status">Participated</span></div></article>
+        <article class="proj-card"><div class="proj-img"><img src="assets/images/nidar/nidar_drone_top.webp" alt="NIDAR 2.0 AirMouse" loading="lazy"></div><div class="proj-body"><span class="proj-tag">Indoor Search Drone</span><h4>NIDAR 2.0 AirMouse</h4><p>GPS-denied indoor search, mapping and survivor localisation.</p><span class="proj-status">In Progress</span></div></article>
+        <article class="proj-card"><div class="proj-img proj-icon"><i data-lucide="siren" style="width:42px;height:42px;"></i></div><div class="proj-body"><span class="proj-tag">Disaster Survivor Search</span><h4>eYantra 26-27 Khoj-o-Drone</h4><p>Autonomous quadcopter survivor detection and coordinate estimation. Stage 1 done, result awaited.</p><span class="proj-status">Result Awaited</span></div></article>
+        </div>
+    </div>
+  </section>
+
   <section class="section" id="subsystems">
     <div class="container">
       <div class="section-header">
@@ -534,6 +618,12 @@
         <p class="section-desc">
           Explore the four interdisciplinary engineering pillars powering Team ARC's space robotics and autonomous systems.
         </p>
+      </div>
+
+      <div class="matrix-gallery matrix-top">
+        <figure class="comp-photo-item" data-lightbox data-src="assets/images/nidar/nidar_drone_top.webp" data-caption="Current NIDAR test platform"><img src="assets/images/nidar/nidar_drone_top.webp" alt="Current NIDAR test drone" loading="lazy"><div class="comp-photo-caption">Current NIDAR Test Platform (Under Testing)</div></figure>
+        <figure class="comp-photo-item" data-lightbox data-src="assets/images/nidar/nidar_drone_front.webp" data-caption="Front view with LiDAR, companion computer and battery"><img src="assets/images/nidar/nidar_drone_front.webp" alt="Drone front view" loading="lazy"><div class="comp-photo-caption">Front: LiDAR, Computer, Battery</div></figure>
+        <figure class="comp-photo-item" data-lightbox data-src="assets/images/nidar/nidar_drone_side.webp" data-caption="Side view"><img src="assets/images/nidar/nidar_drone_side.webp" alt="Drone side view" loading="lazy"><div class="comp-photo-caption">Side Profile</div></figure>
       </div>
 
       <div class="subsystems-grid">
@@ -1057,6 +1147,23 @@
        CONTACT & MEMBERSHIP
        ====================================================================== -->
   <!-- Join CTA band -->
+  <section class="section section-alt" id="sponsors">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">Sponsorship</span>
+        <h2 class="section-title">Our Current Sponsors</h2>
+        <p class="section-desc">The partners who support Team ARC's competitions, builds and testing.</p>
+      </div>
+      <div class="sponsor-grid">
+        <div class="sponsor-slot"><img src="assets/images/sponsors/sponsor1.png" alt="Sponsor 1" onerror="this.remove()"><span>Sponsor 1 Name</span></div>
+        <div class="sponsor-slot"><img src="assets/images/sponsors/sponsor2.png" alt="Sponsor 2" onerror="this.remove()"><span>Sponsor 2 Name</span></div>
+        <div class="sponsor-slot"><img src="assets/images/sponsors/sponsor3.png" alt="Sponsor 3" onerror="this.remove()"><span>Sponsor 3 Name</span></div>
+        <div class="sponsor-slot"><img src="assets/images/sponsors/sponsor4.png" alt="Sponsor 4" onerror="this.remove()"><span>Sponsor 4 Name</span></div>
+        </div>
+      <p class="sponsor-cta">Interested in supporting us? <a href="#contact">Get in touch</a>.</p>
+    </div>
+  </section>
+
   <section class="cta-band" id="join">
     <div class="container">
       <div class="cta-inner">
@@ -1198,11 +1305,16 @@
   </div>
 
   <!-- Master JavaScript -->
-  <script src="js/main.js?v=7"></script>
+  <script src="js/main.js?v=8"></script>
   <script>
     if (typeof lucide !== 'undefined') {
       lucide.createIcons();
     }
+    window.addEventListener('load', function() {
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+    });
   </script>
 </body>
 </html>
