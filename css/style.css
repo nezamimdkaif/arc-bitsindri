@@ -2208,3 +2208,18 @@ h1,h2,h3,h4,h5,h6{font-weight:700;letter-spacing:-.015em}
 body{line-height:1.7}
 .proj-grid,.team-grid,.subsystems-grid{gap:28px}
 @media(max-width:600px){.section{padding:64px 0}.section-header{margin-bottom:40px}}
+
+/* ===== v27: project logos fill the card image area (white tile, contain, centred); icon stays as fallback ===== */
+.proj-img{height:180px;overflow:hidden}
+.proj-img .proj-logo{position:absolute;inset:0;width:100%;height:100%;max-width:none;max-height:none;
+  object-fit:contain;object-position:center;padding:26px 30px;background:#fff;border-radius:0;box-shadow:none;filter:none;z-index:2}
+[data-theme="dark"] .proj-card .proj-img{border-bottom:1px solid var(--border)}
+@media(max-width:600px){.proj-img{height:160px}.proj-img .proj-logo{padding:22px 26px}}
+
+/* ===== v28: ARC logo clearly visible in dark (watermark + navbar badge) ===== */
+[data-theme="dark"] .hero::before{filter:invert(1) brightness(1.5);mix-blend-mode:screen;opacity:.17}
+[data-theme="dark"] .brand-logo{width:54px;height:54px;background:#fff;border-radius:50%;padding:3px;box-shadow:0 0 0 1px #3a3a42}
+[data-theme="dark"] .hero::before{filter:grayscale(1) invert(1) brightness(1.3);mix-blend-mode:screen;opacity:.28}
+/* v28 fix: match specificity of the v23 rule so the dark watermark values really apply */
+:root[data-theme="dark"] .hero::before{filter:grayscale(1) invert(1) brightness(1.3);mix-blend-mode:screen;opacity:.13}
+:root:not([data-theme="dark"]) .hero::before{opacity:.07}
