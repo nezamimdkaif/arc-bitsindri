@@ -2263,3 +2263,96 @@ body{line-height:1.7}
   box-shadow: 0 0 8px #4ade80;
 }
 
+/* ===== v30: Balanced Website Scale & Expanded Portrait Team Cards ===== */
+html { font-size: 15.5px; }
+:root { --nav-height: 70px; --max-width: 1220px; }
+.navbar .container { max-width: 1240px; gap: 24px; }
+.brand-logo { width: 46px; height: 46px; }
+.brand-name { font-size: 1.05rem; }
+.section { padding: 80px 0; }
+.section-header { margin-bottom: 42px; }
+.section-title { font-size: clamp(1.85rem, 3.8vw, 2.6rem); }
+.hero { padding: 120px 0 60px; }
+.hero-title { font-size: clamp(2.2rem, 4.5vw, 3.4rem); }
+.hero-subtitle { font-size: 1.1rem; }
+.hero-stats-ribbon { padding: 22px 28px; }
+.stat-number { font-size: 2.2rem; }
+
+/* Expanded Team Portrait Cards */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+.member-card {
+  padding: 0 0 22px 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.member-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary-border);
+  box-shadow: var(--shadow-md);
+}
+.member-avatar {
+  width: 100%;
+  height: 290px;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+  margin-bottom: 16px;
+  background: var(--bg-surface);
+}
+.member-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.35s ease;
+}
+.member-card:hover .member-avatar img {
+  transform: scale(1.04);
+}
+.member-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  padding: 0 16px;
+  color: var(--text-main);
+}
+.member-role {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--primary);
+  margin-bottom: 8px;
+  padding: 0 16px;
+}
+.member-role-detail {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  padding: 0 18px;
+  margin-bottom: 16px;
+}
+.member-btn {
+  margin-top: auto;
+  padding: 7px 18px;
+  font-size: 0.84rem;
+}
+@media (max-width: 600px) {
+  .member-avatar { height: 260px; }
+  .section { padding: 60px 0; }
+}
+
+
