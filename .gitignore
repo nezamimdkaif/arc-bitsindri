@@ -11,3 +11,4 @@ assets/images/logo_maybe*
 assets/images/test_*
 !assets/videos/*.mp4
 .vercel
+Photos.zip
