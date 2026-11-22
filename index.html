@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aero &amp; Robotics Club | BIT Sindri</title>
+  <meta name="description" content="Aero & Robotics Club (ARC) is the official technical society of BIT Sindri under IIC, dedicated to planetary robotics and rocketry.">
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+  <!-- Master Stylesheet with cache bust -->
+  <link rel="stylesheet" href="css/style.css?v=4">
+</head>
+<body>
+
+  <!-- ======================================================================
+       NAVBAR (Clean Single Logo Brand)
+       ====================================================================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#home" class="brand-link">
+        <img src="assets/images/arc_logo.png" alt="ARC Logo" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-name">ARC <span>BIT SINDRI</span></span>
+          <span class="brand-tag">Aero &amp; Robotics Club</span>
+        </div>
+      </a>
+
+      <div class="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#competitions" class="nav-link">Competitions</a>
+        <a href="#team" class="nav-link">Post Bearers</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#contact" class="btn btn-primary btn-sm">Join Club</a>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ======================================================================
+       HERO SECTION (Clean, Minimal, Focused)
+       ====================================================================== -->
+  <header class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-pill">
+          <i data-lucide="shield-check" style="width:14px;height:14px;"></i>
+          Official Technical Society &bull; BIT Sindri (IIC)
+        </div>
+
+        <h1 class="hero-title">
+          Engineering the Future of <span>Robotics &amp; Space Flight</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          A student-driven engineering community at <strong>Birsa Institute of Technology (BIT) Sindri</strong>. Designing planetary rovers, high-altitude sounding rockets, and autonomous systems.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#competitions" class="btn btn-primary">
+            Explore Flagship Challenges
+            <i data-lucide="arrow-down" style="width:15px;height:15px;"></i>
+          </a>
+          <a href="#team" class="btn btn-secondary">Meet The Post Bearers</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       ABOUT SECTION
+       ====================================================================== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div>
+          <span class="section-pill">About ARC</span>
+          <h2 class="section-title">A Dynamic Hub for Aerospace &amp; Robotics</h2>
+          <p class="about-lead">
+            The Aero and Robotics Club (ARC) at BIT Sindri is a dynamic hub for students passionate about aerospace engineering and robotics. As the technical wing of the Institution Innovation Council (IIC), our mission is to inspire and equip members with the knowledge and skills needed to excel in these cutting-edge fields.
+          </p>
+          <p class="about-body">
+            ARC provides a vibrant platform for students to explore, learn, and apply their expertise through practical projects, competitions, workshops, and research. Our hands-on approach includes activities like building lunar rover models, designing autonomous UAVs, and competing in prestigious events such as the World Robotics Championship, AIAA Design Build Fly, and University Rover Challenge.
+          </p>
+          <p class="about-body">
+            We are dedicated to fostering a culture of innovation, collaboration, and excellence, contributing to the advancement of aerospace engineering and robotics. ARC also focuses on the professional and personal development of its members, nurturing a community of aspiring engineers and innovators.
+          </p>
+
+          <div class="about-meta-box">
+            <h4>Our Mission</h4>
+            <p>At ARC, we inspire, empower, and provide opportunities for students to push the boundaries of aerospace engineering and robotics.</p>
+          </div>
+        </div>
+
+        <div class="about-photo-card" data-lightbox data-src="assets/images/team_with_director.jpg" data-caption="Team ARC with Director Prof. (Dr.) Pankaj Rai, BIT Sindri">
+          <img src="assets/images/team_with_director.jpg" alt="Team ARC with Director, BIT Sindri">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       THE COMPETITIONS DASHBOARD (Clean & Organized)
+       ====================================================================== -->
+  <section class="section section-alt" id="competitions">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">Our Competitions</span>
+        <h2 class="section-title">National Space Challenges</h2>
+        <p class="section-desc">
+          Interactive showcase of Team ARC's flagship missions in planetary robotics, autonomous aerial systems, and high-altitude rocketry.
+        </p>
+      </div>
+
+      <!-- Tab Switcher -->
+      <div class="comp-tabs-nav">
+        <button class="comp-tab-btn active" data-tab="tab-rover">
+          <i data-lucide="bot" style="width:18px;height:18px;"></i>
+          1. ISRO IRoC-U '24 (Planetary Rover)
+        </button>
+        <button class="comp-tab-btn" data-tab="tab-drone">
+          <i data-lucide="crosshair" style="width:18px;height:18px;"></i>
+          2. ISRO IRoC-U '26 (Autonomous UAV &amp; Flight)
+        </button>
+        <button class="comp-tab-btn" data-tab="tab-rocket">
+          <i data-lucide="rocket" style="width:18px;height:18px;"></i>
+          3. IN-SPACe '25 (Model Rocketry)
+        </button>
+      </div>
+
+      <!-- COMPETITION 1: ISRO IRoC-U '24 (ROVER) -->
+      <div class="comp-panel active" id="tab-rover">
+        <div class="comp-panel-header">
+          <div class="cph-title">
+            <span class="comp-status-badge rover">
+              <i data-lucide="check-circle" style="width:14px;height:14px;"></i>
+              National Semi-Finalist (2024)
+            </span>
+            <h3>ISRO Inter-Collegiate Robotics Challenge 2024 (IRoC-U)</h3>
+            <p>Organized by U R Rao Satellite Centre (URSC), ISRO Bengaluru</p>
+          </div>
+        </div>
+
+        <div class="comp-panel-body">
+          <div class="comp-grid-details">
+            <div>
+              <div class="comp-block-label"><span class="bar"></span> Problem Statement</div>
+              <p class="comp-desc-text">
+                The ISRO Robotics Challenge (IRoC-U) tasks university teams with designing and fabricating an autonomous rover for extraterrestrial lunar exploration. The rover must demonstrate stability over loose regolith, slope traversal (up to 25&deg;), autonomous boulder detection, and sample collection under bandwidth-constrained communications.
+              </p>
+
+              <div class="comp-block-label"><span class="bar"></span> How Far We Reached</div>
+              <p class="comp-desc-text">
+                Competing against premier engineering institutions nationwide, Team ARC successfully demonstrated mechanical kinematics, wheel grousers, and vision algorithms to qualify as <strong>National Semi-Finalists @ ISRO IRoC-U 2024</strong>.
+              </p>
+            </div>
+
+            <div>
+              <div class="comp-block-label"><span class="bar"></span> Key Subsystems Built</div>
+              <div class="subsystem-list">
+                <div class="subsystem-card">
+                  <h5>Rocker-Bogie Chassis</h5>
+                  <p>Passive articulation mechanism maintaining 6-wheel ground contact over rocky terrain.</p>
+                </div>
+                <div class="subsystem-card">
+                  <h5>Custom Regolith Wheels</h5>
+                  <p>Curved-grouser wheels manufactured for traction in fine lunar simulant.</p>
+                </div>
+                <div class="subsystem-card">
+                  <h5>Power Distribution Bay</h5>
+                  <p>Shock-isolated electronics enclosure with multi-rail DC regulation.</p>
+                </div>
+                <div class="subsystem-card">
+                  <h5>Telemetry &amp; ROS Compute</h5>
+                  <p>Long-range RF communication module with onboard Linux computing.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lunar AI Model Benchmark Callout -->
+          <div class="lunar-model-callout">
+            <div>
+              <div class="comp-block-label"><span class="bar"></span> Tested On Real Moon Surface Dataset</div>
+              <h4>Lunar Surface Terrain &amp; Obstacle AI Model</h4>
+              <p>
+                Trained and evaluated on <strong>actual Chandrayaan &amp; lunar surface imagery</strong>. This model was integrated inside the rover compute bay for real-time crater segmentation and hazard detection.
+              </p>
+              <button class="btn btn-secondary btn-sm" data-lightbox data-src="assets/images/moon_model_result.png" data-caption="Technical Benchmark Output & Validation Chart (Result-01) — Real Lunar Dataset Model">
+                <i data-lucide="maximize-2" style="width:14px;height:14px;"></i>
+                View Full Benchmark Result (Result-01)
+              </button>
+            </div>
+            <div class="lunar-model-thumb" data-lightbox data-src="assets/images/moon_model_result.png" data-caption="Technical Benchmark Output & Validation Chart (Result-01) — Real Lunar Dataset Model">
+              <img src="assets/images/moon_model_result.png" alt="Lunar Model Result Benchmark">
+              <span style="display:block;font-size:0.75rem;color:var(--text-muted);margin-top:4px;">Click to enlarge</span>
+            </div>
+          </div>
+
+          <!-- Rover Photos -->
+          <div class="comp-gallery-section">
+            <div class="comp-block-label"><span class="bar"></span> Rover Build &amp; Testing Gallery</div>
+            <div class="comp-photos-grid">
+              <div class="comp-photo-item" data-lightbox data-src="assets/images/competitions/rover/rover_cinematic_night.jpg" data-caption="Night Field Trials — Rover with illuminated 4-DOF robotic arm & regolith wheels">
+                <img src="assets/images/competitions/rover/rover_cinematic_night.jpg" alt="Rover Night Trials">
+                <div class="comp-photo-caption">Night Terrain Trials</div>
+              </div>
+              <div class="comp-photo-item" data-lightbox data-src="assets/images/competitions/rover/rover_full_build_1.jpg" data-caption="Full Planetary Rover Assembly & Chassis Frame">
+                <img src="assets/images/competitions/rover/rover_full_build_1.jpg" alt="Rover Full Assembly">
+                <div class="comp-photo-caption">Full Rover Assembly</div>
+              </div>
+              <div class="comp-photo-item" data-lightbox data-src="assets/images/competitions/rover/rover_field_trial_mentors.jpg" data-caption="Outdoor Soil Traversal Field Trials with Faculty & Mentors">
+                <img src="assets/images/competitions/rover/rover_field_trial_mentors.jpg" alt="Field Traction Testing">
+                <div class="comp-photo-caption">Field Soil Trials</div>
+              </div>
+              <div class="comp-photo-item" data-lightbox data-src="assets/images/competitions/rover/rover_robotic_arm_sample.jpg" data-caption="Active Robotic Arm & Gripper Subsystem for Sample Caching">
+                <img src="assets/images/competitions/rover/rover_robotic_arm_sample.jpg" alt="Robotic Arm Gripper">
+                <div class="comp-photo-caption">Robotic Arm Gripper</div>
+              </div>
+              <div class="comp-photo-item" data-lightbox data-src="assets/images/competitions/rover/rover_wheel_stress_fea.jpg" data-caption="Finite Element Analysis (FEA) Stress Simulation on Custom Wheels">
+                <img src="assets/images/competitions/rover/rover_wheel_stress_fea.jpg" alt="Wheel Stress FEA">
+                <div class="comp-photo-caption">Wheel FEA Analysis</div>
+              </div>
+              <div class="comp-photo-item" data-lightbox data-src="assets/images/competitions/rover/rover_electronics_bay.jpg" data-caption="Internal Power & Wiring Distribution Bay">
+                <img src="assets/images/competitions/rover/rover_electronics_bay.jpg" alt="Electronics Bay">
+                <div class="comp-photo-caption">Wiring &amp; Power Bay</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- COMPETITION 2: ISRO IRoC-U '26 (AUTONOMOUS UAV & FLIGHT) -->
+      <div class="comp-panel" id="tab-drone">
+        <div class="comp-panel-header">
+          <div class="cph-title">
+            <span class="comp-status-badge drone">
+              <i data-lucide="check-circle" style="width:14px;height:14px;"></i>
+              Selected &bull; ISRO IRoC-U 2026 Challenge
+            </span>
+            <h3>ISRO Robotics Challenge 2026 (IRoC-U) &mdash; Aerial Systems</h3>
+            <p>Autonomous UAV Flight, Visual SLAM Perception &amp; Planetary Aerial Exploration</p>
+          </div>
+        </div>
+
+        <div class="comp-panel-body">
+          <div class="comp-grid-details">
+            <div>
+              <div class="comp-block-label"><span class="bar"></span> Exploration Focus</div>
+              <p class="comp-desc-text">
+                Building upon our planetary rover pedigree, Team ARC is advancing into autonomous multi-rotor aerial robotics for the <strong>ISRO IRoC-U 2026</strong> mission profile. The system integrates aerial reconnaissance, 3D obstacle avoidance, terrain mapping, and target approach across GPS-denied environments.
+              </p>
+
+              <div class="comp-block-label"><span class="bar"></span> Subsystem Architecture</div>
+              <p class="comp-desc-text">
+                Features lightweight carbon-fiber airframe kinematics, high-thrust brushless propulsion, Intel RealSense stereo vision for depth estimation, Pixhawk 2.4.8 flight controller running PX4/ArduPilot, and companion SBC running ROS 2 nodes.
+              </p>
+            </div>
+
+            <div>
+              <div class="comp-block-label"><span class="bar"></span> Key Aerial Subsystems Built</div>
+              <div class="subsystem-list">
+                <div class="subsystem-card">
+                  <h5>Rigid Carbon Airframe</h5>
+                  <p>Vibration-damped central avionics pod with carbon tube arms and reinforced motor mounts.</p>
+                </div>
+                <div class="subsystem-card">
+                  <h5>Intel RealSense Perception</h5>
+                  <p>Forward-facing depth sensor for 3D point-cloud obstacle mapping in unmapped corridors.</p>
+                </div>
+                <div class="subsystem-card">
+                  <h5>Pixhawk Flight Stack</h5>
+                  <p>Dual IMU flight controller handling real-time attitude stabilization and failsafe RTL.</p>
+                </div>
+                <div class="subsystem-card">
+                  <h5>Companion SBC &amp; ROS 2</h5>
+                  <p>Onboard companion computer running autonomous trajectory generation and SLAM.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Drone Photos -->
+          <div class="comp-gallery-section">
+            <div class="comp-block-label"><span class="bar"></span> UAV Design &amp; Avionics Prototyping Gallery</div>
+            <div class="comp-photos-grid">
+              <div class="comp-photo-item" data-lightbox data-src="assets/images/competitions/drone/drone_cad_exploded.png" data-caption="Exploded Subsystem Schematic &amp; Airframe Architecture">
+                <img src="assets/images/competitions/drone/drone_cad_exploded.png" alt="Exploded Drone CAD Architecture">
+                <div class="comp-photo-caption">Exploded CAD Schematic</div>
+              </div>
+              <div class="comp-photo-item" data-lightbox data-src="assets/images/competitions/drone/drone_cad_realsense_front.png" data-caption="Frontal Sensor Perception &amp; RealSense Depth Camera Mount">
+                <img src="assets/images/competitions/drone/drone_cad_realsense_front.png" alt="Front RealSense Camera Mount">
+                <div class="comp-photo-caption">Depth Perception Mount</div>
+              </div>
+              <div class="comp-photo-item" data-lightbox data-src="assets/images/competitions/drone/drone_cad_top_avionics.png" data-caption="Top-Down Avionics, Power Distribution &amp; Compute Stack">
+                <img src="assets/images/competitions/drone/drone_cad_top_avionics.png" alt="Top-Down Avionics CAD">
+                <div class="comp-photo-caption">Compute &amp; Avionics Bay</div>
+              </div>
+              <div class="comp-photo-item" data-lightbox data-src="assets/images/competitions/drone/drone_cad_perspective.png" data-caption="Full Quadcopter Airframe Assembly in CAD">
+                <img src="assets/images/competitions/drone/drone_cad_perspective.png" alt="Quadcopter Assembly CAD">
+                <div class="comp-photo-caption">Airframe Assembly</div>
+              </div>
+              <div class="comp-photo-item" data-lightbox data-src="assets/images/competitions/drone/drone_cad_side_profile.png" data-caption="Side Profile, Sensor Bay &amp; Carbon Landing Skid">
+                <img src="assets/images/competitions/drone/drone_cad_side_profile.png" alt="Side Profile CAD">
+                <div class="comp-photo-caption">Side Profile &amp; Landing Skid</div>
+              </div>
+              <div class="comp-photo-item" data-lightbox data-src="assets/images/competitions/drone/drone_flight_controller_pixhawk.jpg" data-caption="Hardware Integration &mdash; Pixhawk 2.4.8 Autonomous Flight Controller">
+                <img src="assets/images/competitions/drone/drone_flight_controller_pixhawk.jpg" alt="Pixhawk 2.4.8 Flight Controller">
+                <div class="comp-photo-caption">Flight Controller Setup</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- COMPETITION 2: IN-SPACE MODEL ROCKETRY -->
+      <div class="comp-panel" id="tab-rocket">
+        <div class="comp-panel-header">
+          <div class="cph-title">
+            <span class="comp-status-badge rocket">
+              <i data-lucide="check-circle" style="width:14px;height:14px;"></i>
+              National Finalist (2025)
+            </span>
+            <h3>IN-SPACe Model Rocketry Challenge</h3>
+            <p>Organized by Indian National Space Promotion and Authorization Centre, Dept. of Space, ISRO</p>
+          </div>
+        </div>
+
+        <div class="comp-panel-body">
+          <div class="comp-grid-details">
+            <div>
+              <div class="comp-block-label"><span class="bar"></span> Problem Statement</div>
+              <p class="comp-desc-text">
+                The IN-SPACe Model Rocketry Challenge challenges student teams to design, simulate, fabricate, and launch a sounding rocket. The vehicle must reach an optimal target apogee altitude, maintain aerodynamic stability, transmit telemetry, and deploy a dual-stage parachute recovery mechanism for safe retrieval.
+              </p>
+
+              <div class="comp-block-label"><span class="bar"></span> How Far We Reached</div>
+              <p class="comp-desc-text">
+                Following rigorous Preliminary and Critical Design Reviews evaluated by ISRO and IN-SPACe scientists, Team ARC qualified as <strong>National Finalists @ IN-SPACe Model Rocketry Challenge 2025</strong>.
+              </p>
+            </div>
+
+            <div>
+              <div class="comp-block-label"><span class="bar"></span> Key Subsystems Built</div>
+              <div class="subsystem-list">
+                <div class="subsystem-card">
+                  <h5>Aerodynamic Airframe &amp; Fins</h5>
+                  <p>Composite-wound body tube with flutter-optimized carbon-fiber fins.</p>
+                </div>
+                <div class="subsystem-card">
+                  <h5>Telemetry Avionics</h5>
+                  <p>Flight computer recording barometric altitude, acceleration, and live telemetry.</p>
+                </div>
+                <div class="subsystem-card">
+                  <h5>Solid Motor Mount</h5>
+                  <p>Motor mount assembly with positive mechanical retention and thermal shielding.</p>
+                </div>
+                <div class="subsystem-card">
+                  <h5>Dual Ejection Recovery</h5>
+                  <p>Drogue parachute deployed at apogee and main chute deployed near ground.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Rocket Photos -->
+          <div class="comp-gallery-section">
+            <div class="comp-block-label"><span class="bar"></span> Rocketry Prototyping &amp; Field Gallery</div>
+            <div class="comp-photos-grid">
+              <div class="comp-photo-item" data-lightbox data-src="assets/images/competitions/rocketry/rocket_model.png" data-caption="Model Rocket Airframe Prototype">
+                <img src="assets/images/competitions/rocketry/rocket_model.png" alt="Model Rocket Airframe">
+                <div class="comp-photo-caption">Rocket Airframe</div>
+              </div>
+              <div class="comp-photo-item" data-lightbox data-src="assets/images/competitions/rocketry/rocket_launch_prep.jpg" data-caption="Launch Rail Preparation & Telemetry Check">
+                <img src="assets/images/competitions/rocketry/rocket_launch_prep.jpg" alt="Rocket Launch Prep">
+                <div class="comp-photo-caption">Launch Rail Setup</div>
+              </div>
+              <div class="comp-photo-item" data-lightbox data-src="assets/images/competitions/rocketry/rocket_field.jpg" data-caption="Field Ground Station & Range Setup">
+                <img src="assets/images/competitions/rocketry/rocket_field.jpg" alt="Field Setup">
+                <div class="comp-photo-caption">Ground Station Range</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       POST BEARERS SECTION
+       ====================================================================== -->
+  <section class="section" id="team">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">The Team</span>
+        <h2 class="section-title">Post Bearers</h2>
+        <p class="section-desc">Session 2026&ndash;2027 student leadership of the Aero &amp; Robotics Club.</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="team-filter">
+        <button class="team-filter-btn active" data-filter="all">All Members</button>
+        <button class="team-filter-btn" data-filter="exec">Executive</button>
+        <button class="team-filter-btn" data-filter="tech">Technical</button>
+        <button class="team-filter-btn" data-filter="ops">Operations &amp; PR</button>
+      </div>
+
+      <div class="team-grid">
+
+        <!-- 1. Roushan Raj -->
+        <div class="member-card" data-category="exec tech">
+          <div class="member-avatar">
+            <img src="assets/images/team/roushan_raj.png" alt="Roushan Raj">
+          </div>
+          <div class="member-name">Roushan Raj</div>
+          <div class="member-role">President</div>
+          <div class="member-role-detail">Lead &bull; IRoC-U Rover &amp; InSpace Rocketry</div>
+          <a href="https://www.linkedin.com/in/roushan-raj-cmd007/" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn
+          </a>
+        </div>
+
+        <!-- 2. Aditya Raj -->
+        <div class="member-card" data-category="exec tech">
+          <div class="member-avatar">
+            <img src="assets/images/team/aditya_raj.png" alt="Aditya Raj">
+          </div>
+          <div class="member-name">Aditya Raj</div>
+          <div class="member-role">Vice-President</div>
+          <div class="member-role-detail">Co-Lead &bull; Robotics &amp; Autonomous Systems</div>
+          <a href="https://www.linkedin.com/in/aditya-raj-461a31274/" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn
+          </a>
+        </div>
+
+        <!-- 3. Aastha Agarwal -->
+        <div class="member-card" data-category="exec">
+          <div class="member-avatar">
+            <img src="assets/images/team/aastha_agarwal.png" alt="Aastha Agarwal">
+          </div>
+          <div class="member-name">Aastha Agarwal</div>
+          <div class="member-role">Vice-President</div>
+          <div class="member-role-detail">Strategic Operations &amp; Outreach</div>
+          <a href="https://www.linkedin.com/in/aastha-agarwal-043883294/" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn
+          </a>
+        </div>
+
+        <!-- 4. Rishita Raj -->
+        <div class="member-card" data-category="exec ops">
+          <div class="member-avatar">
+            <img src="assets/images/team/rishita_raj.png" alt="Rishita Raj">
+          </div>
+          <div class="member-name">Rishita Raj</div>
+          <div class="member-role">Treasurer</div>
+          <div class="member-role-detail">Finance &amp; Resource Management</div>
+          <a href="https://www.linkedin.com/in/rishita-raj-836b13290/" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn
+          </a>
+        </div>
+
+        <!-- 5. Omnath Mandal -->
+        <div class="member-card" data-category="exec tech">
+          <div class="member-avatar">
+            <img src="assets/images/team/omnath_mandal.png" alt="Omnath Mandal">
+          </div>
+          <div class="member-name">Omnath Mandal</div>
+          <div class="member-role">General Secretary</div>
+          <div class="member-role-detail">Embedded Systems &amp; Rocketry Lead</div>
+          <a href="https://github.com/htanmo" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="github" style="width:13px;height:13px;"></i> GitHub
+          </a>
+        </div>
+
+        <!-- 6. Kritika Mahato -->
+        <div class="member-card" data-category="exec tech">
+          <div class="member-avatar">
+            <img src="assets/images/team/kritika_mahato.png" alt="Kritika Mahato">
+          </div>
+          <div class="member-name">Kritika Mahato</div>
+          <div class="member-role">Treasurer</div>
+          <div class="member-role-detail">CAD, KiCad &amp; CFD Analysis</div>
+          <a href="https://www.linkedin.com/in/kritika-mahato-4b8aa9289/" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn
+          </a>
+        </div>
+
+        <!-- 7. Kuljeet Singh -->
+        <div class="member-card" data-category="tech">
+          <div class="member-avatar">
+            <img src="assets/images/team/kuljeet_singh.png" alt="Kuljeet Singh">
+          </div>
+          <div class="member-name">Kuljeet Singh</div>
+          <div class="member-role">Head of Software &amp; AI</div>
+          <div class="member-role-detail">Autonomous Vision &amp; Navigation</div>
+          <a href="https://www.linkedin.com/in/kulj33t/" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn
+          </a>
+        </div>
+
+        <!-- 8. Ritika Kumari -->
+        <div class="member-card" data-category="tech">
+          <div class="member-avatar">
+            <img src="assets/images/team/ritika_kumari.png" alt="Ritika Kumari">
+          </div>
+          <div class="member-name">Ritika Kumari</div>
+          <div class="member-role">Technical Head</div>
+          <div class="member-role-detail">Hardware &amp; System Integration</div>
+          <a href="https://www.linkedin.com/in/ritika-kumari-b81a88290/" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn
+          </a>
+        </div>
+
+        <!-- 9. Ayush Ratna -->
+        <div class="member-card" data-category="tech">
+          <div class="member-avatar">
+            <img src="assets/images/team/ayush_ratna.png" alt="Ayush Ratna">
+          </div>
+          <div class="member-name">Ayush Ratna</div>
+          <div class="member-role">Technical Head</div>
+          <div class="member-role-detail">Cybersecurity &amp; System Testing</div>
+          <a href="https://www.linkedin.com/in/ayush-ratna27/" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn
+          </a>
+        </div>
+
+        <!-- 10. Nishant F Kindo -->
+        <div class="member-card" data-category="tech ops">
+          <div class="member-avatar">
+            <img src="assets/images/team/nishant_kindo.png" alt="Nishant F Kindo">
+          </div>
+          <div class="member-name">Nishant F Kindo</div>
+          <div class="member-role">Event Coordinator</div>
+          <div class="member-role-detail">Rocket Propulsion &amp; Aerodynamics</div>
+          <a href="https://www.linkedin.com/in/nishant-f-kindo-7086592a1/" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn
+          </a>
+        </div>
+
+        <!-- 11. Asif Gulmozzam Fayazi -->
+        <div class="member-card" data-category="ops">
+          <div class="member-avatar">
+            <img src="assets/images/team/asif_fayazi.png" alt="Asif Gulmozzam Fayazi">
+          </div>
+          <div class="member-name">Asif Gulmozzam Fayazi</div>
+          <div class="member-role">Event Coordinator</div>
+          <div class="member-role-detail">Events &amp; Operational Management</div>
+          <a href="https://www.linkedin.com/in/asifgulmozzamfayazi/" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn
+          </a>
+        </div>
+
+        <!-- 12. Anish Kumar -->
+        <div class="member-card" data-category="ops">
+          <div class="member-avatar">
+            <img src="assets/images/team/anish_kumar.png" alt="Anish Kumar">
+          </div>
+          <div class="member-name">Anish Kumar</div>
+          <div class="member-role">Public Relations Officer</div>
+          <div class="member-role-detail">Publicity &amp; Media Relations</div>
+          <a href="https://www.linkedin.com/in/anish-kumar-civil-engineer/" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn
+          </a>
+        </div>
+
+        <!-- 13. Vishnu Singh Munda -->
+        <div class="member-card" data-category="tech">
+          <div class="member-avatar">
+            <img src="assets/images/team/vishnu_munda.png" alt="Vishnu Singh Munda">
+          </div>
+          <div class="member-name">Vishnu Singh Munda</div>
+          <div class="member-role">Head of Electrical Systems</div>
+          <div class="member-role-detail">Power Distribution &amp; Circuit Layout</div>
+          <a href="https://www.linkedin.com/in/vishnu-singh-a88a93290/" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn
+          </a>
+        </div>
+
+        <!-- 14. Md Kaif Nezami -->
+        <div class="member-card" data-category="ops tech">
+          <div class="member-avatar">
+            <img src="assets/images/team/kaif_nezami.png" alt="Md Kaif Nezami">
+          </div>
+          <div class="member-name">Md Kaif Nezami</div>
+          <div class="member-role">Sponsorship Head</div>
+          <div class="member-role-detail">Sponsorship &amp; External Partnerships</div>
+          <a href="https://www.linkedin.com/in/md-kaif-nezami-029507313/" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn
+          </a>
+        </div>
+
+        <!-- 15. Renu Kumari -->
+        <div class="member-card" data-category="tech">
+          <div class="member-avatar">
+            <img src="assets/images/team/renu_kumari.png" alt="Renu Kumari">
+          </div>
+          <div class="member-name">Renu Kumari</div>
+          <div class="member-role">Junior Technical Head</div>
+          <div class="member-role-detail">Rocket Aerodynamics &amp; Assembly</div>
+          <a href="https://www.linkedin.com/in/renu-kumari-609358362/" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn
+          </a>
+        </div>
+
+        <!-- 16. Nitin Ekka -->
+        <div class="member-card" data-category="ops tech">
+          <div class="member-avatar">
+            <img src="assets/images/team/nitin_ekka.png" alt="Nitin Ekka">
+          </div>
+          <div class="member-name">Nitin Ekka</div>
+          <div class="member-role">Public Relations Officer</div>
+          <div class="member-role-detail">3D Prototyping &amp; Community Outreach</div>
+          <a href="https://www.linkedin.com/in/nitin-ekka504/" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn
+          </a>
+        </div>
+
+        <!-- 17. Vinay Singh -->
+        <div class="member-card" data-category="ops">
+          <div class="member-avatar">
+            <img src="assets/images/team/vinay_singh.png" alt="Vinay Singh">
+          </div>
+          <div class="member-name">Vinay Singh</div>
+          <div class="member-role">Sponsorship Head</div>
+          <div class="member-role-detail">Corporate Outreach &amp; Project Grants</div>
+          <a href="https://www.linkedin.com/in/vinay-singh-4a58a4280/" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn
+          </a>
+        </div>
+
+        <!-- 18. Aadil Manawar -->
+        <div class="member-card" data-category="ops">
+          <div class="member-avatar">
+            <img src="assets/images/team/aadil_manawar.png" alt="Aadil Manawar">
+          </div>
+          <div class="member-name">Aadil Manawar</div>
+          <div class="member-role">Social Media Head</div>
+          <div class="member-role-detail">Digital Outreach &amp; Media Documentation</div>
+          <a href="https://www.linkedin.com/in/aadil-manawar-3b6152280/" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       CONTACT & MEMBERSHIP
+       ====================================================================== -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="contact-layout">
+        <div class="contact-info">
+          <span class="section-pill">Join Us</span>
+          <h3>Get In Touch With ARC</h3>
+          <p>
+            Interested in planetary rovers, sounding rockets, or autonomous embedded flight? We welcome enthusiastic engineering students across all branches and years of BIT Sindri.
+          </p>
+
+          <div class="contact-items">
+            <div class="contact-item">
+              <i data-lucide="mail" style="width:18px;height:18px;"></i>
+              <span>Official Email: <strong>arc@bitsindri.ac.in</strong></span>
+            </div>
+            <div class="contact-item">
+              <i data-lucide="map-pin" style="width:18px;height:18px;"></i>
+              <span>Location: BIT Sindri, Dhanbad, Jharkhand &ndash; 828123</span>
+            </div>
+            <div class="contact-item">
+              <i data-lucide="instagram" style="width:18px;height:18px;"></i>
+              <span>Instagram: <strong>@arc.bitsindri</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="joinForm">
+          <h4 style="font-size:1.1rem;margin-bottom:14px;">Membership Application</h4>
+          
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" placeholder="Your name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">College Email</label>
+            <input type="email" id="email" placeholder="rollno@bitsindri.ac.in" required>
+          </div>
+
+          <div class="form-group">
+            <label for="compInterest">Competition Interest</label>
+            <select id="compInterest" required>
+              <option value="">Select Primary Interest</option>
+              <option>ISRO IRoC-U (Planetary Rover)</option>
+              <option>IN-SPACe Model Rocketry</option>
+              <option>Both Competitions</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="note">Brief Note (Branch &amp; Year)</label>
+            <textarea id="note" placeholder="E.g. 2nd Year Mechanical, interested in chassis & CAD..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;">
+            Submit Application
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       FOOTER
+       ====================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div>
+        &copy; 2026 Aero &amp; Robotics Club (ARC), BIT Sindri. All rights reserved.
+      </div>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/arc.bitsindri" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <span>&bull;</span>
+        <a href="mailto:arc@bitsindri.ac.in">arc@bitsindri.ac.in</a>
+        <span>&bull;</span>
+        <a href="https://bitsindri.ac.in" target="_blank" rel="noopener noreferrer">BIT Sindri</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div class="modal-overlay" id="imageModal">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Close">&times;</button>
+      <div class="modal-media-box">
+        <img id="modalImage" src="" alt="Full Resolution View">
+      </div>
+      <div class="modal-caption-bar" id="modalCaption"></div>
+    </div>
+  </div>
+
+  <!-- Master JavaScript -->
+  <script src="js/main.js?v=3"></script>
+  <script>
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  </script>
+</body>
+</html>

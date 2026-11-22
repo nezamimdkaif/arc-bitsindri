@@ -1,0 +1,146 @@
+[
+  {
+    "slug": "roushan_raj",
+    "name": "Roushan Raj",
+    "role": "President",
+    "achievements": "DRDO Dare to Dream 5.0 (AIR-2) | Amazon ML Summer School'26 | Semi-finalist @ISRO IRoC-U\u201924 & 26 | Finalist @InSpace Model Rocketry Challenge\u201926",
+    "linkedin": "https://www.linkedin.com/in/roushan-raj-cmd007/",
+    "photo": "assets/images/team/roushan_raj.png"
+  },
+  {
+    "slug": "aditya_raj",
+    "name": "Aditya Raj",
+    "role": "Vice-President",
+    "achievements": "DRDO Dare to Dream 5.0 (AIR-2) | Amazon ML Summer School'26 | Intern @Reliance Industries Ltd. & SindriAI Tech. | Semi-finalist @ISRO IRoC-U\u201926",
+    "linkedin": "https://www.linkedin.com/in/aditya-raj-461a31274/",
+    "photo": "assets/images/team/aditya_raj.png"
+  },
+  {
+    "slug": "aastha_agarwal",
+    "name": "Aastha Agarwal",
+    "role": "Vice-President",
+    "achievements": "TATA Inspire Intern | Building VectraVision Tech Pvt Ltd",
+    "linkedin": "https://www.linkedin.com/in/aastha-agarwal-043883294/",
+    "photo": "assets/images/team/aastha_agarwal.png"
+  },
+  {
+    "slug": "rishita_raj",
+    "name": "Rishita Raj",
+    "role": "Treasurer",
+    "achievements": "Intern @VendorBay Technology | DRDO Dare to Dream 5.0 (AIR-2) | Semi-Finalist @Flipkart GRiD 8.0 & Runway 6.0",
+    "linkedin": "https://www.linkedin.com/in/rishita-raj-836b13290/",
+    "photo": "assets/images/team/rishita_raj.png"
+  },
+  {
+    "slug": "omnath_mandal",
+    "name": "Omnath Mandal",
+    "role": "General Secretary",
+    "achievements": "Semi-Finalist @IRoC-U\u201924 & 26 | Finalist @Inspace Model Rocketry Challenge\u201925",
+    "linkedin": "https://github.com/htanmo",
+    "photo": "assets/images/team/omnath_mandal.png"
+  },
+  {
+    "slug": "kritika_mahato",
+    "name": "Kritika Mahato",
+    "role": "Treasurer",
+    "achievements": "Designing softwares (Cad, KiCad, CFD analysis) | Reliance Foundation Scholar",
+    "linkedin": "https://www.linkedin.com/in/kritika-mahato-4b8aa9289/",
+    "photo": "assets/images/team/kritika_mahato.png"
+  },
+  {
+    "slug": "kuljeet_singh",
+    "name": "Kuljeet Singh",
+    "role": "Head of Software & Autonomous Systems",
+    "achievements": "Intern @IIT Guwahati (AI/ML)",
+    "linkedin": "https://www.linkedin.com/in/kulj33t/",
+    "photo": "assets/images/team/kuljeet_singh.png"
+  },
+  {
+    "slug": "ritika_kumari",
+    "name": "Ritika Kumari",
+    "role": "Technical Head",
+    "achievements": "Intern @SIEMENS | DRDO Dare to Dream 5.0 (AIR-2) | Finalist @Smart India Hackathon\u201924",
+    "linkedin": "https://www.linkedin.com/in/ritika-kumari-b81a88290/?locale=I",
+    "photo": "assets/images/team/ritika_kumari.png"
+  },
+  {
+    "slug": "ayush_ratna",
+    "name": "Ayush Ratna",
+    "role": "Technical Head",
+    "achievements": "Cybersecurity Intern @SecureDIGI | Prize Winner @Hack4Sustain \u2014 AI/ML + Sustainability | Open Source Contributor @GSSoC\u201924 & 25",
+    "linkedin": "https://www.linkedin.com/in/ayush-ratna27/",
+    "photo": "assets/images/team/ayush_ratna.png"
+  },
+  {
+    "slug": "nishant_kindo",
+    "name": "Nishant F Kindo",
+    "role": "Event Coordinator",
+    "achievements": "Propulsion system and Rocket Aerodynamics Expert | Mechanical Subsystems Expert",
+    "linkedin": "https://www.linkedin.com/in/nishant-f-kindo-7086592a1/",
+    "photo": "assets/images/team/nishant_kindo.png"
+  },
+  {
+    "slug": "asif_fayazi",
+    "name": "Asif Gulmozzam Fayazi",
+    "role": "Event Coordinator",
+    "achievements": "Intern @TATA Inspire\u201926 | Finalist @IISF\u201924",
+    "linkedin": "https://www.linkedin.com/in/asifgulmozzamfayazi/",
+    "photo": "assets/images/team/asif_fayazi.png"
+  },
+  {
+    "slug": "anish_kumar",
+    "name": "Anish Kumar",
+    "role": "Public Relations Officer",
+    "achievements": "Intern @Cortex Construction Solutions Pvt. Ltd. | Prize Winner @Hack4Sustain \u2014 AI/ML + Sustainability",
+    "linkedin": "https://www.linkedin.com/in/anish-kumar-civil-engineer/",
+    "photo": "assets/images/team/anish_kumar.png"
+  },
+  {
+    "slug": "vishnu_munda",
+    "name": "Vishnu Singh Munda",
+    "role": "Head of Electrical Systems",
+    "achievements": "PLC Programming & Analog Electronics Expert | YouTube Creator @FunShot",
+    "linkedin": "https://www.linkedin.com/in/vishnu-singh-a88a93290/",
+    "photo": "assets/images/team/vishnu_munda.png"
+  },
+  {
+    "slug": "kaif_nezami",
+    "name": "Md Kaif Nezami",
+    "role": "Sponsorship Head",
+    "achievements": "Project Intern @Drone lab IIT ISM | Semi-Finalist @IRoC-U\u201926",
+    "linkedin": "https://www.linkedin.com/in/md-kaif-nezami-029507313/",
+    "photo": "assets/images/team/kaif_nezami.png"
+  },
+  {
+    "slug": "renu_kumari",
+    "name": "Renu Kumari",
+    "role": "Junior Technical Head",
+    "achievements": "Finalist @InSpace Model Rocketry Challenge\u201925",
+    "linkedin": "https://www.linkedin.com/in/renu-kumari-609358362/",
+    "photo": "assets/images/team/renu_kumari.png"
+  },
+  {
+    "slug": "nitin_ekka",
+    "name": "Nitin Ekka",
+    "role": "Public Relations Officer",
+    "achievements": "3D Design & Prototyping @NextLayer LLP | Ethical Hacking and Penetration Testing Intern @C-DAC, NOIDA",
+    "linkedin": "https://www.linkedin.com/in/nitin-ekka504/",
+    "photo": "assets/images/team/nitin_ekka.png"
+  },
+  {
+    "slug": "vinay_singh",
+    "name": "Vinay Singh",
+    "role": "Sponsorship Head",
+    "achievements": "Semi-Finalist @ISRO IRoC-U\u201926",
+    "linkedin": "https://www.linkedin.com/in/vinay-singh-4a58a4280/",
+    "photo": "assets/images/team/vinay_singh.png"
+  },
+  {
+    "slug": "aadil_manawar",
+    "name": "Aadil Manawar",
+    "role": "Social Media Head",
+    "achievements": "AICTE IDEA Lab Student Ambassador | Semi-Finalist @ISRO IRoC-U\u201926",
+    "linkedin": "https://www.linkedin.com/in/aadil-manawar-3b6152280/",
+    "photo": "assets/images/team/aadil_manawar.png"
+  }
+]

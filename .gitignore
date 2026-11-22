@@ -1,0 +1,12 @@
+*.pptx
+*.mp4
+*.avi
+*.heic
+Photos/
+assets/images/ppt_orientation/
+assets/images/ppt_postbearers/
+assets/images/drone_candidates/
+assets/images/check_*
+assets/images/footer_logo_*
+assets/images/logo_maybe*
+assets/images/test_*
