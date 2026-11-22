@@ -19,7 +19,7 @@
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
 
   <!-- Master Stylesheet with cache bust -->
-  <link rel="stylesheet" href="css/style.css?v=33">
+  <link rel="stylesheet" href="css/style.css?v=34">
 
   <!-- Theme: System (default) / Dark / Light. Runs before paint to avoid flash. -->
   <script>
@@ -657,8 +657,12 @@
           </div>
         </article>
         <article class="proj-card">
-          <div class="proj-img">
-            <img loading="lazy" decoding="async" src="assets/images/nidar/nidar_drone_top.webp" alt="Autonomous Planetary UAV">
+          <div class="proj-img proj-placeholder-box">
+            <div class="uav-placeholder-content">
+              <i data-lucide="crosshair" style="width:38px;height:38px;"></i>
+              <span class="placeholder-tag">Silver-Motor Planetary UAV</span>
+              <span class="placeholder-note">Flight Hardware &bull; Photos Updating</span>
+            </div>
           </div>
           <div class="proj-body">
             <div class="proj-meta"><span class="proj-tag">Autonomous UAV</span><span class="proj-year">2026</span></div>
@@ -668,24 +672,24 @@
           </div>
         </article>
         <article class="proj-card">
-          <div class="proj-img">
-            <img loading="lazy" decoding="async" src="assets/images/competitions/rocketry/rocket_launch_prep.jpg" alt="Model Sounding Rocket">
+          <div class="proj-img proj-rocket-bg">
+            <img loading="lazy" decoding="async" class="proj-rocket-img" src="assets/images/competitions/rocketry/rocket_model.png" alt="Model Sounding Rocket NANDIGHOSH">
           </div>
           <div class="proj-body">
             <div class="proj-meta"><span class="proj-tag">Model Rocketry</span><span class="proj-year">2025</span></div>
-            <h4>Model Sounding Rocket</h4>
-            <p>High-altitude model rocket with dual-deployment parachute recovery, reviewed by ISRO &amp; IN-SPACe scientists.</p>
+            <h4>Model Sounding Rocket (NANDIGHOSH)</h4>
+            <p>High-altitude sounding rocket with dual-deployment parachute recovery and telemetry payload, reviewed by ISRO &amp; IN-SPACe scientists.</p>
             <div class="proj-reach"><span>Mission</span><strong>IN-SPACe Rocketry '25 &bull; National Finalist</strong></div>
           </div>
         </article>
         <article class="proj-card">
-          <div class="proj-img">
-            <img loading="lazy" decoding="async" src="assets/images/nidar/nidar_drone_front.webp" alt="NIDAR 2.0 AirMouse">
+          <div class="proj-img proj-nidar-bg">
+            <img loading="lazy" decoding="async" class="proj-drone-img" src="assets/images/nidar/nidar_drone_clean_framed.jpg" alt="NIDAR 2.0 AirMouse Tactical Drone">
           </div>
           <div class="proj-body">
             <div class="proj-meta"><span class="proj-tag">Indoor Search Drone</span><span class="proj-year">2026</span></div>
             <h4>NIDAR 2.0 AirMouse</h4>
-            <p>Tactical quadcopter with 360&deg; LiDAR, depth cameras, and onboard compute for GPS-denied indoor search and mapping.</p>
+            <p>Tactical hexacopter with 360&deg; LiDAR, depth cameras, and onboard compute for GPS-denied indoor search and mapping.</p>
             <div class="proj-reach"><span>Status</span><strong>Active Mission &bull; Build &amp; Testing In Progress</strong></div>
           </div>
         </article>
