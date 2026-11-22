@@ -5,75 +5,38 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ---- 0. Theme Switcher (System Preference + Manual Toggle) ----
-  const themeToggle = document.getElementById('themeToggle');
-  const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-
-  function getSystemTheme() {
-    return mediaQuery.matches ? 'dark' : 'light';
-  }
+  // ---- 0. Theme Switcher (Default: Dark, with explicit Dark/Light option) ----
+  const themeButtons = document.querySelectorAll('.theme-opt-btn');
 
   function applyTheme(theme, save = true) {
-    if (theme === 'system') {
-      const resolved = getSystemTheme();
-      document.documentElement.setAttribute('data-theme', resolved);
-      if (save) localStorage.removeItem('arc-theme');
-      updateThemeDisplay(resolved, true);
-    } else {
-      document.documentElement.setAttribute('data-theme', theme);
-      if (save) localStorage.setItem('arc-theme', theme);
-      updateThemeDisplay(theme, false);
+    document.documentElement.setAttribute('data-theme', theme);
+    if (save) {
+      localStorage.setItem('arc-theme', theme);
     }
-  }
 
-  function updateThemeDisplay(activeTheme, isSystem) {
-    const moonIcon = document.querySelector('.theme-icon-moon');
-    const sunIcon = document.querySelector('.theme-icon-sun');
-
-    if (moonIcon && sunIcon) {
-      if (activeTheme === 'dark') {
-        sunIcon.style.display = 'block';
-        moonIcon.style.display = 'none';
+    themeButtons.forEach(btn => {
+      if (btn.getAttribute('data-theme') === theme) {
+        btn.classList.add('active');
       } else {
-        sunIcon.style.display = 'none';
-        moonIcon.style.display = 'block';
+        btn.classList.remove('active');
       }
-    }
-
-    if (themeToggle) {
-      themeToggle.setAttribute(
-        'title',
-        `Current Theme: ${activeTheme.toUpperCase()} ${isSystem ? '(System Default)' : ''} • Click to toggle`
-      );
-    }
+    });
 
     if (typeof lucide !== 'undefined') {
       lucide.createIcons();
     }
   }
 
-  // Initial Load
-  const savedTheme = localStorage.getItem('arc-theme');
-  if (savedTheme) {
-    applyTheme(savedTheme, false);
-  } else {
-    applyTheme('system', false);
-  }
+  // DEFAULT TO DARK if not explicitly chosen by user
+  const initialTheme = localStorage.getItem('arc-theme') || 'dark';
+  applyTheme(initialTheme, false);
 
-  // Listen to OS-level theme changes in real time
-  mediaQuery.addEventListener('change', () => {
-    if (!localStorage.getItem('arc-theme')) {
-      applyTheme('system', false);
-    }
-  });
-
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-      const current = document.documentElement.getAttribute('data-theme') || getSystemTheme();
-      const nextTheme = current === 'dark' ? 'light' : 'dark';
-      applyTheme(nextTheme, true);
+  themeButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const selectedTheme = btn.getAttribute('data-theme');
+      applyTheme(selectedTheme, true);
     });
-  }
+  });
 
   // ---- 1. Mobile Menu Toggle ----
   const navToggle = document.querySelector('.nav-toggle');

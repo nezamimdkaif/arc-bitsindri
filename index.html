@@ -19,17 +19,13 @@
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
 
   <!-- Master Stylesheet with cache bust -->
-  <link rel="stylesheet" href="css/style.css?v=9">
+  <link rel="stylesheet" href="css/style.css?v=10">
 
-  <!-- Zero-FOUC Theme Initialization (System & Dark Support) -->
+  <!-- Default to Dark Theme (with user preference override support) -->
   <script>
     (function() {
-      const savedTheme = localStorage.getItem('arc-theme');
-      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-      } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-      }
+      const savedTheme = localStorage.getItem('arc-theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
     })();
   </script>
 </head>
@@ -53,6 +49,7 @@
           <a href="#home" class="nav-link">Home</a>
           <a href="#competitions" class="nav-link">Competitions</a>
           <a href="#subsystems" class="nav-link">Subsystems</a>
+          <a href="#facilities" class="nav-link">R&amp;D Bay</a>
           <a href="#videos" class="nav-link">Field Videos</a>
           <a href="#specs" class="nav-link">Specs</a>
           <a href="#roadmap" class="nav-link">Odyssey</a>
@@ -61,11 +58,17 @@
           <a href="#contact" class="btn btn-primary btn-sm">Join ARC</a>
         </div>
 
-        <!-- Theme Switcher (System / Dark / Light) -->
-        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme" title="Switch Theme (System / Dark / Light)">
-          <i data-lucide="moon" class="theme-icon-moon" style="display:none;"></i>
-          <i data-lucide="sun" class="theme-icon-sun" style="display:none;"></i>
-        </button>
+        <!-- Segmented Theme Switcher (Dark / Light) -->
+        <div class="theme-switcher-control" id="themeSwitcher" role="radiogroup" aria-label="Theme selection">
+          <button type="button" class="theme-opt-btn active" data-theme="dark" title="Dark Theme (Default)">
+            <i data-lucide="moon"></i>
+            <span>Dark</span>
+          </button>
+          <button type="button" class="theme-opt-btn" data-theme="light" title="Light Theme">
+            <i data-lucide="sun"></i>
+            <span>Light</span>
+          </button>
+        </div>
 
         <button class="nav-toggle" aria-label="Toggle menu">
           <span></span>
@@ -573,6 +576,59 @@
             <li><i data-lucide="check-circle-2" style="width:16px;height:16px;"></i> Sub-50ms Low-Latency Video Pipeline</li>
             <li><i data-lucide="check-circle-2" style="width:16px;height:16px;"></i> Hardware Deadman Fail-Safe Switch</li>
           </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       R&D FACILITIES & PROTOTYPING BAY (Engineering Infrastructure)
+       ====================================================================== -->
+  <section class="section section-alt" id="facilities">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">Engineering Infrastructure</span>
+        <h2 class="section-title">R&amp;D Prototyping &amp; Testing Facilities</h2>
+        <p class="section-desc">
+          State-of-the-art student engineering labs, hardware testing benches, and rough-terrain proving grounds at BIT Sindri.
+        </p>
+      </div>
+
+      <div class="facilities-grid">
+        <div class="facility-card">
+          <div class="facility-icon">
+            <i data-lucide="hammer" style="width:24px;height:24px;"></i>
+          </div>
+          <h4>Rapid Manufacturing &amp; CNC Bay</h4>
+          <p>Equipped with multi-material 3D printing (PA12-CF, TPU, PETG), CNC lathe turning, sheet metal brake forming, and composite fiberglass layups for high-rigidity structural parts.</p>
+          <div class="facility-badge">In-House Fabrication</div>
+        </div>
+
+        <div class="facility-card">
+          <div class="facility-icon">
+            <i data-lucide="circuit-board" style="width:24px;height:24px;"></i>
+          </div>
+          <h4>Avionics &amp; Hardware-in-the-Loop Lab</h4>
+          <p>Digital storage oscilloscopes, logic analyzers, precision soldering benches, isolated DC bench power supplies, and thermal diagnostics for embedded electronics verification.</p>
+          <div class="facility-badge">Electronics &amp; Power</div>
+        </div>
+
+        <div class="facility-card">
+          <div class="facility-icon">
+            <i data-lucide="mountain" style="width:24px;height:24px;"></i>
+          </div>
+          <h4>Rough-Terrain Outdoor Testbed</h4>
+          <p>Dedicated outdoor boulder proving grounds simulating lunar regolith slopes (up to 25&deg;), loose soil trenches, and obstacle fields for real-world mechanical validation.</p>
+          <div class="facility-badge">Field Proving Grounds</div>
+        </div>
+
+        <div class="facility-card">
+          <div class="facility-icon">
+            <i data-lucide="terminal" style="width:24px;height:24px;"></i>
+          </div>
+          <h4>Autonomous Simulation Suite</h4>
+          <p>Gazebo Fortress, ROS 2 Humble physics simulations, and PX4 Software-in-the-Loop (SITL) environments for testing waypoint navigation and visual SLAM before hardware flight.</p>
+          <div class="facility-badge">ROS 2 &amp; PX4 SITL</div>
         </div>
       </div>
     </div>
@@ -1159,7 +1215,7 @@
   </div>
 
   <!-- Master JavaScript -->
-  <script src="js/main.js?v=4"></script>
+  <script src="js/main.js?v=5"></script>
   <script>
     if (typeof lucide !== 'undefined') {
       lucide.createIcons();
