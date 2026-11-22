@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aero &amp; Robotics Club | BIT Sindri</title>
-  <meta name="description" content="Aero & Robotics Club (ARC) is the official technical society of BIT Sindri under IIC, dedicated to planetary robotics and rocketry.">
+  <meta name="description" content="Aero &amp; Robotics Club (ARC) is a student-driven engineering society at BIT Sindri dedicated to planetary robotics, aerospace systems, and autonomous flight.">
 
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
@@ -19,7 +19,7 @@
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
 
   <!-- Master Stylesheet with cache bust -->
-  <link rel="stylesheet" href="css/style.css?v=5">
+  <link rel="stylesheet" href="css/style.css?v=6">
 </head>
 <body>
 
@@ -38,9 +38,11 @@
 
       <div class="nav-links">
         <a href="#home" class="nav-link">Home</a>
-        <a href="#about" class="nav-link">About</a>
         <a href="#competitions" class="nav-link">Competitions</a>
-        <a href="#team" class="nav-link">Meet the Team</a>
+        <a href="#videos" class="nav-link">Field Videos</a>
+        <a href="#philosophy" class="nav-link">Philosophy</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#team" class="nav-link">Team</a>
         <a href="#contact" class="nav-link">Contact</a>
         <a href="#contact" class="btn btn-primary btn-sm">Join Club</a>
       </div>
@@ -60,8 +62,8 @@
     <div class="container">
       <div class="hero-content">
         <div class="hero-pill">
-          <i data-lucide="award" style="width:14px;height:14px;"></i>
-          Award-Winning Space &amp; Robotics Society &bull; BIT Sindri (IIC)
+          <i data-lucide="sparkles" style="width:14px;height:14px;"></i>
+          Premier Aerospace &amp; Robotics Society &bull; BIT Sindri
         </div>
 
         <h1 class="hero-title">
@@ -69,7 +71,7 @@
         </h1>
 
         <p class="hero-subtitle">
-          A student-led robotics community devoted to pushing the frontiers of engineering through planetary rovers, autonomous UAVs, and sounding rockets.
+          Designing, building, and field-testing space robotics, planetary rovers, autonomous UAVs, and sounding rockets from scratch.
         </p>
 
         <div class="hero-actions">
@@ -77,8 +79,36 @@
             Explore Flagship Challenges
             <i data-lucide="arrow-down" style="width:15px;height:15px;"></i>
           </a>
-          <a href="#team" class="btn btn-secondary">Meet The Team</a>
+          <a href="#videos" class="btn btn-secondary">
+            <i data-lucide="play-circle" style="width:15px;height:15px;"></i>
+            Watch Field Videos
+          </a>
         </div>
+
+        <!-- Impact Stats Ribbon (Instant clarity for any visitor) -->
+        <div class="hero-stats-ribbon">
+          <div class="stat-item">
+            <div class="stat-number">2</div>
+            <div class="stat-label">National Space Challenges</div>
+            <div class="stat-sub">ISRO IRoC-U &bull; IN-SPACe Rocketry</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">Semi-Finalists</div>
+            <div class="stat-label">All-India Space Ranking</div>
+            <div class="stat-sub">URSC, ISRO Bengaluru</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">6-Wheel</div>
+            <div class="stat-label">Rocker-Bogie Rover</div>
+            <div class="stat-sub">Extraterrestrial Mobility Platform</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Student Engineered</div>
+            <div class="stat-sub">From CAD to Working Hardware</div>
+          </div>
+        </div>
+
       </div>
     </div>
   </header>
@@ -117,9 +147,6 @@
       </div>
     </div>
   </section>
-      </div>
-    </div>
-  </header>
 
   <!-- ======================================================================
        ABOUT SECTION
@@ -131,7 +158,7 @@
           <span class="section-pill">About ARC</span>
           <h2 class="section-title">A Dynamic Hub for Aerospace &amp; Robotics</h2>
           <p class="about-lead">
-            The Aero and Robotics Club (ARC) at BIT Sindri is a dynamic hub for students passionate about aerospace engineering and robotics. As the technical wing of the Institution Innovation Council (IIC), our mission is to inspire and equip members with the knowledge and skills needed to excel in these cutting-edge fields.
+            The Aero and Robotics Club (ARC) at BIT Sindri is a dynamic hub for students passionate about aerospace engineering and robotics. Our mission is to inspire and equip members with the knowledge and hands-on skills needed to excel in these cutting-edge fields.
           </p>
           <p class="about-body">
             ARC provides a vibrant platform for students to explore, learn, and apply their expertise through practical projects, competitions, workshops, and research. Our hands-on approach includes activities like building lunar rover models, designing autonomous UAVs, and competing in prestigious events such as the World Robotics Championship, AIAA Design Build Fly, and University Rover Challenge.
@@ -146,8 +173,8 @@
           </div>
         </div>
 
-        <div class="about-photo-card" data-lightbox data-src="assets/images/team_with_director.jpg" data-caption="Team ARC with Director Prof. (Dr.) Pankaj Rai, BIT Sindri">
-          <img src="assets/images/team_with_director.jpg" alt="Team ARC with Director, BIT Sindri">
+        <div class="about-photo-card" data-lightbox data-src="assets/images/team_collective.jpg" data-caption="Team ARC &mdash; Aero &amp; Robotics Club, BIT Sindri">
+          <img src="assets/images/team_collective.jpg" alt="Team ARC, BIT Sindri">
         </div>
       </div>
     </div>
@@ -263,7 +290,7 @@
                 <img src="assets/images/competitions/rover/rover_full_build_1.jpg" alt="Rover Full Assembly">
                 <div class="comp-photo-caption">Full Rover Assembly</div>
               </div>
-              <div class="comp-photo-item" data-lightbox data-src="assets/images/competitions/rover/rover_field_trial_mentors.jpg" data-caption="Outdoor Soil Traversal Field Trials with Faculty & Mentors">
+              <div class="comp-photo-item" data-lightbox data-src="assets/images/competitions/rover/rover_field_trial_mentors.jpg" data-caption="Outdoor Soil Traversal Field Trials on Rugged Terrain">
                 <img src="assets/images/competitions/rover/rover_field_trial_mentors.jpg" alt="Field Traction Testing">
                 <div class="comp-photo-caption">Field Soil Trials</div>
               </div>
@@ -441,6 +468,83 @@
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       FIELD ACTION VIDEOS (Real Engineering Proof)
+       ====================================================================== -->
+  <section class="section section-alt" id="videos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">Hardware in Motion</span>
+        <h2 class="section-title">Field Trials &amp; Engineering Demos</h2>
+        <p class="section-desc">
+          Watch Team ARC's lunar rover platform tackling boulder obstacles, testing rocker-bogie kinematics, and running night navigation trials on the BIT Sindri testbed.
+        </p>
+      </div>
+
+      <div class="video-grid">
+        <!-- Video 1: Obstacle Traversal -->
+        <div class="video-card">
+          <div class="video-wrapper">
+            <video controls playsinline preload="metadata" poster="assets/videos/poster_obstacle.jpg">
+              <source src="assets/videos/rover_obstacle_test.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-card-body">
+            <span class="video-tag">Field Trial</span>
+            <h4>Boulder Obstacle Climb &amp; Traversal</h4>
+            <p>Full-scale rocker-bogie 6-wheel rover conquering uneven rock piles and rocky soil during off-road locomotion validation.</p>
+          </div>
+        </div>
+
+        <!-- Video 2: Kinematics & Suspension -->
+        <div class="video-card">
+          <div class="video-wrapper">
+            <video controls playsinline preload="metadata" poster="assets/videos/poster_kinematics.jpg">
+              <source src="assets/videos/rover_kinematics_test.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-card-body">
+            <span class="video-tag">Kinematics</span>
+            <h4>Rocker-Bogie Differential Articulation</h4>
+            <p>High-def close-up demonstrating dynamic load balancing, passive suspension pitch equalization, and chassis stabilization.</p>
+          </div>
+        </div>
+
+        <!-- Video 3: Dusk & Night Trials -->
+        <div class="video-card">
+          <div class="video-wrapper">
+            <video controls playsinline preload="metadata" poster="assets/videos/poster_night.jpg">
+              <source src="assets/videos/rover_night_trials.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-card-body">
+            <span class="video-tag">Night Ops</span>
+            <h4>Dusk Navigation &amp; Power Rail Testing</h4>
+            <p>Verification of high-output LED floodlights, onboard electronics cooling, and autonomous path tracking under low-light conditions.</p>
+          </div>
+        </div>
+
+        <!-- Video 4: Wheel CAD Simulation -->
+        <div class="video-card">
+          <div class="video-wrapper">
+            <video controls playsinline preload="metadata" poster="assets/videos/poster_wheel.jpg">
+              <source src="assets/videos/wheel_cad_simulation.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-card-body">
+            <span class="video-tag">Mechanical CAD</span>
+            <h4>Curved-Grouser Wheel 360&deg; Simulation</h4>
+            <p>Finite element analysis and SolidWorks rotational rendering of the custom lightweight regolith traction wheel.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -777,7 +881,7 @@
         <div class="footer-col">
           <h4>Aero &amp; Robotics Club</h4>
           <p>
-            Technical Wing of Institution's Innovation Council (IIC).<br>
+            Autonomous Aerospace &amp; Robotics Collective.<br>
             Birsa Institute of Technology (BIT) Sindri,<br>
             Dhanbad, Jharkhand &ndash; 828123, India.
           </p>
@@ -788,8 +892,9 @@
           <ul>
             <li><a href="#about">About ARC</a></li>
             <li><a href="#competitions">Competitions</a></li>
-            <li><a href="#team">Post Bearers</a></li>
+            <li><a href="#videos">Field Videos</a></li>
             <li><a href="#philosophy">Our Philosophy</a></li>
+            <li><a href="#team">Post Bearers</a></li>
           </ul>
         </div>
 
@@ -804,9 +909,9 @@
         </div>
 
         <div class="footer-col">
-          <h4>With Special Thanks to:</h4>
+          <h4>Engineering Focus</h4>
           <p>
-            Prof. (Dr.) Pankaj Rai (Director, BIT Sindri), Faculty Mentors, and the Institution's Innovation Council (IIC) for continuous support and guidance.
+            Dedicated to planetary rover mobility, autonomous aerial robotics, and model sounding rocketry. Built 100% by students driven by space exploration.
           </p>
         </div>
       </div>

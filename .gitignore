@@ -1,5 +1,4 @@
 *.pptx
-*.mp4
 *.avi
 *.heic
 Photos/
@@ -10,3 +9,5 @@ assets/images/check_*
 assets/images/footer_logo_*
 assets/images/logo_maybe*
 assets/images/test_*
+!assets/videos/*.mp4
+.vercel
