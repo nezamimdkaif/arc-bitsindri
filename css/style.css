@@ -718,15 +718,15 @@ ul { list-style: none; }
 
 .about-photo-card img {
   width: 100%;
-  height: 235px;
+  height: 290px;
   object-fit: cover;
   object-position: center 25%;
   display: block;
   filter: none;
 }
 .about-photo-card.secondary-photo img {
-  height: 200px;
-  object-position: center 30%;
+  height: 280px;
+  object-position: center 28%;
 }
 
 .about-photo-caption {
@@ -2432,7 +2432,7 @@ html { font-size: 15.5px; }
 
 /* Project Cards: real photos fill the frame cleanly */
 .proj-img {
-  height: 200px;
+  height: 235px;
   position: relative;
   overflow: hidden;
 }
