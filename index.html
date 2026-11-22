@@ -19,7 +19,7 @@
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
 
   <!-- Master Stylesheet with cache bust -->
-  <link rel="stylesheet" href="css/style.css?v=8">
+  <link rel="stylesheet" href="css/style.css?v=9">
 
   <!-- Zero-FOUC Theme Initialization (System & Dark Support) -->
   <script>
@@ -52,12 +52,13 @@
         <div class="nav-links">
           <a href="#home" class="nav-link">Home</a>
           <a href="#competitions" class="nav-link">Competitions</a>
+          <a href="#subsystems" class="nav-link">Subsystems</a>
           <a href="#videos" class="nav-link">Field Videos</a>
-          <a href="#philosophy" class="nav-link">Philosophy</a>
-          <a href="#about" class="nav-link">About</a>
+          <a href="#specs" class="nav-link">Specs</a>
+          <a href="#roadmap" class="nav-link">Odyssey</a>
           <a href="#team" class="nav-link">Team</a>
           <a href="#contact" class="nav-link">Contact</a>
-          <a href="#contact" class="btn btn-primary btn-sm">Join Club</a>
+          <a href="#contact" class="btn btn-primary btn-sm">Join ARC</a>
         </div>
 
         <!-- Theme Switcher (System / Dark / Light) -->
@@ -127,6 +128,15 @@
             <div class="stat-label">Student Engineered</div>
             <div class="stat-sub">From CAD to Working Hardware</div>
           </div>
+        </div>
+
+        <!-- Live Mission Telemetry Bar (JPL / ISRO Ground Control style) -->
+        <div class="telemetry-bar">
+          <div class="telemetry-badge"><span class="pulse-dot"></span> ARC_NODE_ONLINE</div>
+          <div class="telemetry-item"><span class="t-key">CHASSIS:</span> <span class="t-val">6-Wheel Rocker-Bogie</span></div>
+          <div class="telemetry-item"><span class="t-key">AVIONICS:</span> <span class="t-val">ROS 2 Humble / STM32</span></div>
+          <div class="telemetry-item"><span class="t-key">PERCEPTION:</span> <span class="t-val">Stereo Depth &bull; RealSense</span></div>
+          <div class="telemetry-item"><span class="t-key">PROVING GROUND:</span> <span class="t-val">BIT Sindri Test Range</span></div>
         </div>
 
       </div>
@@ -492,6 +502,83 @@
   </section>
 
   <!-- ======================================================================
+       ENGINEERING SUBSYSTEMS (Inside The Machine)
+       ====================================================================== -->
+  <section class="section" id="subsystems">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">Engineering Matrix</span>
+        <h2 class="section-title">Inside The Machine</h2>
+        <p class="section-desc">
+          Explore the four interdisciplinary engineering pillars powering Team ARC's space robotics and autonomous systems.
+        </p>
+      </div>
+
+      <div class="subsystems-grid">
+        <!-- Pillar 1: Mechanical & Kinematics -->
+        <div class="subsystem-box">
+          <div class="subsystem-box-header">
+            <div class="s-icon"><i data-lucide="cog" style="width:22px;height:22px;"></i></div>
+            <span class="s-tag">Mechanical &amp; Kinematics</span>
+          </div>
+          <h4>Articulated Mobility &amp; Airframes</h4>
+          <p>Custom-engineered 6-wheel rocker-bogie differential suspension, CNC-milled 6061-T6 aluminum chassis linkages, and curved-grouser regolith traction wheels designed for loose lunar terrain traversal.</p>
+          <ul class="s-feature-list">
+            <li><i data-lucide="check-circle-2" style="width:16px;height:16px;"></i> 6-Wheel Passive Differential Equalizer</li>
+            <li><i data-lucide="check-circle-2" style="width:16px;height:16px;"></i> 25&deg; Slope Incline Traversal Capability</li>
+            <li><i data-lucide="check-circle-2" style="width:16px;height:16px;"></i> Vibration-Damped Carbon Fiber Airframes</li>
+          </ul>
+        </div>
+
+        <!-- Pillar 2: Autonomy & Perception -->
+        <div class="subsystem-box">
+          <div class="subsystem-box-header">
+            <div class="s-icon"><i data-lucide="cpu" style="width:22px;height:22px;"></i></div>
+            <span class="s-tag">Autonomy &amp; AI</span>
+          </div>
+          <h4>Perception &amp; Path Planning</h4>
+          <p>Real-time ROS 2 Humble node graph handling Visual SLAM, 3D point-cloud obstacle mapping, and autonomous GPS-denied planetary waypoint navigation algorithms.</p>
+          <ul class="s-feature-list">
+            <li><i data-lucide="check-circle-2" style="width:16px;height:16px;"></i> Intel RealSense Stereo Depth Vision</li>
+            <li><i data-lucide="check-circle-2" style="width:16px;height:16px;"></i> Real-Time RTAB-Map 3D Visual SLAM</li>
+            <li><i data-lucide="check-circle-2" style="width:16px;height:16px;"></i> Dynamic A* &amp; TEB Local Trajectory Planner</li>
+          </ul>
+        </div>
+
+        <!-- Pillar 3: Avionics & Embedded Power -->
+        <div class="subsystem-box">
+          <div class="subsystem-box-header">
+            <div class="s-icon"><i data-lucide="zap" style="width:22px;height:22px;"></i></div>
+            <span class="s-tag">Avionics &amp; Power</span>
+          </div>
+          <h4>Embedded Control Architecture</h4>
+          <p>Custom 24V isolated multi-rail power distribution bus with redundant STM32 ARM microcontrollers executing deterministic microsecond-level PID closed-loop motor actuation.</p>
+          <ul class="s-feature-list">
+            <li><i data-lucide="check-circle-2" style="width:16px;height:16px;"></i> High-Resolution Hall-Effect Encoders</li>
+            <li><i data-lucide="check-circle-2" style="width:16px;height:16px;"></i> Isolated Logic &amp; Motor Power Rails</li>
+            <li><i data-lucide="check-circle-2" style="width:16px;height:16px;"></i> Real-Time Battery BMS Telemetry &amp; Beacon</li>
+          </ul>
+        </div>
+
+        <!-- Pillar 4: Ground Station & Comms -->
+        <div class="subsystem-box">
+          <div class="subsystem-box-header">
+            <div class="s-icon"><i data-lucide="radio" style="width:22px;height:22px;"></i></div>
+            <span class="s-tag">Telemetry &amp; Comms</span>
+          </div>
+          <h4>Mission Ground Station</h4>
+          <p>Dual-band 2.4/5.8 GHz directional telemetry and low-latency FPV video downlink streaming real-time attitude orientation, motor draw, and payload states to base camp.</p>
+          <ul class="s-feature-list">
+            <li><i data-lucide="check-circle-2" style="width:16px;height:16px;"></i> Dual-Band 2.4 / 5.8 GHz Uplink</li>
+            <li><i data-lucide="check-circle-2" style="width:16px;height:16px;"></i> Sub-50ms Low-Latency Video Pipeline</li>
+            <li><i data-lucide="check-circle-2" style="width:16px;height:16px;"></i> Hardware Deadman Fail-Safe Switch</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
        FIELD ACTION VIDEOS (Real Engineering Proof)
        ====================================================================== -->
   <section class="section section-alt" id="videos">
@@ -563,6 +650,123 @@
             <h4>Curved-Grouser Wheel 360&deg; Simulation</h4>
             <p>Finite element analysis and SolidWorks rotational rendering of the custom lightweight regolith traction wheel.</p>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       FLEET SPECIFICATIONS MATRIX
+       ====================================================================== -->
+  <section class="section" id="specs">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">Technical Benchmark</span>
+        <h2 class="section-title">Fleet Specifications</h2>
+        <p class="section-desc">
+          Comparative engineering metrics of Team ARC's flagship hardware platforms built and tested at BIT Sindri.
+        </p>
+      </div>
+
+      <div class="spec-table-container">
+        <table class="spec-table">
+          <thead>
+            <tr>
+              <th>Engineering Parameter</th>
+              <th>ISRO IRoC-U '24 Rover</th>
+              <th>ISRO IRoC-U '26 Aerial UAV</th>
+              <th>IN-SPACe '25 Sounding Rocket</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Mission Profile</strong></td>
+              <td>Lunar Surface Exploration</td>
+              <td>Autonomous Aerial Reconnaissance</td>
+              <td>High-Altitude Model Rocketry</td>
+            </tr>
+            <tr>
+              <td><strong>Kinematics &amp; Airframe</strong></td>
+              <td>6-Wheel Rocker-Bogie with Passive Differential</td>
+              <td>Carbon Fiber Multi-Rotor Airframe</td>
+              <td>Precision Hand-Laid Composite Tube</td>
+            </tr>
+            <tr>
+              <td><strong>National Recognition</strong></td>
+              <td><span class="spec-highlight green">National Semi-Finalist (2024)</span></td>
+              <td><span class="spec-highlight purple">National Semi-Finalist (2026)</span></td>
+              <td><span class="spec-highlight blue">National Finalist (2025)</span></td>
+            </tr>
+            <tr>
+              <td><strong>Onboard Compute</strong></td>
+              <td>NVIDIA Jetson SBC + ROS 2 Nodes</td>
+              <td>Pixhawk 2.4.8 + Companion SBC</td>
+              <td>Dual-Deployment Barometric Altimeters</td>
+            </tr>
+            <tr>
+              <td><strong>Perception &amp; Sensors</strong></td>
+              <td>Intel RealSense Stereo Depth + 9-DOF IMU</td>
+              <td>Depth Vision + Optical Flow Odometry</td>
+              <td>Flight Telemetry Logging Module</td>
+            </tr>
+            <tr>
+              <td><strong>Power Distribution</strong></td>
+              <td>24V High-Current LiFePO4 Isolated Bus</td>
+              <td>4S High-Discharge Power System</td>
+              <td>Solid Propellant Aerodynamic Motor</td>
+            </tr>
+            <tr>
+              <td><strong>Operating Domain</strong></td>
+              <td>Loose Regolith Sand &amp; 25&deg; Slopes</td>
+              <td>GPS-Denied Planetary Exploration Vault</td>
+              <td>Sub-Kilometer Validated Apogee</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       MISSION ODYSSEY TIMELINE (Roadmap)
+       ====================================================================== -->
+  <section class="section section-alt" id="roadmap">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">Our Flight Path</span>
+        <h2 class="section-title">The ARC Mission Odyssey</h2>
+        <p class="section-desc">
+          From first mechanical prototypes to national space challenge semi-finals and international planetary competitions.
+        </p>
+      </div>
+
+      <div class="timeline-stepper">
+        <div class="step-card">
+          <div class="step-year">2024</div>
+          <div class="step-badge">ISRO IRoC-U '24</div>
+          <h4>Lunar Rover Platform</h4>
+          <p>Designed and built 6-wheel rocker-bogie rover with custom regolith wheels and autonomous boulder navigation. Qualified as <strong>National Semi-Finalists @ URSC ISRO Bengaluru</strong>.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-year">2025</div>
+          <div class="step-badge">IN-SPACe '25</div>
+          <h4>Model Sounding Rocketry</h4>
+          <p>Engineered composite sounding rocket airframe with dual-deployment parachute recovery and aerodynamic validation. Qualified as <strong>National Finalists</strong>.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-year">2026</div>
+          <div class="step-badge">ISRO IRoC-U '26</div>
+          <h4>Autonomous Planetary Drone</h4>
+          <p>Advancing into GPS-denied multi-rotor aerial robotics with Visual SLAM and onboard 3D depth estimation. Qualified as <strong>National Semi-Finalists</strong>.</p>
+        </div>
+
+        <div class="step-card step-future">
+          <div class="step-year">2027+</div>
+          <div class="step-badge">Global Arena</div>
+          <h4>Planetary Science &amp; URC</h4>
+          <p>Developing articulated robotic arms, autonomous drill sampling payloads, and targeting the prestigious international University Rover Challenge (URC).</p>
         </div>
       </div>
     </div>
