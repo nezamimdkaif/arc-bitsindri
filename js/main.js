@@ -5,11 +5,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // Initialize Lucide icons
-  if (typeof lucide !== 'undefined') {
-    lucide.createIcons();
-  }
-
   // ---- 0. Theme Switcher (System / Dark / Light) ----
   const themeButtons = document.querySelectorAll('.theme-opt-btn');
   const darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -65,30 +60,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ---- 2. Navbar Active Links on Scroll ----
+  // ---- 2. Navbar Active Links on Scroll (IntersectionObserver, no scroll listener) ----
   const sections = document.querySelectorAll('section[id], header[id]');
   const navItems = document.querySelectorAll('.nav-link');
-
-  function onScroll() {
-    const scrollY = window.scrollY + 100;
-    sections.forEach(sec => {
-      const top = sec.offsetTop;
-      const height = sec.offsetHeight;
-      const id = sec.getAttribute('id');
-
-      if (scrollY >= top && scrollY < top + height) {
-        navItems.forEach(item => {
-          item.classList.remove('active');
-          if (item.getAttribute('href') === `#${id}`) {
-            item.classList.add('active');
-          }
-        });
-      }
-    });
+  if ('IntersectionObserver' in window) {
+    const spy = new IntersectionObserver(entries => {
+      entries.forEach(en => {
+        if (!en.isIntersecting) return;
+        const id = en.target.id;
+        navItems.forEach(i => i.classList.toggle('active', i.getAttribute('href') === '#' + id));
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    sections.forEach(sec => spy.observe(sec));
   }
-
-  window.addEventListener('scroll', onScroll);
-  onScroll();
 
   // ---- 3. The 2 Competitions Switcher Tabs ----
   const compBtns = document.querySelectorAll('.comp-tab-btn');
@@ -177,23 +161,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ---- 6. Join Form Submission Feedback ----
+  // ---- 6. Join Form: opens the user's email app with the details filled in (no backend needed) ----
   const joinForm = document.getElementById('joinForm');
   if (joinForm) {
     joinForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const submitBtn = joinForm.querySelector('button[type="submit"]');
-      const originalText = submitBtn.innerHTML;
-
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = 'Submitting...';
-
-      setTimeout(() => {
-        alert('Thank you! Your application has been submitted to ARC BIT Sindri.');
-        joinForm.reset();
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = originalText;
-      }, 500);
+      const lines = [];
+      joinForm.querySelectorAll('input, select, textarea').forEach(el => {
+        if (el.type === 'submit' || !el.value) return;
+        const label = el.closest('div') && el.closest('div').querySelector('label');
+        lines.push((label ? label.textContent.trim() : el.id || el.name) + ': ' + el.value);
+      });
+      const subject = encodeURIComponent('ARC Membership Application');
+      const body = encodeURIComponent(lines.join('\n'));
+      window.location.href = 'mailto:arc.bitsindri@gmail.com?subject=' + subject + '&body=' + body;
     });
   }
 
@@ -290,7 +271,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 7c. Scroll reveal (class removed after the animation so hover effects stay intact)
-  const revealSel = '.section-header, .philosophy-card, .subsystem-card, .facility-card, .video-card, .step-card, .about-photo-card, .contact-item, .comp-photo-item';
+  const revealSel = '.section-header, .philosophy-card, .subsystem-card, .video-card, .step-card, .about-photo-card, .contact-item, .comp-photo-item';
   if ('IntersectionObserver' in window && !reduceMotion) {
     const io = new IntersectionObserver(entries => {
       entries.forEach(en => {
@@ -343,12 +324,14 @@ document.addEventListener('DOMContentLoaded', () => {
   toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' }));
   document.body.appendChild(toTop);
 
+  const navbarEl = document.getElementById('navbar');
   let ticking = false;
   function updateScrollUI() {
     const max = document.documentElement.scrollHeight - window.innerHeight;
     const y = window.scrollY;
     bar.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
     toTop.classList.toggle('show', y > 600);
+    if (navbarEl) navbarEl.classList.toggle('scrolled', y > 24);
     ticking = false;
   }
   window.addEventListener('scroll', () => {
@@ -357,7 +340,7 @@ document.addEventListener('DOMContentLoaded', () => {
   updateScrollUI();
 
   // 7f. Cursor spotlight on cards
-  const spotSel = '.subsystem-card, .facility-card, .philosophy-card, .step-card, .video-card, .member-card';
+  const spotSel = '.subsystem-card, .philosophy-card, .step-card, .video-card, .member-card';
   document.addEventListener('mousemove', (e) => {
     const card = e.target.closest && e.target.closest(spotSel);
     if (!card) return;
@@ -367,10 +350,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { passive: true });
 
   // ---- 8. Robotics HUD touches (navbar state, hero glow, IST clock, title decode) ----
-  const navbarEl = document.getElementById('navbar');
-  const syncNav = () => navbarEl && navbarEl.classList.toggle('scrolled', window.scrollY > 24);
-  window.addEventListener('scroll', syncNav, { passive: true });
-  syncNav();
 
   const heroEl = document.getElementById('home');
   const gridEl = heroEl && heroEl.querySelector('.hero-grid');
@@ -391,7 +370,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const clock = item.querySelector('#missionClock');
     const tickClock = () => { clock.textContent = new Date().toLocaleTimeString('en-GB', { timeZone: 'Asia/Kolkata', hour12: false }); };
     tickClock();
-    setInterval(tickClock, 1000);
+    setInterval(() => { if (!document.hidden) tickClock(); }, 1000);
   }
 
   const accent = document.querySelector('.hero-title .hero-accent');
