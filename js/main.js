@@ -60,18 +60,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ---- 2. Navbar Active Links on Scroll (IntersectionObserver, no scroll listener) ----
+  // ---- 2. Navbar Active Links on Scroll (IntersectionObserver for hash links) ----
   const sections = document.querySelectorAll('section[id], header[id]');
   const navItems = document.querySelectorAll('.nav-link');
-  if ('IntersectionObserver' in window) {
-    const spy = new IntersectionObserver(entries => {
-      entries.forEach(en => {
-        if (!en.isIntersecting) return;
-        const id = en.target.id;
-        navItems.forEach(i => i.classList.toggle('active', i.getAttribute('href') === '#' + id));
-      });
-    }, { rootMargin: '-45% 0px -50% 0px' });
-    sections.forEach(sec => spy.observe(sec));
+  if ('IntersectionObserver' in window && sections.length > 0) {
+    const hasHashLinks = Array.from(navItems).some(i => i.getAttribute('href')?.startsWith('#'));
+    if (hasHashLinks) {
+      const spy = new IntersectionObserver(entries => {
+        entries.forEach(en => {
+          if (!en.isIntersecting) return;
+          const id = en.target.id;
+          navItems.forEach(i => {
+            const href = i.getAttribute('href');
+            if (href && href.startsWith('#')) {
+              i.classList.toggle('active', href === '#' + id);
+            }
+          });
+        });
+      }, { rootMargin: '-45% 0px -50% 0px' });
+      sections.forEach(sec => spy.observe(sec));
+    }
   }
 
   // ---- 3. The 2 Competitions Switcher Tabs ----
@@ -161,18 +169,46 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ---- 6. Join Form: opens the user's email app with the details filled in (no backend needed) ----
+  // ---- 6. Join Form: strict institutional email validation & application mailer ----
   const joinForm = document.getElementById('joinForm');
   if (joinForm) {
+    const emailInput = joinForm.querySelector('#email');
+    if (emailInput) {
+      emailInput.addEventListener('input', () => {
+        emailInput.classList.remove('input-error');
+        const errEl = joinForm.querySelector('.form-domain-error');
+        if (errEl) errEl.remove();
+      });
+    }
+
     joinForm.addEventListener('submit', (e) => {
       e.preventDefault();
+      
+      const emailVal = emailInput ? emailInput.value.trim().toLowerCase() : '';
+      const isBitSindri = /^[a-zA-Z0-9._%+-]+@([a-zA-Z0-9-]+\.)*bitsindri\.ac\.in$/.test(emailVal);
+      
+      if (!isBitSindri) {
+        if (emailInput) {
+          emailInput.classList.add('input-error');
+          let errEl = joinForm.querySelector('.form-domain-error');
+          if (!errEl) {
+            errEl = document.createElement('div');
+            errEl.className = 'form-domain-error';
+            emailInput.parentElement.appendChild(errEl);
+          }
+          errEl.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg> <span>Application rejected: Only official BIT Sindri emails (ending with <strong>.bitsindri.ac.in</strong>) are accepted.</span>';
+          emailInput.focus();
+        }
+        return false;
+      }
+
       const lines = [];
       joinForm.querySelectorAll('input, select, textarea').forEach(el => {
         if (el.type === 'submit' || !el.value) return;
         const label = el.closest('div') && el.closest('div').querySelector('label');
         lines.push((label ? label.textContent.trim() : el.id || el.name) + ': ' + el.value);
       });
-      const subject = encodeURIComponent('ARC Membership Application');
+      const subject = encodeURIComponent('ARC Membership Application - ' + (document.getElementById('fullName')?.value || 'Student'));
       const body = encodeURIComponent(lines.join('\n'));
       window.location.href = 'mailto:arc.bitsindri@gmail.com?subject=' + subject + '&body=' + body;
     });

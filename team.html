@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team & Post Bearers | ARC BIT Sindri</title>
+  <meta name="description" content="Aero &amp; Robotics Club (ARC) is a student-driven engineering society at BIT Sindri dedicated to planetary robotics, aerospace systems, and autonomous flight.">
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+
+  <!-- Master Stylesheet with cache bust -->
+  <link rel="stylesheet" href="css/style.css?v=38">
+
+  <!-- Theme: System (default) / Dark / Light. Runs before paint to avoid flash. -->
+  <script>
+    (function() {
+      var pref = 'system';
+      try { pref = localStorage.getItem('arc-theme') || 'system'; } catch (e) {}
+      if (['system', 'dark', 'light'].indexOf(pref) === -1) pref = 'system';
+      var dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var root = document.documentElement;
+      root.setAttribute('data-theme', pref === 'system' ? (dark ? 'dark' : 'light') : pref);
+      root.setAttribute('data-theme-pref', pref);
+    })();
+  </script>
+</head>
+<body>
+  <!-- ======================================================================
+       NAVBAR (Clean Single Logo Brand - aerorobotics.club style)
+       ====================================================================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="brand-link">
+        <img src="assets/images/arc_logo.png" alt="ARC Logo" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-name">ARC <span>BIT SINDRI</span></span>
+          <span class="brand-tag">Aero &amp; Robotics Club</span>
+        </div>
+      </a>
+
+      <div class="nav-right-actions">
+        <div class="nav-links">
+          <a href="index.html" class="nav-link ">Home</a>
+          <a href="competitions.html" class="nav-link ">Competitions</a>
+          <a href="projects.html" class="nav-link ">Projects</a>
+          <a href="team.html" class="nav-link active">Team</a>
+          <a href="sponsors.html" class="nav-link ">Sponsors</a>
+          <a href="join.html" class="btn btn-primary btn-sm ">Join ARC</a>
+        </div>
+
+        <!-- Segmented Theme Switcher (System / Dark / Light) -->
+        <div class="theme-switcher-control" id="themeSwitcher" role="radiogroup" aria-label="Theme selection">
+          <button type="button" class="theme-opt-btn active" data-theme="system" title="Follow device theme">
+            <i data-lucide="monitor"></i>
+            <span>System</span>
+          </button>
+          <button type="button" class="theme-opt-btn" data-theme="dark" title="Dark Theme">
+            <i data-lucide="moon"></i>
+            <span>Dark</span>
+          </button>
+          <button type="button" class="theme-opt-btn" data-theme="light" title="Light Theme">
+            <i data-lucide="sun"></i>
+            <span>Light</span>
+          </button>
+        </div>
+
+        <button class="nav-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <!-- Subpage Hero Header -->
+  <header class="page-hero">
+    <div class="container">
+      <div class="page-breadcrumbs">
+        <a href="index.html">Home</a>
+        <i data-lucide="chevron-right" style="width:14px;height:14px;"></i>
+        <span>Team</span>
+      </div>
+      <span class="section-pill">// STUDENT LEADERSHIP & FACULTY MENTORS</span>
+      <h1 class="page-hero-title">The Minds Behind Team ARC</h1>
+      <p class="page-hero-subtitle">Session 2026–2027 student post bearers, technical heads, event coordinators, and respected faculty advisors driving multidisciplinary space and robotics innovation at BIT Sindri.</p>
+    </div>
+  </header>
+
+  <!-- Faculty Mentors Section -->
+  <section class="section" id="mentors" style="padding-bottom: 20px;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">Faculty Guidance</span>
+        <h2 class="section-title">Distinguished Mentors &amp; Advisors</h2>
+        <p class="section-desc">Academic and scientific mentorship guiding Team ARC's engineering excellence.</p>
+      </div>
+
+      <div class="philosophy-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+        <div class="philosophy-card" style="display:flex; gap:20px; align-items:center;">
+          <div style="width:68px; height:68px; border-radius:50%; background:var(--primary-light); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+            <i data-lucide="award" style="width:34px; height:34px; color:var(--primary);"></i>
+          </div>
+          <div>
+            <h4 style="font-size:1.2rem; margin-bottom:4px;">Dr. Prakash Kumar</h4>
+            <div style="font-size:0.85rem; font-weight:700; color:var(--primary); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">Faculty Mentor &bull; H.O.D.</div>
+            <p style="font-size:0.9rem; line-height:1.5; color:var(--text-secondary); margin:0;">
+              Head of Department, Production &amp; Industrial Engineering, BIT Sindri. Providing institutional backing, technical oversight, and advanced manufacturing guidance.
+            </p>
+          </div>
+        </div>
+
+        <div class="philosophy-card" style="display:flex; gap:20px; align-items:center;">
+          <div style="width:68px; height:68px; border-radius:50%; background:var(--primary-light); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+            <i data-lucide="compass" style="width:34px; height:34px; color:var(--primary);"></i>
+          </div>
+          <div>
+            <h4 style="font-size:1.2rem; margin-bottom:4px;">Deepak Singh</h4>
+            <div style="font-size:0.85rem; font-weight:700; color:var(--primary); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">Scientific Mentor &bull; IISc Bangalore</div>
+            <p style="font-size:0.9rem; line-height:1.5; color:var(--text-secondary); margin:0;">
+              Physical Chemist, Indian Institute of Science (IISc) Bangalore. Mentoring Team ARC on solid rocket propellants, propulsion thermodynamics, and material characterization.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div>
+<section class="section" id="team">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">The Team</span>
+        <h2 class="section-title">Post Bearers</h2>
+        <p class="section-desc">Session 2026&ndash;2027 student leadership of the Aero &amp; Robotics Club.</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="team-filter">
+        <button class="team-filter-btn active" data-filter="all">All Members</button>
+        <button class="team-filter-btn" data-filter="exec">Executive</button>
+        <button class="team-filter-btn" data-filter="tech">Technical</button>
+        <button class="team-filter-btn" data-filter="ops">Operations &amp; PR</button>
+      </div>
+
+      <div class="team-grid">
+
+        <!-- 1. Roushan Raj -->
+        <div class="member-card" data-category="exec tech">
+          <div class="member-avatar">
+            <img loading="lazy" decoding="async" src="assets/images/team/roushan_raj.png" alt="Roushan Raj">
+          </div>
+          <div class="member-name">Roushan Raj</div>
+          <div class="member-role">President</div>
+          <div class="member-role-detail">DRDO D2D 5.0 (AIR-2) &bull; Semi-Finalist @ISRO IRoC-U '24 &amp; '26 &bull; Finalist @IN-SPACe Rocketry &bull; Amazon ML Summer School</div>
+          <a href="https://www.linkedin.com/in/roushan-raj-cmd007/" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn
+          </a>
+        </div>
+
+        <!-- 2. Aditya Raj -->
+        <div class="member-card" data-category="exec tech">
+          <div class="member-avatar">
+            <img loading="lazy" decoding="async" src="assets/images/team/aditya_raj.png" alt="Aditya Raj">
+          </div>
+          <div class="member-name">Aditya Raj</div>
+          <div class="member-role">Vice-President</div>
+          <div class="member-role-detail">Autonomous Systems &bull; Semi-Finalist @ISRO IRoC-U '26 &bull; DRDO D2D 5.0 (AIR-2) &bull; Intern @Reliance Industries &amp; SindriAI</div>
+          <a href="https://www.linkedin.com/in/aditya-raj-461a31274/" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn
+          </a>
+        </div>
+
+        <!-- 3. Aastha Agarwal -->
+        <div class="member-card" data-category="exec ops">
+          <div class="member-avatar">
+            <img loading="lazy" decoding="async" src="assets/images/team/aastha_agarwal.png" alt="Aastha Agarwal">
+          </div>
+          <div class="member-name">Aastha Agarwal</div>
+          <div class="member-role">Vice-President</div>
+          <div class="member-role-detail">Strategic Operations &amp; Outreach &bull; Founder @VectraVision Tech &bull; Intern @TATA Inspire</div>
+          <a href="https://www.linkedin.com/in/aastha-agarwal-043883294/" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn
+          </a>
+        </div>
+
+        <!-- 4. Rishita Raj -->
+        <div class="member-card" data-category="exec ops">
+          <div class="member-avatar">
+            <img loading="lazy" decoding="async" src="assets/images/team/rishita_raj.png" alt="Rishita Raj">
+          </div>
+          <div class="member-name">Rishita Raj</div>
+          <div class="member-role">Treasurer</div>
+          <div class="member-role-detail">Finance &amp; Operations &bull; DRDO D2D 5.0 (AIR-2) &bull; Semi-Finalist @Flipkart GRiD 8.0 &amp; Runway 6.0 &bull; Intern @VendorBay</div>
+          <a href="https://www.linkedin.com/in/rishita-raj-836b13290/" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn
+          </a>
+        </div>
+
+        <!-- 5. Omnath Mandal -->
+        <div class="member-card" data-category="exec tech">
+          <div class="member-avatar">
+            <img loading="lazy" decoding="async" src="assets/images/team/omnath_mandal.png" alt="Omnath Mandal">
+          </div>
+          <div class="member-name">Omnath Mandal</div>
+          <div class="member-role">General Secretary</div>
+          <div class="member-role-detail">Software &amp; Simulation Lead &bull; Semi-Finalist @ISRO IRoC-U '24 &amp; '26 &bull; Finalist @IN-SPACe Model Rocketry Challenge '25</div>
+          <a href="https://github.com/htanmo" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="github" style="width:13px;height:13px;"></i> GitHub
+          </a>
+        </div>
+
+        <!-- 6. Kritika Mahato -->
+        <div class="member-card" data-category="exec tech">
+          <div class="member-avatar">
+            <img loading="lazy" decoding="async" src="assets/images/team/kritika_mahato.png" alt="Kritika Mahato">
+          </div>
+          <div class="member-name">Kritika Mahato</div>
+          <div class="member-role">Treasurer</div>
+          <div class="member-role-detail">Engineering Design (CAD, KiCad &amp; CFD Analysis) &bull; Reliance Foundation Scholar</div>
+          <a href="https://www.linkedin.com/in/kritika-mahato-4b8aa9289/" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn
+          </a>
+        </div>
+
+        <!-- 7. Kuljeet Singh -->
+        <div class="member-card" data-category="tech">
+          <div class="member-avatar">
+            <img loading="lazy" decoding="async" src="assets/images/team/kuljeet_singh.png" alt="Kuljeet Singh">
+          </div>
+          <div class="member-name">Kuljeet Singh</div>
+          <div class="member-role">Head of Software &amp; Autonomous Systems</div>
+          <div class="member-role-detail">Autonomous Vision, Planning &amp; AI Algorithms &bull; Research Intern @IIT Guwahati (AI/ML)</div>
+          <a href="https://www.linkedin.com/in/kulj33t/" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn
+          </a>
+        </div>
+
+        <!-- 8. Ritika Kumari -->
+        <div class="member-card" data-category="tech">
+          <div class="member-avatar">
+            <img loading="lazy" decoding="async" src="assets/images/team/ritika_kumari.png" alt="Ritika Kumari">
+          </div>
+          <div class="member-name">Ritika Kumari</div>
+          <div class="member-role">Technical Head</div>
+          <div class="member-role-detail">Hardware &amp; Systems Engineering &bull; Intern @SIEMENS &bull; DRDO D2D 5.0 (AIR-2) &bull; Finalist @Smart India Hackathon '24</div>
+          <a href="https://www.linkedin.com/in/ritika-kumari-b81a88290/" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn
+          </a>
+        </div>
+
+        <!-- 9. Ayush Ratna -->
+        <div class="member-card" data-category="tech">
+          <div class="member-avatar">
+            <img loading="lazy" decoding="async" src="assets/images/team/ayush_ratna.png" alt="Ayush Ratna">
+          </div>
+          <div class="member-name">Ayush Ratna</div>
+          <div class="member-role">Technical Head</div>
+          <div class="member-role-detail">Cybersecurity &amp; Autonomous Testing &bull; Intern @SecureDIGI &bull; Winner @Hack4Sustain &bull; Contributor @GSSoC</div>
+          <a href="https://www.linkedin.com/in/ayush-ratna27/" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn
+          </a>
+        </div>
+
+        <!-- 10. Nishant F Kindo -->
+        <div class="member-card" data-category="tech ops">
+          <div class="member-avatar">
+            <img loading="lazy" decoding="async" src="assets/images/team/nishant_kindo.png" alt="Nishant F Kindo">
+          </div>
+          <div class="member-name">Nishant F Kindo</div>
+          <div class="member-role">Event Coordinator</div>
+          <div class="member-role-detail">Propulsion Systems &amp; Rocket Aerodynamics Expert &bull; Mechanical Subsystems &amp; Flight Mechanics</div>
+          <a href="https://www.linkedin.com/in/nishant-f-kindo-7086592a1/" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn
+          </a>
+        </div>
+
+        <!-- 11. Asif Gulmozzam Fayazi -->
+        <div class="member-card" data-category="ops">
+          <div class="member-avatar">
+            <img loading="lazy" decoding="async" src="assets/images/team/asif_fayazi.png" alt="Asif Gulmozzam Fayazi">
+          </div>
+          <div class="member-name">Asif Gulmozzam Fayazi</div>
+          <div class="member-role">Event Coordinator</div>
+          <div class="member-role-detail">Event Management &amp; Technical Logistics &bull; Intern @TATA Inspire &bull; Finalist @India International Science Festival (IISF '24)</div>
+          <a href="https://www.linkedin.com/in/asifgulmozzamfayazi/" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn
+          </a>
+        </div>
+
+        <!-- 12. Anish Kumar -->
+        <div class="member-card" data-category="ops">
+          <div class="member-avatar">
+            <img loading="lazy" decoding="async" src="assets/images/team/anish_kumar.png" alt="Anish Kumar">
+          </div>
+          <div class="member-name">Anish Kumar</div>
+          <div class="member-role">Public Relations Officer</div>
+          <div class="member-role-detail">Public Relations &amp; Community Outreach &bull; Intern @Cortex Construction &bull; Prize Winner @Hack4Sustain</div>
+          <a href="https://www.linkedin.com/in/anish-kumar-civil-engineer/" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn
+          </a>
+        </div>
+
+        <!-- 13. Vishnu Singh Munda -->
+        <div class="member-card" data-category="tech">
+          <div class="member-avatar">
+            <img loading="lazy" decoding="async" src="assets/images/team/vishnu_munda.png" alt="Vishnu Singh Munda">
+          </div>
+          <div class="member-name">Vishnu Singh Munda</div>
+          <div class="member-role">Head of Electrical Systems</div>
+          <div class="member-role-detail">Power Distribution, PLC Programming &amp; Analog Electronics &bull; Hardware Diagnostics &bull; Creator @FunShot</div>
+          <a href="https://www.linkedin.com/in/vishnu-singh-a88a93290/" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn
+          </a>
+        </div>
+
+        <!-- 14. Md Kaif Nezami -->
+        <div class="member-card" data-category="ops tech">
+          <div class="member-avatar">
+            <img loading="lazy" decoding="async" src="assets/images/team/kaif_nezami.png" alt="Md Kaif Nezami">
+          </div>
+          <div class="member-name">Md Kaif Nezami</div>
+          <div class="member-role">Sponsorship Head</div>
+          <div class="member-role-detail">Sponsorship &amp; Partnerships &bull; Project Intern @Drone Lab IIT ISM &bull; Semi-Finalist @ISRO IRoC-U '26</div>
+          <a href="https://www.linkedin.com/in/md-kaif-nezami-029507313/" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn
+          </a>
+        </div>
+
+        <!-- 15. Renu Kumari -->
+        <div class="member-card" data-category="tech">
+          <div class="member-avatar">
+            <img loading="lazy" decoding="async" src="assets/images/team/renu_kumari.png" alt="Renu Kumari">
+          </div>
+          <div class="member-name">Renu Kumari</div>
+          <div class="member-role">Junior Technical Head</div>
+          <div class="member-role-detail">Aerodynamics &amp; Rocket Assembly &bull; Finalist @IN-SPACe Model Rocketry Challenge '25</div>
+          <a href="https://www.linkedin.com/in/renu-kumari-609358362/" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn
+          </a>
+        </div>
+
+        <!-- 16. Nitin Ekka -->
+        <div class="member-card" data-category="ops tech">
+          <div class="member-avatar">
+            <img loading="lazy" decoding="async" src="assets/images/team/nitin_ekka.png" alt="Nitin Ekka">
+          </div>
+          <div class="member-name">Nitin Ekka</div>
+          <div class="member-role">Public Relations Officer</div>
+          <div class="member-role-detail">3D Design &amp; Rapid Prototyping @NextLayer &bull; Ethical Hacking &amp; Penetration Testing Intern @C-DAC, NOIDA</div>
+          <a href="https://www.linkedin.com/in/nitin-ekka504/" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn
+          </a>
+        </div>
+
+        <!-- 17. Vinay Singh -->
+        <div class="member-card" data-category="ops">
+          <div class="member-avatar">
+            <img loading="lazy" decoding="async" src="assets/images/team/vinay_singh.png" alt="Vinay Singh">
+          </div>
+          <div class="member-name">Vinay Singh</div>
+          <div class="member-role">Sponsorship Head</div>
+          <div class="member-role-detail">Corporate Sponsorships &amp; External Relations &bull; Semi-Finalist @ISRO IRoC-U '26</div>
+          <a href="https://www.linkedin.com/in/vinay-singh-4a58a4280/" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn
+          </a>
+        </div>
+
+        <!-- 18. Aadil Manawar -->
+        <div class="member-card" data-category="ops">
+          <div class="member-avatar">
+            <img loading="lazy" decoding="async" src="assets/images/team/aadil_manawar.png" alt="Aadil Manawar">
+          </div>
+          <div class="member-name">Aadil Manawar</div>
+          <div class="member-role">Social Media Head</div>
+          <div class="member-role-detail">Digital Outreach &amp; Media Documentation &bull; AICTE IDEA Lab Student Ambassador &bull; Semi-Finalist @ISRO IRoC-U '26</div>
+          <a href="https://www.linkedin.com/in/aadil-manawar-3b6152280/" target="_blank" rel="noopener noreferrer" class="member-btn">
+            <i data-lucide="linkedin" style="width:13px;height:13px;"></i> LinkedIn
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       CONTACT & MEMBERSHIP
+       ====================================================================== -->
+  <!-- Join CTA band -->
+
+  <section class="cta-band">
+    <div class="container">
+      <div class="cta-inner">
+        <div class="cta-text">
+          <span class="cta-kicker">// LEADERSHIP & CONTRIBUTION</span>
+          <h2>Want to join the leadership or technical cohort?</h2>
+          <p>Every session, ARC selects dedicated students to lead technical verticals, sponsorships, operations, and competition teams.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="join.html" class="btn btn-primary">Apply in Recruitment</a>
+          <a href="sponsors.html" class="btn btn-secondary">Support Our Team</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+<footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Aero &amp; Robotics Club</h4>
+          <p>
+            Autonomous Aerospace &amp; Robotics Collective.<br>
+            Birsa Institute of Technology (BIT) Sindri,<br>
+            Dhanbad, Jharkhand &ndash; 828123, India.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>About Us</h4>
+          <ul>
+            <li><a href="index.html">Home Overview</a></li>
+            <li><a href="competitions.html">Missions &amp; Competitions</a></li>
+            <li><a href="projects.html">Hardware &amp; Projects</a></li>
+            <li><a href="team.html">Post Bearers &amp; Mentors</a></li>
+            <li><a href="sponsors.html">Sponsors &amp; Partners</a></li>
+            <li><a href="join.html">Recruitment &amp; Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="mailto:arc.bitsindri@gmail.com">arc.bitsindri@gmail.com</a></li>
+            <li><a href="https://www.instagram.com/arc.bitsindri" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://bitsindri.ac.in" target="_blank" rel="noopener noreferrer">BIT Sindri Official</a></li>
+            <li><a href="join.html#contact">Club Location &amp; Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Engineering Focus</h4>
+          <p>
+            Dedicated to planetary rover mobility, autonomous aerial robotics, and model sounding rocketry. Built 100% by students driven by space exploration.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Aero &amp; Robotics Club (ARC), BIT Sindri. All rights reserved.</div>
+        <div>Dedicated to community, space systems, and engineering excellence.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div class="modal-overlay" id="imageModal">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Close">&times;</button>
+      <div class="modal-media-box">
+        <img loading="lazy" decoding="async" id="modalImage" src="" alt="Full Resolution View">
+      </div>
+      <div class="modal-caption-bar" id="modalCaption"></div>
+    </div>
+  </div>
+
+  <!-- Master JavaScript -->
+  <script src="js/main.js?v=12"></script>
+  <script>
+    function initIcons() {
+      if (typeof lucide !== 'undefined' && typeof lucide.createIcons === 'function') {
+        lucide.createIcons();
+      }
+    }
+    initIcons();
+    window.addEventListener('DOMContentLoaded', initIcons);
+    window.addEventListener('load', initIcons);
+  </script>
+</body>
+</html>

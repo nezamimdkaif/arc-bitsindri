@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join ARC & Recruitment | ARC BIT Sindri</title>
+  <meta name="description" content="Aero &amp; Robotics Club (ARC) is a student-driven engineering society at BIT Sindri dedicated to planetary robotics, aerospace systems, and autonomous flight.">
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+
+  <!-- Master Stylesheet with cache bust -->
+  <link rel="stylesheet" href="css/style.css?v=38">
+
+  <!-- Theme: System (default) / Dark / Light. Runs before paint to avoid flash. -->
+  <script>
+    (function() {
+      var pref = 'system';
+      try { pref = localStorage.getItem('arc-theme') || 'system'; } catch (e) {}
+      if (['system', 'dark', 'light'].indexOf(pref) === -1) pref = 'system';
+      var dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var root = document.documentElement;
+      root.setAttribute('data-theme', pref === 'system' ? (dark ? 'dark' : 'light') : pref);
+      root.setAttribute('data-theme-pref', pref);
+    })();
+  </script>
+</head>
+<body>
+  <!-- ======================================================================
+       NAVBAR (Clean Single Logo Brand - aerorobotics.club style)
+       ====================================================================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="brand-link">
+        <img src="assets/images/arc_logo.png" alt="ARC Logo" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-name">ARC <span>BIT SINDRI</span></span>
+          <span class="brand-tag">Aero &amp; Robotics Club</span>
+        </div>
+      </a>
+
+      <div class="nav-right-actions">
+        <div class="nav-links">
+          <a href="index.html" class="nav-link ">Home</a>
+          <a href="competitions.html" class="nav-link ">Competitions</a>
+          <a href="projects.html" class="nav-link ">Projects</a>
+          <a href="team.html" class="nav-link ">Team</a>
+          <a href="sponsors.html" class="nav-link ">Sponsors</a>
+          <a href="join.html" class="btn btn-primary btn-sm active">Join ARC</a>
+        </div>
+
+        <!-- Segmented Theme Switcher (System / Dark / Light) -->
+        <div class="theme-switcher-control" id="themeSwitcher" role="radiogroup" aria-label="Theme selection">
+          <button type="button" class="theme-opt-btn active" data-theme="system" title="Follow device theme">
+            <i data-lucide="monitor"></i>
+            <span>System</span>
+          </button>
+          <button type="button" class="theme-opt-btn" data-theme="dark" title="Dark Theme">
+            <i data-lucide="moon"></i>
+            <span>Dark</span>
+          </button>
+          <button type="button" class="theme-opt-btn" data-theme="light" title="Light Theme">
+            <i data-lucide="sun"></i>
+            <span>Light</span>
+          </button>
+        </div>
+
+        <button class="nav-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <!-- Subpage Hero Header -->
+  <header class="page-hero">
+    <div class="container">
+      <div class="page-breadcrumbs">
+        <a href="index.html">Home</a>
+        <i data-lucide="chevron-right" style="width:14px;height:14px;"></i>
+        <span>Join ARC</span>
+      </div>
+      <span class="section-pill">// RECRUITMENT & ADMISSIONS</span>
+      <h1 class="page-hero-title">Build Robots That Leave The Ground</h1>
+      <p class="page-hero-subtitle">Rovers, drones, and rockets &mdash; designed, built, and flown by students. Join Team ARC to gain genuine hardware mastery and compete on the national stage.</p>
+    </div>
+  </header>
+
+  <!-- Recruitment Domains -->
+  <section class="section" id="domains" style="padding-bottom: 20px;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">Recruitment Verticals</span>
+        <h2 class="section-title">Choose Your Engineering Focus</h2>
+        <p class="section-desc">We recruit motivated students across all branches and academic years of BIT Sindri.</p>
+      </div>
+
+      <div class="philosophy-grid">
+        <div class="philosophy-card">
+          <div class="philosophy-icon"><i data-lucide="wrench"></i></div>
+          <h4>Mechanical &amp; Aerospace</h4>
+          <p>CAD 3D modeling (SolidWorks/Fusion 360), FEA structural simulation, rocker-bogie kinematics, CNC machining, 3D printing, and rocket airframe composite lamination.</p>
+        </div>
+
+        <div class="philosophy-card">
+          <div class="philosophy-icon"><i data-lucide="cpu"></i></div>
+          <h4>Electronics &amp; Avionics</h4>
+          <p>Custom PCB design (KiCad), microcontroller firmware (STM32, Teensy, ESP32), sensor fusion (IMU, Baro, GPS), power distribution, and LoRa long-range telemetry.</p>
+        </div>
+
+        <div class="philosophy-card">
+          <div class="philosophy-icon"><i data-lucide="code"></i></div>
+          <h4>Autonomous AI &amp; Software</h4>
+          <p>Linux &amp; ROS 2 development, ArduPilot flight stacks, computer vision (OpenCV, YOLO), LiDAR SLAM, autonomous path planning, and ground station telemetry software.</p>
+        </div>
+
+        <div class="philosophy-card">
+          <div class="philosophy-icon"><i data-lucide="megaphone"></i></div>
+          <h4>Operations &amp; Outreach</h4>
+          <p>Corporate sponsorship outreach, budget management, technical documentation, graphic design, social media storytelling, and national event logistics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div>
+<section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="contact-layout">
+        <div class="contact-info">
+          <span class="section-pill">Join Us</span>
+          <h3>Get In Touch With ARC</h3>
+          <p>
+            Interested in drones, planetary rovers, rockets or robotics? We welcome enthusiastic engineering students across all branches and years of BIT Sindri.
+          </p>
+
+          <div class="contact-items">
+            <div class="contact-item">
+              <i data-lucide="mail" style="width:18px;height:18px;"></i>
+              <span>Official Email: <strong>arc.bitsindri@gmail.com</strong></span>
+            </div>
+            <div class="contact-item">
+              <i data-lucide="map-pin" style="width:18px;height:18px;"></i>
+              <span>Location: BIT Sindri, Dhanbad, Jharkhand &ndash; 828123</span>
+            </div>
+            <div class="contact-item">
+              <i data-lucide="instagram" style="width:18px;height:18px;"></i>
+              <span>Instagram: <strong>@arc.bitsindri</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="joinForm">
+          <h4 style="font-size:1.15rem;margin-bottom:16px;">Team ARC Recruitment Application</h4>
+          
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" placeholder="Your full name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Institutional College Email</label>
+            <input type="email" id="email" placeholder="e.g. yourname.rollno@bitsindri.ac.in" pattern=".*@([a-zA-Z0-9-]+\.)*bitsindri\.ac\.in$" title="Please use your official BIT Sindri institutional email ending with .bitsindri.ac.in" required>
+            <small style="color:var(--text-secondary);font-size:0.76rem;margin-top:5px;display:block;line-height:1.4;">Only official institutional emails ending with <strong>.bitsindri.ac.in</strong> are accepted.</small>
+          </div>
+
+          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:14px;">
+            <div class="form-group">
+              <label for="branch">Engineering Branch</label>
+              <select id="branch" required>
+                <option value="">Select Branch</option>
+                <option>Mechanical Engineering</option>
+                <option>Electrical Engineering</option>
+                <option>Electronics &amp; Communication (ECE)</option>
+                <option>Computer Science &amp; Engg (CSE)</option>
+                <option>Information Technology (IT)</option>
+                <option>Production &amp; Industrial Engg</option>
+                <option>Civil Engineering</option>
+                <option>Chemical Engineering</option>
+                <option>Metallurgical Engineering</option>
+                <option>Mining Engineering</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="year">Academic Year</label>
+              <select id="year" required>
+                <option value="">Select Year</option>
+                <option>1st Year (B.Tech)</option>
+                <option>2nd Year (B.Tech)</option>
+                <option>3rd Year (B.Tech)</option>
+                <option>4th Year (B.Tech)</option>
+                <option>M.Tech / Research</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="engineeringFocus">Primary Engineering Focus</label>
+            <select id="engineeringFocus" required>
+              <option value="">Choose Your Engineering Focus</option>
+              <option value="Mechanical & Aerospace">Mechanical &amp; Aerospace &mdash; CAD, FEA, Rocker-Bogie &amp; Composite Rocketry</option>
+              <option value="Electronics & Avionics">Electronics &amp; Avionics &mdash; Custom PCBs, Microcontroller Firmware &amp; Telemetry</option>
+              <option value="Autonomous AI & Software">Autonomous AI &amp; Software &mdash; ROS 2, ArduPilot, Computer Vision &amp; SLAM</option>
+              <option value="Operations & Outreach">Operations &amp; Outreach &mdash; Corporate Sponsorship, Media &amp; Event Logistics</option>
+              <option value="Interdisciplinary">Interdisciplinary / Open to Multiple Domains</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="compInterest">Target Mission / Competition Interest</label>
+            <select id="compInterest" required>
+              <option value="">Select Primary Competition Interest</option>
+              <option value="NIDAR 2.0 AirMouse (Active)">NIDAR 2.0 AirMouse (Autonomous Hexacopter UAV)</option>
+              <option value="eYantra 2026-27 (Active)">eYantra Robotics Challenge 2026&ndash;27 (IIT Bombay)</option>
+              <option value="ISRO IRoC-U Planetary Rover">ISRO IRoC-U Planetary Rover Exploration</option>
+              <option value="IN-SPACe Model Rocketry">IN-SPACe Model Sounding Rocketry (NANDIGHOSH)</option>
+              <option value="All Active Missions">All Active Missions / Where Needed</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="note">Statement of Interest / Prior Experience</label>
+            <textarea id="note" placeholder="Tell us why you want to join ARC, your skills (e.g. SolidWorks, Python, C++, PCB design), or any past projects/GitHub links..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;">
+            Submit Application
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       FOOTER (aerorobotics.club style)
+       ====================================================================== -->
+
+  </div>
+<footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Aero &amp; Robotics Club</h4>
+          <p>
+            Autonomous Aerospace &amp; Robotics Collective.<br>
+            Birsa Institute of Technology (BIT) Sindri,<br>
+            Dhanbad, Jharkhand &ndash; 828123, India.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>About Us</h4>
+          <ul>
+            <li><a href="index.html">Home Overview</a></li>
+            <li><a href="competitions.html">Missions &amp; Competitions</a></li>
+            <li><a href="projects.html">Hardware &amp; Projects</a></li>
+            <li><a href="team.html">Post Bearers &amp; Mentors</a></li>
+            <li><a href="sponsors.html">Sponsors &amp; Partners</a></li>
+            <li><a href="join.html">Recruitment &amp; Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="mailto:arc.bitsindri@gmail.com">arc.bitsindri@gmail.com</a></li>
+            <li><a href="https://www.instagram.com/arc.bitsindri" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://bitsindri.ac.in" target="_blank" rel="noopener noreferrer">BIT Sindri Official</a></li>
+            <li><a href="join.html#contact">Club Location &amp; Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Engineering Focus</h4>
+          <p>
+            Dedicated to planetary rover mobility, autonomous aerial robotics, and model sounding rocketry. Built 100% by students driven by space exploration.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Aero &amp; Robotics Club (ARC), BIT Sindri. All rights reserved.</div>
+        <div>Dedicated to community, space systems, and engineering excellence.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div class="modal-overlay" id="imageModal">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Close">&times;</button>
+      <div class="modal-media-box">
+        <img loading="lazy" decoding="async" id="modalImage" src="" alt="Full Resolution View">
+      </div>
+      <div class="modal-caption-bar" id="modalCaption"></div>
+    </div>
+  </div>
+
+  <!-- Master JavaScript -->
+  <script src="js/main.js?v=12"></script>
+  <script>
+    function initIcons() {
+      if (typeof lucide !== 'undefined' && typeof lucide.createIcons === 'function') {
+        lucide.createIcons();
+      }
+    }
+    initIcons();
+    window.addEventListener('DOMContentLoaded', initIcons);
+    window.addEventListener('load', initIcons);
+  </script>
+</body>
+</html>

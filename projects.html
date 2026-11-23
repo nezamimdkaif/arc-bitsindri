@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hardware & Projects | ARC BIT Sindri</title>
+  <meta name="description" content="Aero &amp; Robotics Club (ARC) is a student-driven engineering society at BIT Sindri dedicated to planetary robotics, aerospace systems, and autonomous flight.">
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+
+  <!-- Master Stylesheet with cache bust -->
+  <link rel="stylesheet" href="css/style.css?v=38">
+
+  <!-- Theme: System (default) / Dark / Light. Runs before paint to avoid flash. -->
+  <script>
+    (function() {
+      var pref = 'system';
+      try { pref = localStorage.getItem('arc-theme') || 'system'; } catch (e) {}
+      if (['system', 'dark', 'light'].indexOf(pref) === -1) pref = 'system';
+      var dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var root = document.documentElement;
+      root.setAttribute('data-theme', pref === 'system' ? (dark ? 'dark' : 'light') : pref);
+      root.setAttribute('data-theme-pref', pref);
+    })();
+  </script>
+</head>
+<body>
+  <!-- ======================================================================
+       NAVBAR (Clean Single Logo Brand - aerorobotics.club style)
+       ====================================================================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="brand-link">
+        <img src="assets/images/arc_logo.png" alt="ARC Logo" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-name">ARC <span>BIT SINDRI</span></span>
+          <span class="brand-tag">Aero &amp; Robotics Club</span>
+        </div>
+      </a>
+
+      <div class="nav-right-actions">
+        <div class="nav-links">
+          <a href="index.html" class="nav-link ">Home</a>
+          <a href="competitions.html" class="nav-link ">Competitions</a>
+          <a href="projects.html" class="nav-link active">Projects</a>
+          <a href="team.html" class="nav-link ">Team</a>
+          <a href="sponsors.html" class="nav-link ">Sponsors</a>
+          <a href="join.html" class="btn btn-primary btn-sm ">Join ARC</a>
+        </div>
+
+        <!-- Segmented Theme Switcher (System / Dark / Light) -->
+        <div class="theme-switcher-control" id="themeSwitcher" role="radiogroup" aria-label="Theme selection">
+          <button type="button" class="theme-opt-btn active" data-theme="system" title="Follow device theme">
+            <i data-lucide="monitor"></i>
+            <span>System</span>
+          </button>
+          <button type="button" class="theme-opt-btn" data-theme="dark" title="Dark Theme">
+            <i data-lucide="moon"></i>
+            <span>Dark</span>
+          </button>
+          <button type="button" class="theme-opt-btn" data-theme="light" title="Light Theme">
+            <i data-lucide="sun"></i>
+            <span>Light</span>
+          </button>
+        </div>
+
+        <button class="nav-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <!-- Subpage Hero Header -->
+  <header class="page-hero">
+    <div class="container">
+      <div class="page-breadcrumbs">
+        <a href="index.html">Home</a>
+        <i data-lucide="chevron-right" style="width:14px;height:14px;"></i>
+        <span>Projects</span>
+      </div>
+      <span class="section-pill">// HARDWARE SYSTEMS & PROTOTYPES</span>
+      <h1 class="page-hero-title">What We Have Built</h1>
+      <p class="page-hero-subtitle">A deep-dive showcase of planetary rovers, high-impulse sounding rockets, autonomous hexacopter UAVs, and scientific payload systems designed, fabricated, and validated by BIT Sindri students.</p>
+    </div>
+  </header>
+
+  <div style='padding-top:20px;'>
+<section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">Projects</span>
+        <h2 class="section-title">What We Have Built</h2>
+        <p class="section-desc">A showcase of the rovers, drones, rockets, and autonomous systems designed, built, and tested by Team ARC.</p>
+      </div>
+      <div class="proj-grid">
+        <article class="proj-card">
+          <div class="proj-img">
+            <img loading="lazy" decoding="async" src="assets/images/competitions/rover/rover_full_build_1.jpg" alt="Lunar &amp; Planetary Rover">
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta"><span class="proj-tag">Planetary Rover</span><span class="proj-year">2024</span></div>
+            <h4>Lunar &amp; Planetary Rover</h4>
+            <p>6-wheel rocker-bogie exploration platform with custom regolith wheels and autonomous hazard navigation.</p>
+            <div class="proj-reach"><span>Mission</span><strong>ISRO IRoC-U '24 &bull; Semi-Finalist (Top 12)</strong></div>
+          </div>
+        </article>
+        <article class="proj-card">
+          <div class="proj-img proj-placeholder-box">
+            <div class="uav-placeholder-content">
+              <i data-lucide="crosshair" style="width:38px;height:38px;"></i>
+              <span class="placeholder-tag">Silver-Motor Planetary UAV</span>
+              <span class="placeholder-note">Flight Hardware &bull; Photos Updating</span>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta"><span class="proj-tag">Autonomous UAV</span><span class="proj-year">2026</span></div>
+            <h4>Autonomous Planetary UAV</h4>
+            <p>Multi-rotor aerial platform with onboard vision, SLAM, and GPS-denied navigation for planetary terrain.</p>
+            <div class="proj-reach"><span>Mission</span><strong>ISRO IRoC-U '26 &bull; Semi-Finalist</strong></div>
+          </div>
+        </article>
+        <article class="proj-card">
+          <div class="proj-img">
+            <img loading="lazy" decoding="async" src="assets/images/competitions/rocketry/nandighosh_real_inspace.jpg" alt="Model Sounding Rocket NANDIGHOSH with Team at IN-SPACe" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;">
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta"><span class="proj-tag">Model Rocketry</span><span class="proj-year">2025</span></div>
+            <h4>Model Sounding Rocket (NANDIGHOSH)</h4>
+            <p>Physical single-stage solid motor sounding rocket (1.66m) with CANSAT telemetry payload and dual parachute recovery, demonstrated at IN-SPACe Ahmedabad.</p>
+            <div class="proj-reach"><span>Mission</span><strong>IN-SPACe Rocketry '25 &bull; National Finalists</strong></div>
+          </div>
+        </article>
+        <article class="proj-card">
+          <div class="proj-img proj-nidar-bg">
+            <img loading="lazy" decoding="async" class="proj-drone-img" src="assets/images/nidar/nidar_drone_clean_framed.jpg" alt="NIDAR 2.0 AirMouse Tactical Drone">
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta"><span class="proj-tag">Indoor Search Drone</span><span class="proj-year">2026</span></div>
+            <h4>NIDAR 2.0 AirMouse</h4>
+            <p>Autonomous GPS-denied UAV engineered for Drone Federation of India (DFI). Cartographer 2D LiDAR SLAM verified; currently in survivor detection pipeline testing.</p>
+            <div class="proj-reach"><span>Status</span><strong>Active Mission &bull; SLAM Tested &bull; Survivor Detection Phase</strong></div>
+          </div>
+        </article>
+        <article class="proj-card">
+          <div class="proj-img proj-icon">
+            <i data-lucide="siren" style="width:42px;height:42px;"></i>
+            <img loading="lazy" decoding="async" class="proj-logo" src="assets/images/logos/eyantra.png" alt="eYantra Khoj-o-Drone logo" onerror="this.remove()">
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta"><span class="proj-tag">Survivor Search Drone</span><span class="proj-year">2026-27</span></div>
+            <h4>Khoj-o-Drone Quadcopter</h4>
+            <p>Autonomous survivor detection, visual tracking, and GPS-denied 3D localization quadcopter for disaster zones.</p>
+            <div class="proj-reach"><span>Mission</span><strong>eYantra 2026-27 &bull; Stage 1 Done (Result Awaited)</strong></div>
+          </div>
+        </article>
+        <article class="proj-card">
+          <div class="proj-img proj-icon">
+            <i data-lucide="plane" style="width:42px;height:42px;"></i>
+            <img loading="lazy" decoding="async" class="proj-logo" src="assets/images/logos/sae.png" alt="SAE Aerothon logo" onerror="this.remove()">
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta"><span class="proj-tag">Aircraft Design</span><span class="proj-year">2024</span></div>
+            <h4>Fixed-Wing RC Aircraft</h4>
+            <p>Custom-fabricated high-lift fixed-wing aircraft engineered for aerodynamic payload capacity and flight stability.</p>
+            <div class="proj-reach"><span>Competition</span><strong>SAE Aerothon &bull; Competed</strong></div>
+          </div>
+        </article>
+        <article class="proj-card">
+          <div class="proj-img proj-icon">
+            <i data-lucide="satellite" style="width:42px;height:42px;"></i>
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta"><span class="proj-tag">Space Software &amp; AI</span><span class="proj-year">2024</span></div>
+            <h4>Antariksh AI &amp; Satellite Pipeline</h4>
+            <p>Computer vision and geospatial AI pipeline for satellite data processing and automated environmental feature extraction.</p>
+            <div class="proj-reach"><span>Hackathon</span><strong>Bharatiya Antariksh Hackathon &bull; Competed</strong></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+<section class="section" id="subsystems">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">Engineering Matrix</span>
+        <h2 class="section-title">Inside The Machine</h2>
+        <p class="section-desc">
+          Explore the interdisciplinary engineering hardware powering Team ARC's space robotics, planetary rovers, and autonomous aerial platforms.
+        </p>
+      </div>
+
+      <div class="matrix-gallery matrix-top">
+        <figure class="comp-photo-item" data-lightbox data-src="assets/images/competitions/rover/rover_full_build_1.jpg" data-caption="ISRO IRoC-U '24 Rocker-Bogie Planetary Rover Platform"><img src="assets/images/competitions/rover/rover_full_build_1.jpg" alt="ISRO IRoC-U '24 Rocker-Bogie Rover Platform" loading="lazy"><div class="comp-photo-caption">ISRO IRoC-U '24 Planetary Rover</div></figure>
+        <figure class="comp-photo-item" data-lightbox data-src="assets/images/nidar/nidar_drone_top.webp" data-caption="Autonomous Aerial Robotics Testbed (LiDAR &amp; Companion Computer)"><img src="assets/images/nidar/nidar_drone_top.webp" alt="Autonomous Aerial Robotics Testbed" loading="lazy"><div class="comp-photo-caption">Autonomous Drone Testbed</div></figure>
+        <figure class="comp-photo-item" data-lightbox data-src="assets/images/competitions/rover/rover_robotic_arm_sample.jpg" data-caption="4-DOF Articulated Robotic Arm &amp; Sample Gripper"><img src="assets/images/competitions/rover/rover_robotic_arm_sample.jpg" alt="4-DOF Articulated Robotic Arm &amp; Sample Gripper" loading="lazy"><div class="comp-photo-caption">4-DOF Robotic Arm &amp; Gripper</div></figure>
+      </div>
+
+      <div class="subsystems-grid">
+        <!-- Pillar 1: Mechanical & Kinematics -->
+        <div class="subsystem-box">
+          <div class="subsystem-box-header">
+            <div class="s-icon"><i data-lucide="cog" style="width:22px;height:22px;"></i></div>
+            <span class="s-tag">Mechanical &amp; Kinematics</span>
+          </div>
+          <h4>Articulated Mobility &amp; Airframes</h4>
+          <p>Custom-engineered 6-wheel rocker-bogie differential suspension, CNC-milled 6061-T6 aluminum chassis linkages, and curved-grouser regolith traction wheels designed for loose lunar terrain traversal.</p>
+          <ul class="s-feature-list">
+            <li><i data-lucide="check-circle-2" style="width:16px;height:16px;"></i> 6-Wheel Passive Differential Equalizer</li>
+            <li><i data-lucide="check-circle-2" style="width:16px;height:16px;"></i> 25&deg; Slope Incline Traversal Capability</li>
+            <li><i data-lucide="check-circle-2" style="width:16px;height:16px;"></i> Vibration-Damped Carbon Fiber Airframes</li>
+          </ul>
+        </div>
+
+        <!-- Pillar 2: Autonomy & Perception -->
+        <div class="subsystem-box">
+          <div class="subsystem-box-header">
+            <div class="s-icon"><i data-lucide="cpu" style="width:22px;height:22px;"></i></div>
+            <span class="s-tag">Autonomy &amp; AI</span>
+          </div>
+          <h4>Perception &amp; Path Planning</h4>
+          <p>Real-time ROS 2 Humble node graph handling Visual SLAM, 3D point-cloud obstacle mapping, and autonomous GPS-denied planetary waypoint navigation algorithms.</p>
+          <ul class="s-feature-list">
+            <li><i data-lucide="check-circle-2" style="width:16px;height:16px;"></i> Intel RealSense Stereo Depth Vision</li>
+            <li><i data-lucide="check-circle-2" style="width:16px;height:16px;"></i> Real-Time RTAB-Map 3D Visual SLAM</li>
+            <li><i data-lucide="check-circle-2" style="width:16px;height:16px;"></i> Dynamic A* &amp; TEB Local Trajectory Planner</li>
+          </ul>
+        </div>
+
+        <!-- Pillar 3: Avionics & Embedded Power -->
+        <div class="subsystem-box">
+          <div class="subsystem-box-header">
+            <div class="s-icon"><i data-lucide="zap" style="width:22px;height:22px;"></i></div>
+            <span class="s-tag">Avionics &amp; Power</span>
+          </div>
+          <h4>Embedded Control Architecture</h4>
+          <p>Custom 24V isolated multi-rail power distribution bus with redundant STM32 ARM microcontrollers executing deterministic microsecond-level PID closed-loop motor actuation.</p>
+          <ul class="s-feature-list">
+            <li><i data-lucide="check-circle-2" style="width:16px;height:16px;"></i> High-Resolution Hall-Effect Encoders</li>
+            <li><i data-lucide="check-circle-2" style="width:16px;height:16px;"></i> Isolated Logic &amp; Motor Power Rails</li>
+            <li><i data-lucide="check-circle-2" style="width:16px;height:16px;"></i> Real-Time Battery BMS Telemetry &amp; Beacon</li>
+          </ul>
+        </div>
+
+        <!-- Pillar 4: Ground Station & Comms -->
+        <div class="subsystem-box">
+          <div class="subsystem-box-header">
+            <div class="s-icon"><i data-lucide="radio" style="width:22px;height:22px;"></i></div>
+            <span class="s-tag">Telemetry &amp; Comms</span>
+          </div>
+          <h4>Mission Ground Station</h4>
+          <p>Dual-band 2.4/5.8 GHz directional telemetry and low-latency FPV video downlink streaming real-time attitude orientation, motor draw, and payload states to base camp.</p>
+          <ul class="s-feature-list">
+            <li><i data-lucide="check-circle-2" style="width:16px;height:16px;"></i> Dual-Band 2.4 / 5.8 GHz Uplink</li>
+            <li><i data-lucide="check-circle-2" style="width:16px;height:16px;"></i> Sub-50ms Low-Latency Video Pipeline</li>
+            <li><i data-lucide="check-circle-2" style="width:16px;height:16px;"></i> Hardware Deadman Fail-Safe Switch</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       FIELD ACTION VIDEOS (Real Engineering Proof)
+       ====================================================================== -->
+
+<section class="section section-alt" id="videos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">Hardware in Motion</span>
+        <h2 class="section-title">Field Trials &amp; Engineering Demos</h2>
+        <p class="section-desc">
+          Watch Team ARC's lunar rover platform tackling boulder obstacles, testing rocker-bogie kinematics, and running night navigation trials on the BIT Sindri testbed.
+        </p>
+      </div>
+
+      <div class="video-grid">
+        <!-- Featured Video: Full Rover Locomotion & Ground Trials -->
+        <div class="video-card" style="grid-column: 1 / -1; border-color: var(--primary-border);">
+          <div class="video-wrapper" style="aspect-ratio: 16/9;">
+            <video controls playsinline preload="metadata" poster="assets/videos/poster_orientation.jpg">
+              <source src="assets/videos/arc_orientation_showcase.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-card-body">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+              <span class="video-tag" style="background:var(--primary); color:#ffffff; font-weight:700;">FEATURED LOCOMOTION DEMO</span>
+              <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-secondary);">1080P &bull; 62 SECONDS</span>
+            </div>
+            <h4>Full-Scale Planetary Rover Locomotion &amp; Ground Field Trials</h4>
+            <p>Official physical trials of Team ARC's 6-wheel rocker-bogie planetary rover on the outdoor proving ground at BIT Sindri, demonstrating hub motor synchronization, differential pivot articulation, and autonomous stability.</p>
+          </div>
+        </div>
+
+        <!-- Video 1: Obstacle Traversal -->
+        <div class="video-card">
+          <div class="video-wrapper">
+            <video controls playsinline preload="metadata" poster="assets/videos/poster_obstacle.jpg">
+              <source src="assets/videos/rover_obstacle_test.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-card-body">
+            <span class="video-tag">Field Trial</span>
+            <h4>Boulder Obstacle Climb &amp; Traversal</h4>
+            <p>Full-scale rocker-bogie 6-wheel rover conquering uneven rock piles and rocky soil during off-road locomotion validation.</p>
+          </div>
+        </div>
+
+        <!-- Video 2: Kinematics & Suspension -->
+        <div class="video-card">
+          <div class="video-wrapper">
+            <video controls playsinline preload="metadata" poster="assets/videos/poster_kinematics.jpg">
+              <source src="assets/videos/rover_kinematics_test.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-card-body">
+            <span class="video-tag">Kinematics</span>
+            <h4>Rocker-Bogie Differential Articulation</h4>
+            <p>High-def close-up demonstrating dynamic load balancing, passive suspension pitch equalization, and chassis stabilization.</p>
+          </div>
+        </div>
+
+        <!-- Video 3: Dusk & Night Trials -->
+        <div class="video-card">
+          <div class="video-wrapper">
+            <video controls playsinline preload="metadata" poster="assets/videos/poster_night.jpg">
+              <source src="assets/videos/rover_night_trials.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-card-body">
+            <span class="video-tag">Night Ops</span>
+            <h4>Dusk Navigation &amp; Power Rail Testing</h4>
+            <p>Verification of high-output LED floodlights, onboard electronics cooling, and autonomous path tracking under low-light conditions.</p>
+          </div>
+        </div>
+
+        <!-- Video 4: Wheel CAD Simulation -->
+        <div class="video-card">
+          <div class="video-wrapper">
+            <video controls playsinline preload="metadata" poster="assets/videos/poster_wheel.jpg">
+              <source src="assets/videos/wheel_cad_simulation.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-card-body">
+            <span class="video-tag">Mechanical CAD</span>
+            <h4>Curved-Grouser Wheel 360&deg; Simulation</h4>
+            <p>Finite element analysis and SolidWorks rotational rendering of the custom lightweight regolith traction wheel.</p>
+          </div>
+        </div>
+
+        <!-- Video 5: NIDAR 2.0 Real-time Cartographer SLAM Mapping -->
+        <div class="video-card">
+          <div class="video-wrapper">
+            <video controls playsinline preload="metadata" poster="assets/videos/poster_nidar_slam.jpg">
+              <source src="assets/videos/nidar_slam_mapping.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-card-body">
+            <span class="video-tag" style="background:#10b981; color:#fff;">LiDAR SLAM Live Trial</span>
+            <h4>NIDAR 2.0 Real-Time Cartographer 2D SLAM</h4>
+            <p>Real-time RViz 2D occupancy grid mapping and laser-scan loop closure in a GPS-denied indoor test environment running on our onboard companion computer.</p>
+          </div>
+        </div>
+
+        <!-- Video 6: Lunar Surface Environment & Terrain 3D Model -->
+        <div class="video-card">
+          <div class="video-wrapper">
+            <video controls playsinline preload="metadata" poster="assets/videos/poster_moon_model.jpg">
+              <source src="assets/videos/Moon_model.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="video-card-body">
+            <span class="video-tag" style="background:var(--primary); color:#fff;">3D Simulation</span>
+            <h4>Lunar Surface &amp; Terrain Environmental Model</h4>
+            <p>Digital 3D lunar terrain mapping and simulation environment developed for planetary rover locomotion, obstacle clearance, and regolith interaction studies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       FLEET SPECIFICATIONS MATRIX
+       ====================================================================== -->
+
+<section class="section" id="specs">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">Competition Summary</span>
+        <h2 class="section-title">Competitions at a Glance</h2>
+        <p class="section-desc">
+          Each challenge Team ARC has taken part in, with the platform, the mission and where we stand.
+        </p>
+      </div>
+
+      <div class="spec-table-container">
+        <table class="spec-table">
+          <thead><tr><th>Parameter</th><th>ISRO IRoC-U '24</th><th>ISRO IRoC-U '26</th><th>IN-SPACe '25</th><th>eYantra '26-27</th><th>NIDAR 2.0</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Platform</strong></td><td>Planetary rover</td><td>Autonomous UAV</td><td>Model rocket</td><td>Quadcopter</td><td>Quadcopter</td></tr>
+            <tr><td><strong>Mission</strong></td><td>Lunar surface exploration</td><td>GPS-denied aerial exploration</td><td>Design, build and launch a rocket</td><td>Find survivors in a disaster zone and estimate their coordinates</td><td>Search, map and locate survivors in a 15 x 15 m maze (DFI)</td></tr>
+            <tr><td><strong>Status</strong></td><td><span class="spec-highlight green">National Semi-Finalist (2024)</span></td><td><span class="spec-highlight purple">National Semi-Finalist (2026)</span></td><td><span class="spec-highlight blue">National Finalist (2025)</span></td><td><span class="spec-highlight blue">Stage 1 completed, result awaited</span></td><td><span class="spec-highlight green">SLAM Tested &bull; Survivor Detection Phase</span></td></tr>
+            </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       MISSION ODYSSEY TIMELINE (Roadmap)
+       ====================================================================== -->
+
+  <section class="cta-band">
+    <div class="container">
+      <div class="cta-inner">
+        <div class="cta-text">
+          <span class="cta-kicker">// HANDS-ON ENGINEERING</span>
+          <h2>Ready to turn CAD models into physical reality?</h2>
+          <p>ARC provides lab resources, 3D printing, CNC machining, flight controllers, and mentor guidance for ambitious student builders.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="join.html" class="btn btn-primary">Join the Build Cohort</a>
+          <a href="competitions.html" class="btn btn-secondary">View Competition Missions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+<footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Aero &amp; Robotics Club</h4>
+          <p>
+            Autonomous Aerospace &amp; Robotics Collective.<br>
+            Birsa Institute of Technology (BIT) Sindri,<br>
+            Dhanbad, Jharkhand &ndash; 828123, India.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>About Us</h4>
+          <ul>
+            <li><a href="index.html">Home Overview</a></li>
+            <li><a href="competitions.html">Missions &amp; Competitions</a></li>
+            <li><a href="projects.html">Hardware &amp; Projects</a></li>
+            <li><a href="team.html">Post Bearers &amp; Mentors</a></li>
+            <li><a href="sponsors.html">Sponsors &amp; Partners</a></li>
+            <li><a href="join.html">Recruitment &amp; Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="mailto:arc.bitsindri@gmail.com">arc.bitsindri@gmail.com</a></li>
+            <li><a href="https://www.instagram.com/arc.bitsindri" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://bitsindri.ac.in" target="_blank" rel="noopener noreferrer">BIT Sindri Official</a></li>
+            <li><a href="join.html#contact">Club Location &amp; Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Engineering Focus</h4>
+          <p>
+            Dedicated to planetary rover mobility, autonomous aerial robotics, and model sounding rocketry. Built 100% by students driven by space exploration.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Aero &amp; Robotics Club (ARC), BIT Sindri. All rights reserved.</div>
+        <div>Dedicated to community, space systems, and engineering excellence.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div class="modal-overlay" id="imageModal">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Close">&times;</button>
+      <div class="modal-media-box">
+        <img loading="lazy" decoding="async" id="modalImage" src="" alt="Full Resolution View">
+      </div>
+      <div class="modal-caption-bar" id="modalCaption"></div>
+    </div>
+  </div>
+
+  <!-- Master JavaScript -->
+  <script src="js/main.js?v=12"></script>
+  <script>
+    function initIcons() {
+      if (typeof lucide !== 'undefined' && typeof lucide.createIcons === 'function') {
+        lucide.createIcons();
+      }
+    }
+    initIcons();
+    window.addEventListener('DOMContentLoaded', initIcons);
+    window.addEventListener('load', initIcons);
+  </script>
+</body>
+</html>

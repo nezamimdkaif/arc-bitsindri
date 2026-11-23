@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Missions & Competitions | ARC BIT Sindri</title>
+  <meta name="description" content="Aero &amp; Robotics Club (ARC) is a student-driven engineering society at BIT Sindri dedicated to planetary robotics, aerospace systems, and autonomous flight.">
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+
+  <!-- Master Stylesheet with cache bust -->
+  <link rel="stylesheet" href="css/style.css?v=38">
+
+  <!-- Theme: System (default) / Dark / Light. Runs before paint to avoid flash. -->
+  <script>
+    (function() {
+      var pref = 'system';
+      try { pref = localStorage.getItem('arc-theme') || 'system'; } catch (e) {}
+      if (['system', 'dark', 'light'].indexOf(pref) === -1) pref = 'system';
+      var dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var root = document.documentElement;
+      root.setAttribute('data-theme', pref === 'system' ? (dark ? 'dark' : 'light') : pref);
+      root.setAttribute('data-theme-pref', pref);
+    })();
+  </script>
+</head>
+<body>
+  <!-- ======================================================================
+       NAVBAR (Clean Single Logo Brand - aerorobotics.club style)
+       ====================================================================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="brand-link">
+        <img src="assets/images/arc_logo.png" alt="ARC Logo" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-name">ARC <span>BIT SINDRI</span></span>
+          <span class="brand-tag">Aero &amp; Robotics Club</span>
+        </div>
+      </a>
+
+      <div class="nav-right-actions">
+        <div class="nav-links">
+          <a href="index.html" class="nav-link ">Home</a>
+          <a href="competitions.html" class="nav-link active">Competitions</a>
+          <a href="projects.html" class="nav-link ">Projects</a>
+          <a href="team.html" class="nav-link ">Team</a>
+          <a href="sponsors.html" class="nav-link ">Sponsors</a>
+          <a href="join.html" class="btn btn-primary btn-sm ">Join ARC</a>
+        </div>
+
+        <!-- Segmented Theme Switcher (System / Dark / Light) -->
+        <div class="theme-switcher-control" id="themeSwitcher" role="radiogroup" aria-label="Theme selection">
+          <button type="button" class="theme-opt-btn active" data-theme="system" title="Follow device theme">
+            <i data-lucide="monitor"></i>
+            <span>System</span>
+          </button>
+          <button type="button" class="theme-opt-btn" data-theme="dark" title="Dark Theme">
+            <i data-lucide="moon"></i>
+            <span>Dark</span>
+          </button>
+          <button type="button" class="theme-opt-btn" data-theme="light" title="Light Theme">
+            <i data-lucide="sun"></i>
+            <span>Light</span>
+          </button>
+        </div>
+
+        <button class="nav-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <!-- Subpage Hero Header -->
+  <header class="page-hero">
+    <div class="container">
+      <div class="page-breadcrumbs">
+        <a href="index.html">Home</a>
+        <i data-lucide="chevron-right" style="width:14px;height:14px;"></i>
+        <span>Competitions</span>
+      </div>
+      <span class="section-pill">// NATIONAL MISSIONS & ODYSSEY</span>
+      <h1 class="page-hero-title">Our Competitive Odyssey</h1>
+      <p class="page-hero-subtitle">From national planetary rover design at ISRO URSC Bangalore to student-built sounding rocketry at IN-SPACe Ahmedabad, explore Team ARC's competitive journey and active campaigns.</p>
+    </div>
+  </header>
+
+  <!-- Active Missions Section -->
+  <section class="section" id="active-missions">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">// CURRENT FOCUS &bull; SESSION 2026&ndash;2027</span>
+        <h2 class="section-title">Active Missions</h2>
+        <p class="section-desc">Autonomous aerial robotics and embedded systems currently under active research, design, and physical validation in our lab.</p>
+      </div>
+
+      <div class="philosophy-grid" style="grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));">
+        
+        <!-- NIDAR 2.0 AirMouse -->
+        <div class="philosophy-card" style="border-top: 3px solid #10b981; padding:32px;">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:16px;">
+            <div class="mission-logo-badge" style="height:54px; max-width:180px;">
+              <img src="assets/images/logos/nidar.png" alt="NIDAR 2.0 Logo">
+            </div>
+            <span class="live-pill" style="font-size:0.75rem; padding:4px 10px;"><span class="live-dot"></span> ACTIVE TESTING &bull; SLAM VALIDATED</span>
+          </div>
+          <h3 style="font-size:1.35rem; margin-bottom:8px;">NIDAR 2.0 &mdash; AirMouse</h3>
+          <div style="font-family:var(--font-mono); font-size:0.82rem; color:var(--primary); font-weight:700; margin-bottom:14px;">
+            ORGANIZER: DRONE FEDERATION OF INDIA (DFI)
+          </div>
+          <p style="font-size:0.92rem; color:var(--text-secondary); line-height:1.6; margin-bottom:16px;">
+            Autonomous GPS-denied UAV engineered for indoor search, 2D/3D LiDAR occupancy mapping, and disaster survivor localization. Powered by ROS 2 and Cartographer SLAM on an onboard companion computer.
+          </p>
+          <div style="background:var(--bg-surface); padding:16px; border-radius:var(--radius-md); border:1px solid var(--border); font-size:0.84rem; line-height:1.5; color:var(--text-secondary); margin-bottom:16px;">
+            <strong style="color:var(--text-main);">Current Status:</strong> Hardware assembly &amp; physical flight stabilization completed at BIT Sindri. Cartographer 2D LiDAR SLAM mapping successfully tested &amp; verified. Currently advancing to the autonomous survivor detection &amp; target localization phase.
+          </div>
+          <div class="video-wrapper" style="border-radius:var(--radius-md); overflow:hidden; border:1px solid var(--border);">
+            <video controls playsinline preload="metadata" poster="assets/videos/poster_nidar_slam.jpg" style="width:100%; display:block;">
+              <source src="assets/videos/nidar_slam_mapping.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-secondary); margin-top:8px; display:flex; justify-content:space-between;">
+            <span>&bull; Real Cartographer SLAM Telemetry</span>
+            <span>RViz 2D Grid Mapping</span>
+          </div>
+        </div>
+
+        <!-- eYantra 2026-27 -->
+        <div class="philosophy-card" style="border-top: 3px solid #10b981; padding:32px;">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:16px;">
+            <div class="mission-logo-badge" style="height:54px; max-width:180px;">
+              <img src="assets/images/logos/eyantra.png" alt="eYantra Logo">
+            </div>
+            <span class="live-pill" style="font-size:0.75rem; padding:4px 10px;"><span class="live-dot"></span> STAGE 1 COMPLETED</span>
+          </div>
+          <h3 style="font-size:1.35rem; margin-bottom:8px;">eYantra Robotics Competition 2026&ndash;27</h3>
+          <div style="font-family:var(--font-mono); font-size:0.82rem; color:var(--primary); font-weight:700; margin-bottom:14px;">
+            ORGANIZER: IIT BOMBAY &bull; MINISTRY OF EDUCATION
+          </div>
+          <p style="font-size:0.92rem; color:var(--text-secondary); line-height:1.6; margin-bottom:16px;">
+            Nationwide robotics and embedded engineering competition hosted by IIT Bombay. Challenging university teams to design autonomous multi-agent aerial and terrestrial robotic systems to solve simulated industrial and disaster scenarios.
+          </p>
+          <div style="background:var(--bg-surface); padding:16px; border-radius:var(--radius-md); border:1px solid var(--border); font-size:0.84rem; line-height:1.5; color:var(--text-secondary);">
+            <strong style="color:var(--text-main);">Current Status:</strong> Team ARC successfully qualified Stage 1 with top regional scores. Currently building algorithmic simulation pipelines and hardware integration for Stage 2 tasks.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Past Competitions Section -->
+  <section class="section section-alt" id="past-competitions">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">// COMPETITION ARCHIVE &amp; TRACK RECORD</span>
+        <h2 class="section-title">Past Competitions &amp; Milestones</h2>
+        <p class="section-desc">Historical challenges where Team ARC designed, fabricated, and demonstrated custom space and robotics systems nationwide.</p>
+      </div>
+
+      <div class="past-comp-grid" style="grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));">
+        
+        <!-- 1. ISRO IRoC-U -->
+        <div class="past-comp-card">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:14px;">
+            <div class="mission-logo-badge">
+              <img src="assets/images/logos/isro.png" alt="ISRO Logo">
+            </div>
+            <span class="comp-status-badge rover">2&times; SEMI-FINALISTS</span>
+          </div>
+          <h3 style="font-size:1.25rem; margin-bottom:12px;">ISRO Robotics Challenge (IRoC-U 2024 &amp; 2026)</h3>
+          
+          <div style="margin: 12px 0 16px; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border); height: 180px;">
+            <img src="assets/images/competitions/rover/rover_full_build_1.jpg" alt="Planetary Rover Full Build" style="width:100%; height:100%; object-fit:cover; cursor:pointer;" data-lightbox data-caption="Planetary Rover 6-Wheel Rocker-Bogie Build at BIT Sindri Proving Ground">
+          </div>
+
+          <div class="past-comp-meta">
+            <strong>Conducted by:</strong><br>
+            Indian Space Research Organisation (ISRO) &amp; U R Rao Satellite Centre (URSC), Bengaluru.
+          </div>
+
+          <div class="past-comp-meta">
+            <strong>Problem Statement (PS):</strong><br>
+            Design, manufacture, and operate an extraterrestrial planetary exploration rover capable of traversing simulated lunar/martian craters and boulder fields, executing autonomous obstacle avoidance, and collecting regolith core samples.
+          </div>
+
+          <div class="past-comp-meta">
+            <strong>How We Performed &amp; Result:</strong><br>
+            Team ARC engineered a full-scale 6-wheel rocker-bogie planetary rover with custom compliant wheels, differential pivot, and onboard autonomous perception. Ranked among the <strong>Top 12 teams nationwide across India</strong> in IRoC-U 2024 and achieved <strong>National Semi-Finalist</strong> standing in IRoC-U 2026.
+          </div>
+
+          <div class="past-comp-result">
+            <i data-lucide="award" style="width:16px;height:16px;color:#eab308;"></i>
+            <span>Top 12 in India (2024) &bull; National Semi-Finalist (2026)</span>
+          </div>
+        </div>
+
+        <!-- 2. IN-SPACe Rocketry -->
+        <div class="past-comp-card">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:14px;">
+            <div class="mission-logo-badge">
+              <img src="assets/images/logos/inspace.png" alt="IN-SPACe Logo">
+            </div>
+            <span class="comp-status-badge rocket">NATIONAL FINALISTS</span>
+          </div>
+          <h3 style="font-size:1.25rem; margin-bottom:12px;">IN-SPACe Model Rocketry Challenge 2025</h3>
+          
+          <!-- Authentic Photos: Sounding Rocket at Analog Astronaut Center & Meeting with ISRO Chairman -->
+          <div style="margin: 12px 0 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border); height: 180px;">
+              <img src="assets/images/competitions/rocketry/nandighosh_real_inspace.jpg" alt="Team AADISHAKTI with Sounding Rocket NANDIGHOSH at IN-SPACe Analog Astronaut Training Center" style="width:100%; height:100%; object-fit:cover; object-position:center 30%; cursor:pointer;" data-lightbox data-caption="Team AADISHAKTI with Sounding Rocket NANDIGHOSH at the IN-SPACe Analog Astronaut Training Center dome">
+            </div>
+            <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border); height: 180px;">
+              <img src="assets/images/competitions/rocketry/team_with_isro_chairman.png" alt="Team ARC with ISRO Chairman S. Somanath at IN-SPACe" style="width:100%; height:100%; object-fit:cover; object-position:top center; cursor:pointer;" data-lightbox data-caption="Team ARC with ISRO Chairman S. Somanath at IN-SPACe National Workshop">
+            </div>
+          </div>
+
+          <div class="past-comp-meta">
+            <strong>Conducted by:</strong><br>
+            Indian National Space Promotion and Authorization Centre (IN-SPACe), Department of Space, Govt. of India.
+          </div>
+
+          <div class="past-comp-meta">
+            <strong>Problem Statement (PS):</strong><br>
+            Design, aerodynamically simulate in OpenRocket, fabricate, and launch a single-stage solid-motor model sounding rocket (K-motor class) reaching an apogee of ~1.1 km while deploying an operational CANSAT telemetry payload and safely recovering via dual parachutes.
+          </div>
+
+          <div class="past-comp-meta">
+            <strong>How We Performed &amp; Result:</strong><br>
+            Under the name <strong>Team AADISHAKTI</strong>, ARC designed Sounding Rocket NANDIGHOSH (1.66m length, 15.6cm airframe). Selected as <strong>National Finalists</strong> and attended the national rocketry workshop in Ahmedabad, presenting and launching prototype hardware in the presence of ISRO Chairman S. Somanath.
+          </div>
+
+          <div class="past-comp-result">
+            <i data-lucide="award" style="width:16px;height:16px;color:#eab308;"></i>
+            <span>National Finalists &bull; Prototype Flight at IN-SPACe Ahmedabad</span>
+          </div>
+        </div>
+
+        <!-- 3. SAE International Aerothon -->
+        <div class="past-comp-card">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:14px;">
+            <div class="mission-logo-badge">
+              <img src="assets/images/logos/sae.png" alt="SAE Logo">
+            </div>
+            <span class="comp-status-badge">NATIONAL CONTEST</span>
+          </div>
+          <h3 style="font-size:1.25rem; margin-bottom:12px;">SAE International Aerothon &amp; Hackathons</h3>
+          
+          <div class="past-comp-meta">
+            <strong>Conducted by:</strong><br>
+            SAE India, Flipkart GRiD, &amp; Bhartiya Antariksh Hackathon (ISRO).
+          </div>
+
+          <div class="past-comp-meta">
+            <strong>Problem Statement (PS):</strong><br>
+            Design and optimize high-efficiency autonomous aerial UAV platforms meeting strict payload drop accuracy, aerodynamic endurance, structural safety factors, and mission autonomous control parameters.
+          </div>
+
+          <div class="past-comp-meta">
+            <strong>How We Performed &amp; Result:</strong><br>
+            Team ARC executed comprehensive CAD and CFD aerodynamic simulations, carbon composite airframe fabrication, and successful flight demonstration rounds against premier national engineering colleges.
+          </div>
+
+          <div class="past-comp-result">
+            <i data-lucide="award" style="width:16px;height:16px;color:#3b82f6;"></i>
+            <span>National Design Validation &amp; Mission Presentation</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Competition Roadmap Stepper -->
+  <section class="section section-alt" id="roadmap">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-pill">Our Flight Path</span>
+        <h2 class="section-title">The ARC Mission Odyssey</h2>
+        <p class="section-desc">
+          From first mechanical prototypes to national space challenge semi-finals and international planetary competitions.
+        </p>
+      </div>
+
+      <div class="timeline-stepper">
+        <div class="step-card">
+          <div class="step-year">2024</div>
+          <div class="step-badge">ISRO IRoC-U '24</div>
+          <h4>Lunar Rover Platform</h4>
+          <p>Designed and built 6-wheel rocker-bogie rover with custom regolith wheels and autonomous boulder navigation. Qualified as <strong>National Semi-Finalists @ URSC ISRO Bengaluru</strong>.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-year">2025</div>
+          <div class="step-badge">IN-SPACe '25</div>
+          <h4>Model Sounding Rocketry</h4>
+          <p>Engineered composite sounding rocket airframe with dual-deployment parachute recovery and aerodynamic validation. Qualified as <strong>National Finalists</strong>.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-year">2026</div>
+          <div class="step-badge">ISRO IRoC-U '26 &bull; Semi-Finalist</div>
+          <h4>Autonomous Planetary Drone</h4>
+          <p>Advancing into GPS-denied multi-rotor aerial robotics with Visual SLAM and onboard 3D depth estimation. Qualified as <strong>National Semi-Finalists</strong>.</p>
+        </div>
+
+        <div class="step-card step-active">
+          <div class="step-year">2026-27</div>
+          <div class="step-badge active-badge"><span class="pulse-dot"></span> Active Build &bull; eYantra &amp; NIDAR 2.0</div>
+          <h4>Indoor Search Drones</h4>
+          <p>Competing in eYantra Khoj-o-Drone (Stage 1 completed, result awaited) and building a GPS-denied drone for NIDAR 2.0 AirMouse, now under testing.</p>
+        </div>
+
+        <div class="step-card step-future">
+          <div class="step-year">2027+</div>
+          <div class="step-badge">Global Arena</div>
+          <h4>Planetary Science &amp; URC</h4>
+          <p>Developing articulated robotic arms, autonomous drill sampling payloads, and targeting the prestigious international University Rover Challenge (URC).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="cta-band">
+    <div class="container">
+      <div class="cta-inner">
+        <div class="cta-text">
+          <span class="cta-kicker">// REPRESENT BIT SINDRI NATIONWIDE</span>
+          <h2>Want to fly rockets or build planetary rovers with us?</h2>
+          <p>Join Team ARC to engineer autonomous rovers, drones, and sounding rockets for India's premier aerospace challenges.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="join.html" class="btn btn-primary">Apply for ARC Recruitment</a>
+          <a href="projects.html" class="btn btn-secondary">Explore Hardware</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+<footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Aero &amp; Robotics Club</h4>
+          <p>
+            Autonomous Aerospace &amp; Robotics Collective.<br>
+            Birsa Institute of Technology (BIT) Sindri,<br>
+            Dhanbad, Jharkhand &ndash; 828123, India.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>About Us</h4>
+          <ul>
+            <li><a href="index.html">Home Overview</a></li>
+            <li><a href="competitions.html">Missions &amp; Competitions</a></li>
+            <li><a href="projects.html">Hardware &amp; Projects</a></li>
+            <li><a href="team.html">Post Bearers &amp; Mentors</a></li>
+            <li><a href="sponsors.html">Sponsors &amp; Partners</a></li>
+            <li><a href="join.html">Recruitment &amp; Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="mailto:arc.bitsindri@gmail.com">arc.bitsindri@gmail.com</a></li>
+            <li><a href="https://www.instagram.com/arc.bitsindri" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://bitsindri.ac.in" target="_blank" rel="noopener noreferrer">BIT Sindri Official</a></li>
+            <li><a href="join.html#contact">Club Location &amp; Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Engineering Focus</h4>
+          <p>
+            Dedicated to planetary rover mobility, autonomous aerial robotics, and model sounding rocketry. Built 100% by students driven by space exploration.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Aero &amp; Robotics Club (ARC), BIT Sindri. All rights reserved.</div>
+        <div>Dedicated to community, space systems, and engineering excellence.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div class="modal-overlay" id="imageModal">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Close">&times;</button>
+      <div class="modal-media-box">
+        <img loading="lazy" decoding="async" id="modalImage" src="" alt="Full Resolution View">
+      </div>
+      <div class="modal-caption-bar" id="modalCaption"></div>
+    </div>
+  </div>
+
+  <!-- Master JavaScript -->
+  <script src="js/main.js?v=12"></script>
+  <script>
+    function initIcons() {
+      if (typeof lucide !== 'undefined' && typeof lucide.createIcons === 'function') {
+        lucide.createIcons();
+      }
+    }
+    initIcons();
+    window.addEventListener('DOMContentLoaded', initIcons);
+    window.addEventListener('load', initIcons);
+  </script>
+</body>
+</html>
