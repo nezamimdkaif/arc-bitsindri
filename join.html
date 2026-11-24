@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,20 +19,7 @@
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
 
   <!-- Master Stylesheet with cache bust -->
-  <link rel="stylesheet" href="css/style.css?v=42">
-
-  <!-- Theme: System (default) / Dark / Light. Runs before paint to avoid flash. -->
-  <script>
-    (function() {
-      var pref = 'system';
-      try { pref = localStorage.getItem('arc-theme') || 'system'; } catch (e) {}
-      if (['system', 'dark', 'light'].indexOf(pref) === -1) pref = 'system';
-      var dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      var root = document.documentElement;
-      root.setAttribute('data-theme', pref === 'system' ? (dark ? 'dark' : 'light') : pref);
-      root.setAttribute('data-theme-pref', pref);
-    })();
-  </script>
+  <link rel="stylesheet" href="css/style.css?v=43">
 </head>
 <body>
   <!-- ======================================================================
@@ -56,22 +43,6 @@
           <a href="team.html" class="nav-link ">Team</a>
           <a href="sponsors.html" class="nav-link ">Sponsors</a>
           <a href="join.html" class="btn btn-primary btn-sm active">Join ARC</a>
-        </div>
-
-        <!-- Segmented Theme Switcher (System / Dark / Light) -->
-        <div class="theme-switcher-control" id="themeSwitcher" role="radiogroup" aria-label="Theme selection">
-          <button type="button" class="theme-opt-btn active" data-theme="system" title="Follow device theme">
-            <i data-lucide="monitor"></i>
-            <span>System</span>
-          </button>
-          <button type="button" class="theme-opt-btn" data-theme="dark" title="Dark Theme">
-            <i data-lucide="moon"></i>
-            <span>Dark</span>
-          </button>
-          <button type="button" class="theme-opt-btn" data-theme="light" title="Light Theme">
-            <i data-lucide="sun"></i>
-            <span>Light</span>
-          </button>
         </div>
 
         <button class="nav-toggle" aria-label="Toggle menu">

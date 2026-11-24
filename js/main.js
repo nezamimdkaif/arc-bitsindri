@@ -5,44 +5,8 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ---- 0. Theme Switcher (System / Dark / Light) ----
-  const themeButtons = document.querySelectorAll('.theme-opt-btn');
-  const darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
-  const THEMES = ['system', 'dark', 'light'];
-
-  function getPref() {
-    let saved = null;
-    try { saved = localStorage.getItem('arc-theme'); } catch (e) {}
-    return THEMES.includes(saved) ? saved : 'system';
-  }
-
-  function applyTheme(pref, save = true) {
-    const resolved = pref === 'system' ? (darkQuery.matches ? 'dark' : 'light') : pref;
-    const root = document.documentElement;
-    root.setAttribute('data-theme', resolved);
-    root.setAttribute('data-theme-pref', pref);
-    if (save) {
-      try { localStorage.setItem('arc-theme', pref); } catch (e) {}
-    }
-
-    themeButtons.forEach(btn => {
-      const on = btn.getAttribute('data-theme') === pref;
-      btn.classList.toggle('active', on);
-      btn.setAttribute('aria-pressed', on);
-    });
-
-    window.dispatchEvent(new Event('arc-theme-change'));
-  }
-
-  applyTheme(getPref(), false);
-
-  themeButtons.forEach(btn => {
-    btn.addEventListener('click', () => applyTheme(btn.getAttribute('data-theme'), true));
-  });
-
-  const onSystemChange = () => { if (getPref() === 'system') applyTheme('system', false); };
-  if (darkQuery.addEventListener) darkQuery.addEventListener('change', onSystemChange);
-  else if (darkQuery.addListener) darkQuery.addListener(onSystemChange);
+  // ---- 0. Enforce Clean Light Theme ----
+  document.documentElement.setAttribute('data-theme', 'light');
 
   // ---- 1. Mobile Menu Toggle ----
   const navToggle = document.querySelector('.nav-toggle');
