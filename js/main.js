@@ -373,18 +373,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(() => { if (!document.hidden) tickClock(); }, 1000);
   }
 
-  const accent = document.querySelector('.hero-title .hero-accent');
-  if (accent && !reduceMotion) {
-    const finalText = accent.textContent.trim();
-    const glyphs = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#/';
-    const t0 = performance.now();
-    (function scramble(now) {
-      const p = Math.min((now - t0) / 1000, 1);
-      const lock = Math.floor(p * finalText.length);
-      accent.textContent = finalText.split('').map((ch, i) =>
-        ch === ' ' || i < lock ? ch : glyphs[Math.floor(Math.random() * glyphs.length)]).join('');
-      if (p < 1) requestAnimationFrame(scramble); else accent.textContent = finalText;
-    })(t0);
-  }
+  // (hero title letter-scramble effect removed)
 
 });
