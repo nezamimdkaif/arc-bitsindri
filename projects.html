@@ -19,20 +19,9 @@
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
 
   <!-- Master Stylesheet with cache bust -->
-  <link rel="stylesheet" href="css/style.css?v=39">
+  <link rel="stylesheet" href="css/style.css?v=42">
 
-  <!-- Theme: System (default) / Dark / Light. Runs before paint to avoid flash. -->
-  <script>
-    (function() {
-      var pref = 'system';
-      try { pref = localStorage.getItem('arc-theme') || 'system'; } catch (e) {}
-      if (['system', 'dark', 'light'].indexOf(pref) === -1) pref = 'system';
-      var dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      var root = document.documentElement;
-      root.setAttribute('data-theme', pref === 'system' ? (dark ? 'dark' : 'light') : pref);
-      root.setAttribute('data-theme-pref', pref);
-    })();
-  </script>
+  <script>document.documentElement.setAttribute('data-theme','light');</script>
 </head>
 <body>
   <!-- ======================================================================
@@ -58,22 +47,6 @@
           <a href="join.html" class="btn btn-primary btn-sm ">Join ARC</a>
         </div>
 
-        <!-- Segmented Theme Switcher (System / Dark / Light) -->
-        <div class="theme-switcher-control" id="themeSwitcher" role="radiogroup" aria-label="Theme selection">
-          <button type="button" class="theme-opt-btn active" data-theme="system" title="Follow device theme">
-            <i data-lucide="monitor"></i>
-            <span>System</span>
-          </button>
-          <button type="button" class="theme-opt-btn" data-theme="dark" title="Dark Theme">
-            <i data-lucide="moon"></i>
-            <span>Dark</span>
-          </button>
-          <button type="button" class="theme-opt-btn" data-theme="light" title="Light Theme">
-            <i data-lucide="sun"></i>
-            <span>Light</span>
-          </button>
-        </div>
-
         <button class="nav-toggle" aria-label="Toggle menu">
           <span></span>
           <span></span>
@@ -90,7 +63,7 @@
         <i data-lucide="chevron-right" style="width:14px;height:14px;"></i>
         <span>Projects</span>
       </div>
-      <span class="section-pill">// HARDWARE SYSTEMS & PROTOTYPES</span>
+      <span class="section-pill">Hardware Systems & Prototypes</span>
       <h1 class="page-hero-title">What We Have Built</h1>
       <p class="page-hero-subtitle">A deep-dive showcase of planetary rovers, high-impulse sounding rockets, autonomous hexacopter UAVs, and scientific payload systems designed, fabricated, and validated by BIT Sindri students.</p>
     </div>
@@ -427,7 +400,7 @@
     <div class="container">
       <div class="cta-inner">
         <div class="cta-text">
-          <span class="cta-kicker">// HANDS-ON ENGINEERING</span>
+          <span class="cta-kicker">Hands-on Engineering</span>
           <h2>Ready to turn CAD models into physical reality?</h2>
           <p>ARC provides lab resources, 3D printing, CNC machining, flight controllers, and mentor guidance for ambitious student builders.</p>
         </div>
@@ -499,7 +472,7 @@
   </div>
 
   <!-- Master JavaScript -->
-  <script src="js/main.js?v=12"></script>
+  <script src="js/main.js?v=13"></script>
   <script>
     function initIcons() {
       if (typeof lucide !== 'undefined' && typeof lucide.createIcons === 'function') {

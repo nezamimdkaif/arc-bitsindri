@@ -19,7 +19,7 @@
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
 
   <!-- Master Stylesheet with cache bust -->
-  <link rel="stylesheet" href="css/style.css?v=39">
+  <link rel="stylesheet" href="css/style.css?v=42">
 
   <!-- Theme: System (default) / Dark / Light. Runs before paint to avoid flash. -->
   <script>
@@ -83,14 +83,13 @@
     </div>
   </nav>
 <header class="hero" id="home">
-    <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
-    <div class="hero-grid" aria-hidden="true"></div>
-    <span class="hud hud-tl" aria-hidden="true"></span><span class="hud hud-tr" aria-hidden="true"></span>
-    <span class="hud hud-bl" aria-hidden="true"></span><span class="hud hud-br" aria-hidden="true"></span>
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/videos/poster_iroc_sim.jpg" aria-hidden="true">
+      <source src="assets/videos/iroc_2026_rover_sim.mp4" type="video/mp4">
+    </video>
     <div class="container">
       <div class="hero-content">
         <div class="hero-pill">
-          <i data-lucide="sparkles" style="width:14px;height:14px;"></i>
+          <i data-lucide="sparkles" style="width:13px;height:13px;"></i>
           Aero &amp; Robotics Club &bull; BIT Sindri
         </div>
 
@@ -298,7 +297,7 @@
       <!-- 2. Past Competitions & Track Record Preview -->
       <div>
         <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
-          <span class="section-pill" style="margin-bottom:0; font-size:0.75rem;">HISTORICAL COMPETITIONS &amp; MILESTONES</span>
+          <span class="section-pill" style="margin-bottom:0; font-size:0.75rem;">Historical Competitions &amp; Milestones</span>
         </div>
         <div class="past-comp-grid">
           
@@ -469,7 +468,7 @@
     <div class="container">
       <div class="cta-inner">
         <div class="cta-text">
-          <span class="cta-kicker">// RECRUITMENT OPEN &bull; SESSION 2026-27</span>
+          <span class="cta-kicker">Recruitment Open &bull; Session 2026-27</span>
           <h2>Build robots that leave the ground.</h2>
           <p>Rovers, drones and rockets &mdash; designed, built and flown by students. Apply with your official institutional email (.bitsindri.ac.in).</p>
         </div>
@@ -543,7 +542,7 @@
   </div>
 
   <!-- Master JavaScript -->
-  <script src="js/main.js?v=12"></script>
+  <script src="js/main.js?v=13"></script>
   <script>
     function initIcons() {
       if (typeof lucide !== 'undefined' && typeof lucide.createIcons === 'function') {
