@@ -19,7 +19,7 @@
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
 
   <!-- Master Stylesheet with cache bust -->
-  <link rel="stylesheet" href="css/style.css?v=48">
+  <link rel="stylesheet" href="css/style.css?v=49">
 
   <script>document.documentElement.setAttribute('data-theme','light');</script>
 </head>
@@ -125,8 +125,18 @@
           <p style="font-size:0.92rem; color:var(--text-secondary); line-height:1.6; margin-bottom:16px;">
             Nationwide robotics and embedded engineering competition hosted by IIT Bombay. Challenging university teams to design autonomous multi-agent aerial and terrestrial robotic systems to solve simulated industrial and disaster scenarios.
           </p>
-          <div style="background:var(--bg-surface); padding:16px; border-radius:var(--radius-md); border:1px solid var(--border); font-size:0.84rem; line-height:1.5; color:var(--text-secondary);">
+          <div style="background:var(--bg-surface); padding:16px; border-radius:var(--radius-md); border:1px solid var(--border); font-size:0.84rem; line-height:1.5; color:var(--text-secondary); margin-bottom:16px;">
             <strong style="color:var(--text-main);">Current Status:</strong> Team ARC successfully qualified Stage 1 with top regional scores. Currently building algorithmic simulation pipelines and hardware integration for Stage 2 tasks.
+          </div>
+          <div class="video-wrapper" style="border-radius:var(--radius-md); overflow:hidden; border:1px solid var(--border);">
+            <video controls playsinline preload="metadata" poster="assets/videos/poster_eyantra_sim.jpg" style="width:100%; display:block;">
+              <source src="assets/videos/eyantra_drone_sim.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-secondary); margin-top:8px; display:flex; justify-content:space-between;">
+            <span>&bull; Autonomous Drone Simulation</span>
+            <span>ROS 2 &amp; Gazebo Environment</span>
           </div>
         </div>
 
